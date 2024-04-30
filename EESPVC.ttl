@@ -1,23 +1,26 @@
-@prefix : <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/> .
+@prefix : <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix swrl: <http://www.w3.org/2003/11/swrl#> .
-@prefix swrlb: <http://www.w3.org/2003/11/swrlb#> .
-@base <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/> .
+@base <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC> .
 
 <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC> rdf:type owl:Ontology ;
+                                                              <http://purl.org/dc/elements/1.1/created> "2024-04-30" ;
                                                               <http://purl.org/dc/elements/1.1/creator> "Nestor Carreno Gimeno" ;
-                                                              <http://purl.org/dc/elements/1.1/description> """Ésta ontología propone un formato estándar para representar, clasificar y analizar las experiencias de los clientes de aerolíneas comerciales que quedan reflejadas en las encuestas de satisfacción que las mismas compañías ponen a disposición de sus pasajeros. 
-La estructura de datos sigue un esquema claro en el que se puede plasmar de forma inequívoca y unificada la información recogida en encuestas de distintas aerolíneas (que por tanto pueden seguir formatos distintos). Concretamente, la ontología se ha desarrollado a partir de encuestas hechas por Qatar Airways y Ryanair a sus respectivos clientes.
-En la ontología se describen y se incluyen datos relativos a la experiencia del cliente, información sobre la persona encuestada, información sobre la ruta realizada, forma y contenido de los comentarios y otros campos de utilidad.""" ;
-                                                              <http://purl.org/dc/elements/1.1/title> "EESPVC - Encuestas Estandarizadas de Satisfacción de Pasajeros en Vuelos Comerciales" .
+                                                              <http://purl.org/dc/elements/1.1/description> """This ontology proposes a standard format for representing, classifying and analyzing the experiences of commercial airline customers as reflected in the satisfaction surveys that the airlines themselves make available to their passengers. 
+The data structure follows a clear schema in which the information collected in surveys from different airlines (which can therefore follow different formats) can be captured in an unambiguous and unified way. Specifically, the ontology has been developed from surveys conducted by Qatar Airways and Ryanair with their respective customers.
+The ontology describes and includes data related to the customer experience, information about the respondent, information about the route flown, form and content of the comments and other useful fields.""" ;
+                                                              <http://purl.org/dc/elements/1.1/title> "EESPVC - Encuestas Estandarizadas de Satisfacción de Pasajeros en Vuelos Comerciales / Standardized Passenger Satisfaction Surveys on Commercial Flights" .
 
 #################################################################
 #    Annotation properties
 #################################################################
+
+###  http://purl.org/dc/elements/1.1/created
+<http://purl.org/dc/elements/1.1/created> rdf:type owl:AnnotationProperty .
+
 
 ###  http://purl.org/dc/elements/1.1/creator
 <http://purl.org/dc/elements/1.1/creator> rdf:type owl:AnnotationProperty .
@@ -795,32 +798,42 @@ owl:topObjectProperty rdfs:subPropertyOf owl:topObjectProperty .
 ###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#AircraftManufacturer_Airbus
 :AircraftManufacturer_Airbus rdf:type owl:NamedIndividual ,
                                       :Airbus ;
-                             :manufacturerName "Airbus" .
+                             :manufacturerName "Airbus" ;
+                             rdfs:comment "Airbus instance of AircraftManufacturer" ;
+                             rdfs:label "Aircraft_Manufacturer_Airbus" .
 
 
 ###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#AircraftManufacturer_Boeing
 :AircraftManufacturer_Boeing rdf:type owl:NamedIndividual ,
                                       :Boeing ;
-                             :manufacturerName "Boeing" .
+                             :manufacturerName "Boeing" ;
+                             rdfs:comment "Boeing instance of AircraftManufacturer" ;
+                             rdfs:label "AircraftManufacturer_Boeing" .
 
 
 ###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Airline_1
 :Airline_1 rdf:type owl:NamedIndividual ,
                     :Airline ;
-           :airlineName "Airline 1" .
+           :airlineName "Airline 1" ;
+           rdfs:comment "Instance of an Airline with an unknown sub-type" ;
+           rdfs:label "Airline_1" .
 
 
 ###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Airplane_A7-AJN
 :Airplane_A7-AJN rdf:type owl:NamedIndividual ,
                           :A380_800 ;
-                 :aircraftCode "A7-AJN" .
+                 :aircraftCode "A7-AJN" ;
+                 rdfs:comment "Instance of A7-AJN airplane" ;
+                 rdfs:label "Airplane_A7-AJN" .
 
 
 ###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Airplane_A8-GTR
 :Airplane_A8-GTR rdf:type owl:NamedIndividual ,
                           :Aircraft ;
                  :manufacturedBy :AircraftManufacturer_Airbus ;
-                 :aircraftCode "A8-GTR" .
+                 :aircraftCode "A8-GTR" ;
+                 rdfs:comment "Instance of A8-GTR airplane" ;
+                 rdfs:label "Airplane_A8-GTR" .
 
 
 ###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Airplane_B7-MLG
@@ -828,7 +841,9 @@ owl:topObjectProperty rdfs:subPropertyOf owl:topObjectProperty .
                           :Boeing_777 ;
                  :covers :Flight_QA4563 ;
                  :operatedBy :Airline_1 ;
-                 :aircraftCode "B7-MLG" .
+                 :aircraftCode "B7-MLG" ;
+                 rdfs:comment "Instance of B7-MLG airplane" ;
+                 rdfs:label "Airplane_B7-MLG" .
 
 
 ###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Airport_Barcelona
@@ -836,7 +851,9 @@ owl:topObjectProperty rdfs:subPropertyOf owl:topObjectProperty .
                             :Airport ;
                    :locatedIn :Country_Spain ;
                    :airportCode "BCN" ;
-                   :airportName "Barcelona Airport" .
+                   :airportName "Barcelona Airport" ;
+                   rdfs:comment "Instance of Barcelona's airport" ;
+                   rdfs:label "Airport_Barcelona" .
 
 
 ###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Airport_London_Stansted
@@ -844,26 +861,34 @@ owl:topObjectProperty rdfs:subPropertyOf owl:topObjectProperty .
                                   :Airport ;
                          :locatedIn :Country_United_Kingdom ;
                          :airportCode "LST" ;
-                         :airportName "London Stansted Airport" .
+                         :airportName "London Stansted Airport" ;
+                         rdfs:comment "Instance of London Stansted's airport" ;
+                         rdfs:label "Airport_London_Stansted" .
 
 
 ###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Airport_Malaga
 :Airport_Malaga rdf:type owl:NamedIndividual ,
                          :Airport ;
                 :airportCode "MLG" ;
-                :airportName "Malaga Airport" .
+                :airportName "Malaga Airport" ;
+                rdfs:comment "Instance of Malaga's airport" ;
+                rdfs:label "Airport_Malaga" .
 
 
 ###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Country_Spain
 :Country_Spain rdf:type owl:NamedIndividual ,
                         :Country ;
-               :countryName "Spain" .
+               :countryName "Spain" ;
+               rdfs:comment "Instance of Spain - Country" ;
+               rdfs:label "Country_Spain" .
 
 
 ###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Country_United_Kingdom
 :Country_United_Kingdom rdf:type owl:NamedIndividual ,
                                  :Country ;
-                        :countryName "United Kingdom" .
+                        :countryName "United Kingdom" ;
+                        rdfs:comment "Instance of United Kingdom - Country" ;
+                        rdfs:label "Country_United_Kingdom" .
 
 
 ###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Flight_QA4563
@@ -872,7 +897,9 @@ owl:topObjectProperty rdfs:subPropertyOf owl:topObjectProperty .
                :arrivesTo :Airport_London_Stansted ;
                :departsFrom :Airport_Barcelona ;
                :flightCode "QA4563" ;
-               :flightDate "2024-01-09T14:00:00"^^xsd:dateTime .
+               :flightDate "2024-01-09T14:00:00"^^xsd:dateTime ;
+               rdfs:comment "Instance of Flight QA4563" ;
+               rdfs:label "Flight_QA4563" .
 
 
 ###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Person_Mary_Le
@@ -880,7 +907,9 @@ owl:topObjectProperty rdfs:subPropertyOf owl:topObjectProperty .
                          :Person ;
                 :livesIn :Country_United_Kingdom ;
                 :takes :Flight_QA4563 ;
-                :personName "Mary Le" .
+                :personName "Mary Le" ;
+                rdfs:comment "Instance of a Person, Mary Le" ;
+                rdfs:label "Person_Mary_Le" .
 
 
 ###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Person_Nestor_Carreno_Gimeno
@@ -889,19 +918,25 @@ owl:topObjectProperty rdfs:subPropertyOf owl:topObjectProperty .
                               :livesIn :Country_Spain ;
                               :takes :Flight_QA4563 ;
                               :personName "Nestor Carreno Gimeno" ;
-                              :personPassportCode "56879054C" .
+                              :personPassportCode "56879054C" ;
+                              rdfs:comment "Instance of a Person, Nestor Carreno Gimeno" ;
+                              rdfs:label "Person_Nestor_Carreno_Gimeno" .
 
 
 ###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Rating_1
 :Rating_1 rdf:type owl:NamedIndividual ,
                    :OverallRating ;
-          :ratingScore "10"^^xsd:int .
+          :ratingScore "10"^^xsd:int ;
+          rdfs:comment "A numeric rating: 10" ;
+          rdfs:label "Rating_1" .
 
 
 ###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Rating_2
 :Rating_2 rdf:type owl:NamedIndividual ,
                    :OverallRating ;
-          :ratingScore "3"^^xsd:int .
+          :ratingScore "3"^^xsd:int ;
+          rdfs:comment "A numeric rating: 3" ;
+          rdfs:label "Rating_2" .
 
 
 ###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#SatisfactionSurvey_1
@@ -915,7 +950,9 @@ owl:topObjectProperty rdfs:subPropertyOf owl:topObjectProperty .
                       :surveyCommentBody "The flight was on time. Everything perfect." ;
                       :surveyCommentTitle "Very happy with the service." ;
                       :surveyIdentifier "1"^^xsd:int ;
-                      :surveyPublicationDate "2024-02-23T16:30:47"^^xsd:dateTime .
+                      :surveyPublicationDate "2024-02-23T16:30:47"^^xsd:dateTime ;
+                      rdfs:comment "An instance of the SatisfactionSurvey with ID 1" ;
+                      rdfs:label "SatisfactionSurvey_1" .
 
 
 ###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#SatisfactionSurvey_2
@@ -929,22 +966,30 @@ owl:topObjectProperty rdfs:subPropertyOf owl:topObjectProperty .
                       :surveyCommentBody "The delay of my flight from Haneda to Doha caused a bit of chaos upon arrival. Despite my efforts to reach the gate promptly, I was denied boarding due to luggage issues, and the lack of assistance added to the frustration. I paid for an Economy Comfort package, which was supposed to include an aisle seat. However, upon boarding, I was informed that no aisle seats were available, despite assurances beforehand. Additionally, my luggage tag was lost during the boarding pass exchange, leading to further uncertainty upon arrival in London. What was meant to be a 19-hour journey turned into a 27-hour ordeal. When I requested assistance from staff regarding a re-arrangement they promised to get back to me within 5-10 minutes, but no one followed up until I reached out again. The security queue at Heathrow on departure from the UK was incredibly long, with a wait time of about 1.5 hours just to get through. Overall, while the crew onboard was courteous and provided great service, the experience was marred by these inconveniences." ;
                       :surveyCommentTitle "Marred by inconveniences" ;
                       :surveyIdentifier "2"^^xsd:int ;
-                      :surveyPublicationDate "2024-02-02T13:45:32"^^xsd:dateTime .
+                      :surveyPublicationDate "2024-02-02T13:45:32"^^xsd:dateTime ;
+                      rdfs:comment "An instance of the SatisfactionSurvey with ID 2" ;
+                      rdfs:label "SatisfactionSurvey_2" .
 
 
 ###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#SeatType_EconomyClass
 :SeatType_EconomyClass rdf:type owl:NamedIndividual ,
-                                :EconomyClass .
+                                :EconomyClass ;
+                       rdfs:comment "Instance of the SeatType Economy Class" ;
+                       rdfs:label "SeatType_EconomyClass" .
 
 
 ###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#TravellerType_Business
 :TravellerType_Business rdf:type owl:NamedIndividual ,
-                                 :Business .
+                                 :Business ;
+                        rdfs:comment "Instance of the TravellerType Business" ;
+                        rdfs:label "TravellerType_Business" .
 
 
 ###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#TravellerType_FamilyLeisure
 :TravellerType_FamilyLeisure rdf:type owl:NamedIndividual ,
-                                      :FamilyLeisure .
+                                      :FamilyLeisure ;
+                             rdfs:comment "Instance of the TravellerType Family Leisure" ;
+                             rdfs:label "TravellerType_FamilyLeisure" .
 
 
 #################################################################
@@ -1006,446 +1051,446 @@ owl:topObjectProperty rdfs:subPropertyOf owl:topObjectProperty .
 #    Rules
 #################################################################
 
-<urn:swrl:var#b> rdf:type swrl:Variable .
+<urn:swrl:var#b> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
 
-<urn:swrl:var#f> rdf:type swrl:Variable .
+<urn:swrl:var#f> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
 
-<urn:swrl:var#a> rdf:type swrl:Variable .
+<urn:swrl:var#a> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
 
-<urn:swrl:var#o> rdf:type swrl:Variable .
+<urn:swrl:var#o> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
 
-<urn:swrl:var#s> rdf:type swrl:Variable .
+<urn:swrl:var#s> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
 
-<urn:swrl:var#x> rdf:type swrl:Variable .
+<urn:swrl:var#x> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
 
-<urn:swrl:var#r> rdf:type swrl:Variable .
+<urn:swrl:var#r> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
 
-[ rdf:type swrl:Imp ;
-   swrl:body [ rdf:type swrl:AtomList ;
-               rdf:first [ rdf:type swrl:ClassAtom ;
-                           swrl:classPredicate :SatisfactionSurvey ;
-                           swrl:argument1 <urn:swrl:var#s>
-                         ] ;
-               rdf:rest [ rdf:type swrl:AtomList ;
-                          rdf:first [ rdf:type swrl:BuiltinAtom ;
-                                      swrl:builtin swrlb:lessThanOrEqual ;
-                                      swrl:arguments [ rdf:type rdf:List ;
-                                                       rdf:first <urn:swrl:var#x> ;
-                                                       rdf:rest [ rdf:type rdf:List ;
-                                                                  rdf:first 6 ;
-                                                                  rdf:rest rdf:nil
-                                                                ]
-                                                     ]
-                                    ] ;
-                          rdf:rest [ rdf:type swrl:AtomList ;
-                                     rdf:first [ rdf:type swrl:BuiltinAtom ;
-                                                 swrl:builtin swrlb:greaterThan ;
-                                                 swrl:arguments [ rdf:type rdf:List ;
-                                                                  rdf:first <urn:swrl:var#x> ;
-                                                                  rdf:rest [ rdf:type rdf:List ;
-                                                                             rdf:first 4 ;
-                                                                             rdf:rest rdf:nil
-                                                                           ]
-                                                                ]
-                                               ] ;
-                                     rdf:rest [ rdf:type swrl:AtomList ;
-                                                rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
-                                                            swrl:propertyPredicate :exposes ;
-                                                            swrl:argument1 <urn:swrl:var#s> ;
-                                                            swrl:argument2 <urn:swrl:var#r>
-                                                          ] ;
-                                                rdf:rest [ rdf:type swrl:AtomList ;
-                                                           rdf:first [ rdf:type swrl:DatavaluedPropertyAtom ;
-                                                                       swrl:propertyPredicate :ratingScore ;
-                                                                       swrl:argument1 <urn:swrl:var#r> ;
-                                                                       swrl:argument2 <urn:swrl:var#x>
-                                                                     ] ;
-                                                           rdf:rest rdf:nil
-                                                         ]
-                                              ]
-                                   ]
-                        ]
-             ] ;
-   swrl:head [ rdf:type swrl:AtomList ;
-               rdf:first [ rdf:type swrl:ClassAtom ;
-                           swrl:classPredicate :NeutralSurvey ;
-                           swrl:argument1 <urn:swrl:var#s>
-                         ] ;
-               rdf:rest rdf:nil
-             ]
+[ rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :SatisfactionSurvey ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#s>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#lessThanOrEqual> ;
+                                                                  <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                               rdf:first <urn:swrl:var#x> ;
+                                                                                                               rdf:rest [ rdf:type rdf:List ;
+                                                                                                                          rdf:first 6 ;
+                                                                                                                          rdf:rest rdf:nil
+                                                                                                                        ]
+                                                                                                             ]
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThan> ;
+                                                                             <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                          rdf:first <urn:swrl:var#x> ;
+                                                                                                                          rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                     rdf:first 4 ;
+                                                                                                                                     rdf:rest rdf:nil
+                                                                                                                                   ]
+                                                                                                                        ]
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> :exposes ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#s> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#r>
+                                                                                      ] ;
+                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#propertyPredicate> :ratingScore ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#r> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#x>
+                                                                                                 ] ;
+                                                                                       rdf:rest rdf:nil
+                                                                                     ]
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :NeutralSurvey ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#s>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
  ] .
 
-[ rdf:type swrl:Imp ;
-   swrl:body [ rdf:type swrl:AtomList ;
-               rdf:first [ rdf:type swrl:ClassAtom ;
-                           swrl:classPredicate :SatisfactionSurvey ;
-                           swrl:argument1 <urn:swrl:var#s>
-                         ] ;
-               rdf:rest [ rdf:type swrl:AtomList ;
-                          rdf:first [ rdf:type swrl:BuiltinAtom ;
-                                      swrl:builtin swrlb:lessThanOrEqual ;
-                                      swrl:arguments [ rdf:type rdf:List ;
-                                                       rdf:first <urn:swrl:var#x> ;
-                                                       rdf:rest [ rdf:type rdf:List ;
-                                                                  rdf:first 8 ;
-                                                                  rdf:rest rdf:nil
-                                                                ]
-                                                     ]
-                                    ] ;
-                          rdf:rest [ rdf:type swrl:AtomList ;
-                                     rdf:first [ rdf:type swrl:BuiltinAtom ;
-                                                 swrl:builtin swrlb:greaterThan ;
-                                                 swrl:arguments [ rdf:type rdf:List ;
-                                                                  rdf:first <urn:swrl:var#x> ;
-                                                                  rdf:rest [ rdf:type rdf:List ;
-                                                                             rdf:first 6 ;
-                                                                             rdf:rest rdf:nil
-                                                                           ]
-                                                                ]
-                                               ] ;
-                                     rdf:rest [ rdf:type swrl:AtomList ;
-                                                rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
-                                                            swrl:propertyPredicate :exposes ;
-                                                            swrl:argument1 <urn:swrl:var#s> ;
-                                                            swrl:argument2 <urn:swrl:var#r>
-                                                          ] ;
-                                                rdf:rest [ rdf:type swrl:AtomList ;
-                                                           rdf:first [ rdf:type swrl:DatavaluedPropertyAtom ;
-                                                                       swrl:propertyPredicate :ratingScore ;
-                                                                       swrl:argument1 <urn:swrl:var#r> ;
-                                                                       swrl:argument2 <urn:swrl:var#x>
-                                                                     ] ;
-                                                           rdf:rest rdf:nil
-                                                         ]
-                                              ]
-                                   ]
-                        ]
-             ] ;
-   swrl:head [ rdf:type swrl:AtomList ;
-               rdf:first [ rdf:type swrl:ClassAtom ;
-                           swrl:classPredicate :SatisfiedSurvey ;
-                           swrl:argument1 <urn:swrl:var#s>
-                         ] ;
-               rdf:rest rdf:nil
-             ]
+[ rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :SatisfactionSurvey ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#s>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#lessThanOrEqual> ;
+                                                                  <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                               rdf:first <urn:swrl:var#x> ;
+                                                                                                               rdf:rest [ rdf:type rdf:List ;
+                                                                                                                          rdf:first 8 ;
+                                                                                                                          rdf:rest rdf:nil
+                                                                                                                        ]
+                                                                                                             ]
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThan> ;
+                                                                             <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                          rdf:first <urn:swrl:var#x> ;
+                                                                                                                          rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                     rdf:first 6 ;
+                                                                                                                                     rdf:rest rdf:nil
+                                                                                                                                   ]
+                                                                                                                        ]
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> :exposes ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#s> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#r>
+                                                                                      ] ;
+                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#propertyPredicate> :ratingScore ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#r> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#x>
+                                                                                                 ] ;
+                                                                                       rdf:rest rdf:nil
+                                                                                     ]
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :SatisfiedSurvey ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#s>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
  ] .
 
-[ rdf:type swrl:Imp ;
-   swrl:body [ rdf:type swrl:AtomList ;
-               rdf:first [ rdf:type swrl:ClassAtom ;
-                           swrl:classPredicate :SatisfactionSurvey ;
-                           swrl:argument1 <urn:swrl:var#s>
-                         ] ;
-               rdf:rest [ rdf:type swrl:AtomList ;
-                          rdf:first [ rdf:type swrl:BuiltinAtom ;
-                                      swrl:builtin swrlb:greaterThan ;
-                                      swrl:arguments [ rdf:type rdf:List ;
-                                                       rdf:first <urn:swrl:var#x> ;
-                                                       rdf:rest [ rdf:type rdf:List ;
-                                                                  rdf:first 8 ;
-                                                                  rdf:rest rdf:nil
-                                                                ]
-                                                     ]
-                                    ] ;
-                          rdf:rest [ rdf:type swrl:AtomList ;
-                                     rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
-                                                 swrl:propertyPredicate :exposes ;
-                                                 swrl:argument1 <urn:swrl:var#s> ;
-                                                 swrl:argument2 <urn:swrl:var#r>
-                                               ] ;
-                                     rdf:rest [ rdf:type swrl:AtomList ;
-                                                rdf:first [ rdf:type swrl:DatavaluedPropertyAtom ;
-                                                            swrl:propertyPredicate :ratingScore ;
-                                                            swrl:argument1 <urn:swrl:var#r> ;
-                                                            swrl:argument2 <urn:swrl:var#x>
-                                                          ] ;
-                                                rdf:rest [ rdf:type swrl:AtomList ;
-                                                           rdf:first [ rdf:type swrl:BuiltinAtom ;
-                                                                       swrl:builtin swrlb:lessThanOrEqual ;
-                                                                       swrl:arguments [ rdf:type rdf:List ;
-                                                                                        rdf:first <urn:swrl:var#x> ;
-                                                                                        rdf:rest [ rdf:type rdf:List ;
-                                                                                                   rdf:first 10 ;
-                                                                                                   rdf:rest rdf:nil
-                                                                                                 ]
-                                                                                      ]
-                                                                     ] ;
-                                                           rdf:rest rdf:nil
-                                                         ]
-                                              ]
-                                   ]
-                        ]
-             ] ;
-   swrl:head [ rdf:type swrl:AtomList ;
-               rdf:first [ rdf:type swrl:ClassAtom ;
-                           swrl:classPredicate :VerySatisfiedSurvey ;
-                           swrl:argument1 <urn:swrl:var#s>
-                         ] ;
-               rdf:rest rdf:nil
-             ]
+[ rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :SatisfactionSurvey ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#s>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThan> ;
+                                                                  <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                               rdf:first <urn:swrl:var#x> ;
+                                                                                                               rdf:rest [ rdf:type rdf:List ;
+                                                                                                                          rdf:first 8 ;
+                                                                                                                          rdf:rest rdf:nil
+                                                                                                                        ]
+                                                                                                             ]
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> :exposes ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#s> ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#r>
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> :ratingScore ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#r> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#x>
+                                                                                      ] ;
+                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#lessThanOrEqual> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                                                rdf:first <urn:swrl:var#x> ;
+                                                                                                                                                rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                           rdf:first 10 ;
+                                                                                                                                                           rdf:rest rdf:nil
+                                                                                                                                                         ]
+                                                                                                                                              ]
+                                                                                                 ] ;
+                                                                                       rdf:rest rdf:nil
+                                                                                     ]
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :VerySatisfiedSurvey ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#s>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
  ] .
 
-[ rdf:type swrl:Imp ;
-   swrl:body [ rdf:type swrl:AtomList ;
-               rdf:first [ rdf:type swrl:ClassAtom ;
-                           swrl:classPredicate :SatisfactionSurvey ;
-                           swrl:argument1 <urn:swrl:var#s>
-                         ] ;
-               rdf:rest [ rdf:type swrl:AtomList ;
-                          rdf:first [ rdf:type swrl:BuiltinAtom ;
-                                      swrl:builtin swrlb:lessThanOrEqual ;
-                                      swrl:arguments [ rdf:type rdf:List ;
-                                                       rdf:first <urn:swrl:var#x> ;
-                                                       rdf:rest [ rdf:type rdf:List ;
-                                                                  rdf:first 2 ;
-                                                                  rdf:rest rdf:nil
-                                                                ]
-                                                     ]
-                                    ] ;
-                          rdf:rest [ rdf:type swrl:AtomList ;
-                                     rdf:first [ rdf:type swrl:BuiltinAtom ;
-                                                 swrl:builtin swrlb:greaterThanOrEqual ;
-                                                 swrl:arguments [ rdf:type rdf:List ;
-                                                                  rdf:first <urn:swrl:var#x> ;
-                                                                  rdf:rest [ rdf:type rdf:List ;
-                                                                             rdf:first 0 ;
-                                                                             rdf:rest rdf:nil
-                                                                           ]
-                                                                ]
-                                               ] ;
-                                     rdf:rest [ rdf:type swrl:AtomList ;
-                                                rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
-                                                            swrl:propertyPredicate :exposes ;
-                                                            swrl:argument1 <urn:swrl:var#s> ;
-                                                            swrl:argument2 <urn:swrl:var#r>
-                                                          ] ;
-                                                rdf:rest [ rdf:type swrl:AtomList ;
-                                                           rdf:first [ rdf:type swrl:DatavaluedPropertyAtom ;
-                                                                       swrl:propertyPredicate :ratingScore ;
-                                                                       swrl:argument1 <urn:swrl:var#r> ;
-                                                                       swrl:argument2 <urn:swrl:var#x>
-                                                                     ] ;
-                                                           rdf:rest rdf:nil
-                                                         ]
-                                              ]
-                                   ]
-                        ]
-             ] ;
-   swrl:head [ rdf:type swrl:AtomList ;
-               rdf:first [ rdf:type swrl:ClassAtom ;
-                           swrl:classPredicate :VeryDissatisfiedSurvey ;
-                           swrl:argument1 <urn:swrl:var#s>
-                         ] ;
-               rdf:rest rdf:nil
-             ]
+[ rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :SatisfactionSurvey ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#s>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#lessThanOrEqual> ;
+                                                                  <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                               rdf:first <urn:swrl:var#x> ;
+                                                                                                               rdf:rest [ rdf:type rdf:List ;
+                                                                                                                          rdf:first 2 ;
+                                                                                                                          rdf:rest rdf:nil
+                                                                                                                        ]
+                                                                                                             ]
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThanOrEqual> ;
+                                                                             <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                          rdf:first <urn:swrl:var#x> ;
+                                                                                                                          rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                     rdf:first 0 ;
+                                                                                                                                     rdf:rest rdf:nil
+                                                                                                                                   ]
+                                                                                                                        ]
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> :exposes ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#s> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#r>
+                                                                                      ] ;
+                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#propertyPredicate> :ratingScore ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#r> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#x>
+                                                                                                 ] ;
+                                                                                       rdf:rest rdf:nil
+                                                                                     ]
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :VeryDissatisfiedSurvey ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#s>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
  ] .
 
-[ rdf:type swrl:Imp ;
-   swrl:body [ rdf:type swrl:AtomList ;
-               rdf:first [ rdf:type swrl:ClassAtom ;
-                           swrl:classPredicate :A350 ;
-                           swrl:argument1 <urn:swrl:var#b>
-                         ] ;
-               rdf:rest rdf:nil
-             ] ;
-   swrl:head [ rdf:type swrl:AtomList ;
-               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
-                           swrl:propertyPredicate :manufacturedBy ;
-                           swrl:argument1 <urn:swrl:var#b> ;
-                           swrl:argument2 :AircraftManufacturer_Airbus
-                         ] ;
-               rdf:rest rdf:nil
-             ]
+[ rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :A350 ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#b>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :manufacturedBy ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#b> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :AircraftManufacturer_Airbus
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
  ] .
 
-[ rdf:type swrl:Imp ;
-   swrl:body [ rdf:type swrl:AtomList ;
-               rdf:first [ rdf:type swrl:ClassAtom ;
-                           swrl:classPredicate :A350_1000 ;
-                           swrl:argument1 <urn:swrl:var#b>
-                         ] ;
-               rdf:rest rdf:nil
-             ] ;
-   swrl:head [ rdf:type swrl:AtomList ;
-               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
-                           swrl:propertyPredicate :manufacturedBy ;
-                           swrl:argument1 <urn:swrl:var#b> ;
-                           swrl:argument2 :AircraftManufacturer_Airbus
-                         ] ;
-               rdf:rest rdf:nil
-             ]
+[ rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :A350_1000 ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#b>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :manufacturedBy ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#b> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :AircraftManufacturer_Airbus
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
  ] .
 
-[ rdf:type swrl:Imp ;
-   swrl:body [ rdf:type swrl:AtomList ;
-               rdf:first [ rdf:type swrl:ClassAtom ;
-                           swrl:classPredicate :A380 ;
-                           swrl:argument1 <urn:swrl:var#b>
-                         ] ;
-               rdf:rest rdf:nil
-             ] ;
-   swrl:head [ rdf:type swrl:AtomList ;
-               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
-                           swrl:propertyPredicate :manufacturedBy ;
-                           swrl:argument1 <urn:swrl:var#b> ;
-                           swrl:argument2 :AircraftManufacturer_Airbus
-                         ] ;
-               rdf:rest rdf:nil
-             ]
+[ rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :A380 ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#b>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :manufacturedBy ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#b> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :AircraftManufacturer_Airbus
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
  ] .
 
-[ rdf:type swrl:Imp ;
-   swrl:body [ rdf:type swrl:AtomList ;
-               rdf:first [ rdf:type swrl:ClassAtom ;
-                           swrl:classPredicate :A380_800 ;
-                           swrl:argument1 <urn:swrl:var#b>
-                         ] ;
-               rdf:rest rdf:nil
-             ] ;
-   swrl:head [ rdf:type swrl:AtomList ;
-               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
-                           swrl:propertyPredicate :manufacturedBy ;
-                           swrl:argument1 <urn:swrl:var#b> ;
-                           swrl:argument2 :AircraftManufacturer_Airbus
-                         ] ;
-               rdf:rest rdf:nil
-             ]
+[ rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :A380_800 ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#b>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :manufacturedBy ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#b> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :AircraftManufacturer_Airbus
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
  ] .
 
-[ rdf:type swrl:Imp ;
-   swrl:body [ rdf:type swrl:AtomList ;
-               rdf:first [ rdf:type swrl:ClassAtom ;
-                           swrl:classPredicate :Boeing_777 ;
-                           swrl:argument1 <urn:swrl:var#b>
-                         ] ;
-               rdf:rest rdf:nil
-             ] ;
-   swrl:head [ rdf:type swrl:AtomList ;
-               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
-                           swrl:propertyPredicate :manufacturedBy ;
-                           swrl:argument1 <urn:swrl:var#b> ;
-                           swrl:argument2 :AircraftManufacturer_Boeing
-                         ] ;
-               rdf:rest rdf:nil
-             ]
+[ rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Boeing_777 ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#b>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :manufacturedBy ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#b> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :AircraftManufacturer_Boeing
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
  ] .
 
-[ rdf:type swrl:Imp ;
-   swrl:body [ rdf:type swrl:AtomList ;
-               rdf:first [ rdf:type swrl:ClassAtom ;
-                           swrl:classPredicate :Boeing_787 ;
-                           swrl:argument1 <urn:swrl:var#b>
-                         ] ;
-               rdf:rest rdf:nil
-             ] ;
-   swrl:head [ rdf:type swrl:AtomList ;
-               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
-                           swrl:propertyPredicate :manufacturedBy ;
-                           swrl:argument1 <urn:swrl:var#b> ;
-                           swrl:argument2 :AircraftManufacturer_Boeing
-                         ] ;
-               rdf:rest rdf:nil
-             ]
+[ rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Boeing_787 ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#b>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :manufacturedBy ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#b> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :AircraftManufacturer_Boeing
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
  ] .
 
-[ rdf:type swrl:Imp ;
-   swrl:body [ rdf:type swrl:AtomList ;
-               rdf:first [ rdf:type swrl:ClassAtom ;
-                           swrl:classPredicate :Flight ;
-                           swrl:argument1 <urn:swrl:var#f>
-                         ] ;
-               rdf:rest [ rdf:type swrl:AtomList ;
-                          rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
-                                      swrl:propertyPredicate :coveredBy ;
-                                      swrl:argument1 <urn:swrl:var#f> ;
-                                      swrl:argument2 <urn:swrl:var#a>
-                                    ] ;
-                          rdf:rest [ rdf:type swrl:AtomList ;
-                                     rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
-                                                 swrl:propertyPredicate :departsFrom ;
-                                                 swrl:argument1 <urn:swrl:var#f> ;
-                                                 swrl:argument2 :Airport_Barcelona
-                                               ] ;
-                                     rdf:rest [ rdf:type swrl:AtomList ;
-                                                rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
-                                                            swrl:propertyPredicate :arrivesTo ;
-                                                            swrl:argument1 <urn:swrl:var#f> ;
-                                                            swrl:argument2 :Airport_London_Stansted
-                                                          ] ;
-                                                rdf:rest [ rdf:type swrl:AtomList ;
-                                                           rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
-                                                                       swrl:propertyPredicate :operatedBy ;
-                                                                       swrl:argument1 <urn:swrl:var#a> ;
-                                                                       swrl:argument2 <urn:swrl:var#o>
-                                                                     ] ;
-                                                           rdf:rest rdf:nil
-                                                         ]
-                                              ]
-                                   ]
-                        ]
-             ] ;
-   swrl:head [ rdf:type swrl:AtomList ;
-               rdf:first [ rdf:type swrl:ClassAtom ;
-                           swrl:classPredicate :Ryanair ;
-                           swrl:argument1 <urn:swrl:var#o>
-                         ] ;
-               rdf:rest rdf:nil
-             ]
+[ rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Flight ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#f>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :coveredBy ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#f> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#a>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> :departsFrom ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#f> ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> :Airport_Barcelona
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> :arrivesTo ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#f> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument2> :Airport_London_Stansted
+                                                                                      ] ;
+                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#propertyPredicate> :operatedBy ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#a> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#o>
+                                                                                                 ] ;
+                                                                                       rdf:rest rdf:nil
+                                                                                     ]
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Ryanair ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#o>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
  ] .
 
-[ rdf:type swrl:Imp ;
-   swrl:body [ rdf:type swrl:AtomList ;
-               rdf:first [ rdf:type swrl:ClassAtom ;
-                           swrl:classPredicate :SatisfactionSurvey ;
-                           swrl:argument1 <urn:swrl:var#s>
-                         ] ;
-               rdf:rest [ rdf:type swrl:AtomList ;
-                          rdf:first [ rdf:type swrl:BuiltinAtom ;
-                                      swrl:builtin swrlb:lessThanOrEqual ;
-                                      swrl:arguments [ rdf:type rdf:List ;
-                                                       rdf:first <urn:swrl:var#x> ;
-                                                       rdf:rest [ rdf:type rdf:List ;
-                                                                  rdf:first 4 ;
-                                                                  rdf:rest rdf:nil
-                                                                ]
-                                                     ]
-                                    ] ;
-                          rdf:rest [ rdf:type swrl:AtomList ;
-                                     rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
-                                                 swrl:propertyPredicate :exposes ;
-                                                 swrl:argument1 <urn:swrl:var#s> ;
-                                                 swrl:argument2 <urn:swrl:var#r>
-                                               ] ;
-                                     rdf:rest [ rdf:type swrl:AtomList ;
-                                                rdf:first [ rdf:type swrl:DatavaluedPropertyAtom ;
-                                                            swrl:propertyPredicate :ratingScore ;
-                                                            swrl:argument1 <urn:swrl:var#r> ;
-                                                            swrl:argument2 <urn:swrl:var#x>
-                                                          ] ;
-                                                rdf:rest [ rdf:type swrl:AtomList ;
-                                                           rdf:first [ rdf:type swrl:BuiltinAtom ;
-                                                                       swrl:builtin swrlb:greaterThan ;
-                                                                       swrl:arguments [ rdf:type rdf:List ;
-                                                                                        rdf:first <urn:swrl:var#x> ;
-                                                                                        rdf:rest [ rdf:type rdf:List ;
-                                                                                                   rdf:first 2 ;
-                                                                                                   rdf:rest rdf:nil
-                                                                                                 ]
-                                                                                      ]
-                                                                     ] ;
-                                                           rdf:rest rdf:nil
-                                                         ]
-                                              ]
-                                   ]
-                        ]
-             ] ;
-   swrl:head [ rdf:type swrl:AtomList ;
-               rdf:first [ rdf:type swrl:ClassAtom ;
-                           swrl:classPredicate :DissatisfiedSurvey ;
-                           swrl:argument1 <urn:swrl:var#s>
-                         ] ;
-               rdf:rest rdf:nil
-             ]
+[ rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :SatisfactionSurvey ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#s>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#lessThanOrEqual> ;
+                                                                  <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                               rdf:first <urn:swrl:var#x> ;
+                                                                                                               rdf:rest [ rdf:type rdf:List ;
+                                                                                                                          rdf:first 4 ;
+                                                                                                                          rdf:rest rdf:nil
+                                                                                                                        ]
+                                                                                                             ]
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> :exposes ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#s> ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#r>
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> :ratingScore ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#r> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#x>
+                                                                                      ] ;
+                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThan> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                                                rdf:first <urn:swrl:var#x> ;
+                                                                                                                                                rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                           rdf:first 2 ;
+                                                                                                                                                           rdf:rest rdf:nil
+                                                                                                                                                         ]
+                                                                                                                                              ]
+                                                                                                 ] ;
+                                                                                       rdf:rest rdf:nil
+                                                                                     ]
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :DissatisfiedSurvey ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#s>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
  ] .
 
 ###  Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi
