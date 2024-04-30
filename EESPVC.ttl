@@ -1,0 +1,1451 @@
+@prefix : <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix swrl: <http://www.w3.org/2003/11/swrl#> .
+@prefix swrlb: <http://www.w3.org/2003/11/swrlb#> .
+@base <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/> .
+
+<http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC> rdf:type owl:Ontology ;
+                                                              <http://purl.org/dc/elements/1.1/creator> "Nestor Carreno Gimeno" ;
+                                                              <http://purl.org/dc/elements/1.1/description> """Ésta ontología propone un formato estándar para representar, clasificar y analizar las experiencias de los clientes de aerolíneas comerciales que quedan reflejadas en las encuestas de satisfacción que las mismas compañías ponen a disposición de sus pasajeros. 
+La estructura de datos sigue un esquema claro en el que se puede plasmar de forma inequívoca y unificada la información recogida en encuestas de distintas aerolíneas (que por tanto pueden seguir formatos distintos). Concretamente, la ontología se ha desarrollado a partir de encuestas hechas por Qatar Airways y Ryanair a sus respectivos clientes.
+En la ontología se describen y se incluyen datos relativos a la experiencia del cliente, información sobre la persona encuestada, información sobre la ruta realizada, forma y contenido de los comentarios y otros campos de utilidad.""" ;
+                                                              <http://purl.org/dc/elements/1.1/title> "EESPVC - Encuestas Estandarizadas de Satisfacción de Pasajeros en Vuelos Comerciales" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2000/01/rdf-schema#sameAs
+rdfs:sameAs rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#arrivesTo
+:arrivesTo rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf owl:topObjectProperty ;
+           owl:inverseOf :hasArrival ;
+           rdf:type owl:FunctionalProperty ;
+           rdfs:domain :Flight ;
+           rdfs:range :Airport ;
+           rdfs:comment "A Flight arrives to an Airport" ;
+           rdfs:label "arrivesTo" .
+
+
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#completes
+:completes rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf owl:topObjectProperty ;
+           owl:inverseOf :isCompletedBy ;
+           rdfs:domain :Passenger ;
+           rdfs:range :SatisfactionSurvey ;
+           rdfs:comment "A Passenger completes a SatisfactionSurvey" ;
+           rdfs:label "completes" .
+
+
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#coveredBy
+:coveredBy rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf owl:topObjectProperty ;
+           owl:inverseOf :covers ;
+           rdfs:domain :Flight ;
+           rdfs:range :Aircraft ;
+           rdfs:comment "A Flight is covered by an Airplane" ;
+           rdfs:label "coveredBy" .
+
+
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#covers
+:covers rdf:type owl:ObjectProperty ;
+        rdfs:subPropertyOf owl:topObjectProperty ;
+        rdf:type owl:FunctionalProperty ;
+        rdfs:domain :Aircraft ;
+        rdfs:range :Flight ;
+        rdfs:comment "An Airplane covers a Flight" ;
+        rdfs:label "covers" .
+
+
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#departsFrom
+:departsFrom rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf owl:topObjectProperty ;
+             owl:inverseOf :hasDeparture ;
+             rdf:type owl:FunctionalProperty ;
+             rdfs:domain :Flight ;
+             rdfs:range :Airport ;
+             rdfs:comment "A Flight departs from an Airport" ;
+             rdfs:label "departsFrom" .
+
+
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#explainsExperienceOf
+:explainsExperienceOf rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf owl:topObjectProperty ;
+                      rdf:type owl:FunctionalProperty ;
+                      rdfs:domain :SatisfactionSurvey ;
+                      rdfs:range :TravellerType ;
+                      rdfs:comment "A SatisfactionSurvey explains the experience of a specific TravellerType" ;
+                      rdfs:label "explainsExperienceOf" .
+
+
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#exposes
+:exposes rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf owl:topObjectProperty ;
+         rdf:type owl:FunctionalProperty ,
+                  owl:AsymmetricProperty ;
+         rdfs:domain :SatisfactionSurvey ;
+         rdfs:range :OverallRating ;
+         rdfs:comment "A SatisfactionSurvey exposes an OverallRating of an experience" ;
+         rdfs:label "exposes" .
+
+
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#hasArrival
+:hasArrival rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty ;
+            rdfs:domain :Airport ;
+            rdfs:range :Flight ;
+            rdfs:comment "An Airport has the arrival of a Flight" ;
+            rdfs:label "hasArrival" .
+
+
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#hasDeparture
+:hasDeparture rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf owl:topObjectProperty ;
+              rdfs:domain :Airport ;
+              rdfs:range :Flight ;
+              rdfs:comment "An Airport has the departure of a Flight" ;
+              rdfs:label "hasDeparture" .
+
+
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#hasManufactured
+:hasManufactured rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf owl:topObjectProperty ;
+                 owl:inverseOf :manufacturedBy ;
+                 rdfs:domain :AircraftManufacturer ;
+                 rdfs:range :Aircraft ;
+                 rdfs:comment "An AircraftManufacturer has manufactured an Airplane" ;
+                 rdfs:label "hasManufactured" .
+
+
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#isCompletedBy
+:isCompletedBy rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf owl:topObjectProperty ;
+               rdf:type owl:FunctionalProperty ;
+               rdfs:domain :SatisfactionSurvey ;
+               rdfs:range :Passenger ;
+               rdfs:comment "A SatisfactionSurvey is completed by a Passenger" ;
+               rdfs:label "isCompletedBy" .
+
+
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#isEvaluatedIn
+:isEvaluatedIn rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf owl:topObjectProperty ;
+               owl:inverseOf :isEvaluating ;
+               rdfs:domain :SeatType ;
+               rdfs:range :SatisfactionSurvey ;
+               rdfs:comment "A SeatType is evaluated in SatisfactionSurveys" ;
+               rdfs:label "isEvaluatedIn" .
+
+
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#isEvaluating
+:isEvaluating rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf owl:topObjectProperty ;
+              rdf:type owl:FunctionalProperty ,
+                       owl:AsymmetricProperty ;
+              rdfs:domain :SatisfactionSurvey ;
+              rdfs:range :SeatType ;
+              rdfs:comment "A SatisfactionSurvey is evaluating the SeatType that the Passenger chose" ;
+              rdfs:label "isEvaluating" .
+
+
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#isRatedOn
+:isRatedOn rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf owl:topObjectProperty ;
+           owl:inverseOf :rates ;
+           rdfs:domain :Flight ;
+           rdfs:range :SatisfactionSurvey ;
+           rdfs:comment "A Flight is rated on a SatisfactionSurvey" ;
+           rdfs:label "isRatedOn" .
+
+
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#livesIn
+:livesIn rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf owl:topObjectProperty ;
+         owl:inverseOf :residenceOf ;
+         rdf:type owl:FunctionalProperty ;
+         rdfs:domain :Person ;
+         rdfs:range :Country ;
+         rdfs:comment "A Person lives in a Country" ;
+         rdfs:label "livesIn" .
+
+
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#locatedIn
+:locatedIn rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf owl:topObjectProperty ;
+           owl:inverseOf :locates ;
+           rdf:type owl:FunctionalProperty ;
+           rdfs:domain :Airport ;
+           rdfs:range :Country ;
+           rdfs:comment "An Airport is located in a Country" ;
+           rdfs:label "locatedIn" .
+
+
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#locates
+:locates rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf owl:topObjectProperty ;
+         rdfs:domain :Country ;
+         rdfs:range :Airport ;
+         rdfs:comment "A Country locates some Airports" ;
+         rdfs:label "locates" .
+
+
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#manufacturedBy
+:manufacturedBy rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf owl:topObjectProperty ;
+                rdf:type owl:FunctionalProperty ;
+                rdfs:domain :Aircraft ;
+                rdfs:range :AircraftManufacturer ;
+                rdfs:comment "An Airplane was manufactured by an AircraftManufacturer" ;
+                rdfs:label "manufacturedBy" .
+
+
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#operatedBy
+:operatedBy rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty ;
+            owl:inverseOf :operates ;
+            rdf:type owl:FunctionalProperty ;
+            rdfs:domain :Aircraft ;
+            rdfs:range :Airline ;
+            rdfs:comment "An Airplane is operated by an Airline" ;
+            rdfs:label "operatedBy" .
+
+
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#operates
+:operates rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf owl:topObjectProperty ;
+          rdfs:domain :Airline ;
+          rdfs:range :Aircraft ;
+          rdfs:comment "An Airline operates an Airplane" ;
+          rdfs:label "operates" .
+
+
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#rates
+:rates rdf:type owl:ObjectProperty ;
+       rdfs:subPropertyOf owl:topObjectProperty ;
+       rdf:type owl:FunctionalProperty ;
+       rdfs:domain :SatisfactionSurvey ;
+       rdfs:range :Flight ;
+       rdfs:comment "A SatisfactionSurvey rates a Flight" ;
+       rdfs:label "rates" .
+
+
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#residenceOf
+:residenceOf rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf owl:topObjectProperty ;
+             rdfs:domain :Country ;
+             rdfs:range :Person ;
+             rdfs:comment "A Country is residence of a Person" ;
+             rdfs:label "residenceOf" .
+
+
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#takenBy
+:takenBy rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf owl:topObjectProperty ;
+         owl:inverseOf :takes ;
+         rdfs:domain :Flight ;
+         rdfs:range :Passenger ;
+         rdfs:comment "A Flight is taken by a Passenger" ;
+         rdfs:label "takenBy" .
+
+
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#takes
+:takes rdf:type owl:ObjectProperty ;
+       rdfs:subPropertyOf owl:topObjectProperty ;
+       rdfs:domain :Passenger ;
+       rdfs:range :Flight ;
+       rdfs:comment "A Passenger takes a Flight" ;
+       rdfs:label "takes" .
+
+
+###  http://www.w3.org/2002/07/owl#topObjectProperty
+owl:topObjectProperty rdfs:subPropertyOf owl:topObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#aircraftCode
+:aircraftCode rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf owl:topDataProperty ;
+              rdf:type owl:FunctionalProperty ;
+              rdfs:domain :Aircraft ;
+              rdfs:range xsd:string ;
+              rdfs:comment "Code given to the airplane." ;
+              rdfs:label "airplaneCode" .
+
+
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#airlineName
+:airlineName rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf owl:topDataProperty ;
+             rdfs:domain :Airline ;
+             rdfs:range xsd:string ;
+             rdfs:comment "Name of the airline." ;
+             rdfs:label "airlineName" .
+
+
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#airportCode
+:airportCode rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf owl:topDataProperty ;
+             rdf:type owl:FunctionalProperty ;
+             rdfs:domain :Airport ;
+             rdfs:range xsd:string ;
+             rdfs:comment "Code given to the airport." ;
+             rdfs:label "airportCode" .
+
+
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#airportName
+:airportName rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf owl:topDataProperty ;
+             rdfs:domain :Airport ;
+             rdfs:range xsd:string ;
+             rdfs:comment "Name of the airport." ;
+             rdfs:label "airportName" .
+
+
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#countryName
+:countryName rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf owl:topDataProperty ;
+             rdfs:domain :Country ;
+             rdfs:range xsd:string ;
+             rdfs:comment "Name of the country." ;
+             rdfs:label "countryName" .
+
+
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#flightCode
+:flightCode rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf owl:topDataProperty ;
+            rdfs:domain :Flight ;
+            rdfs:range xsd:string ;
+            rdfs:comment "Identifier given to a flight." ;
+            rdfs:label "flightCode" .
+
+
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#flightDate
+:flightDate rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf owl:topDataProperty ;
+            rdf:type owl:FunctionalProperty ;
+            rdfs:domain :Flight ;
+            rdfs:range xsd:dateTime ;
+            rdfs:comment "Date the flight took place on." ;
+            rdfs:label "flightDate" .
+
+
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#manufacturerName
+:manufacturerName rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf owl:topDataProperty ;
+                  rdfs:domain :AircraftManufacturer ;
+                  rdfs:range xsd:string ;
+                  rdfs:comment "Name of the aircraft manufacturer." ;
+                  rdfs:label "manufacturerName" .
+
+
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#personName
+:personName rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf owl:topDataProperty ;
+            rdfs:domain :Person ;
+            rdfs:range xsd:string ;
+            rdfs:comment "Name of an individual." ;
+            rdfs:label "personName" .
+
+
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#personPassportCode
+:personPassportCode rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf owl:topDataProperty ;
+                    rdf:type owl:FunctionalProperty ;
+                    rdfs:domain :Person ;
+                    rdfs:range xsd:string ;
+                    rdfs:comment "Passport code of an individual." ;
+                    rdfs:label "personPassportCode" .
+
+
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#ratingScore
+:ratingScore rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf owl:topDataProperty ;
+             rdf:type owl:FunctionalProperty ;
+             rdfs:domain :Rating ;
+             rdfs:range [ rdf:type rdfs:Datatype ;
+                          owl:onDatatype xsd:int ;
+                          owl:withRestrictions ( [ xsd:minInclusive "0"^^xsd:int
+                                                 ]
+                                                 [ xsd:maxInclusive "10"^^xsd:int
+                                                 ]
+                                               )
+                        ] ;
+             rdfs:comment "Score given from 0 to 10." ;
+             rdfs:label "ratingScore" .
+
+
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#surveyCommentBody
+:surveyCommentBody rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf owl:topDataProperty ;
+                   rdf:type owl:FunctionalProperty ;
+                   rdfs:domain :SatisfactionSurvey ;
+                   rdfs:range xsd:string ;
+                   rdfs:comment "Comment written on a survey." ;
+                   rdfs:label "surveyCommentBody" .
+
+
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#surveyCommentTitle
+:surveyCommentTitle rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf owl:topDataProperty ;
+                    rdf:type owl:FunctionalProperty ;
+                    rdfs:domain :SatisfactionSurvey ;
+                    rdfs:range xsd:string ;
+                    rdfs:comment "Title of the comment written on a survey." ;
+                    rdfs:label "surveyCommentTitle" .
+
+
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#surveyIdentifier
+:surveyIdentifier rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf owl:topDataProperty ;
+                  rdf:type owl:FunctionalProperty ;
+                  rdfs:domain :Survey ;
+                  rdfs:range xsd:int ;
+                  rdfs:comment "Numerical identifier for the surveys." ;
+                  rdfs:label "surveyIdentifier" .
+
+
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#surveyPublicationDate
+:surveyPublicationDate rdf:type owl:DatatypeProperty ;
+                       rdfs:subPropertyOf owl:topDataProperty ;
+                       rdf:type owl:FunctionalProperty ;
+                       rdfs:domain :Survey ;
+                       rdfs:range xsd:dateTime ;
+                       rdfs:comment "Date the survey was published on." ;
+                       rdfs:label "surveyPublicationDate" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#A350
+:A350 rdf:type owl:Class ;
+      rdfs:subClassOf :Aircraft ;
+      rdfs:comment "This class represents the A350 plane model by Airbus." ;
+      rdfs:label "A350" .
+
+
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#A350_1000
+:A350_1000 rdf:type owl:Class ;
+           rdfs:subClassOf :Aircraft ;
+           rdfs:comment "This class represents the A350-1000 plane model by Airbus." ;
+           rdfs:label "A350_1000" .
+
+
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#A380
+:A380 rdf:type owl:Class ;
+      rdfs:subClassOf :Aircraft ;
+      rdfs:comment "This class represents the A380 plane model by Airbus." ;
+      rdfs:label "A380" .
+
+
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#A380_800
+:A380_800 rdf:type owl:Class ;
+          rdfs:subClassOf :Aircraft ;
+          rdfs:comment "This class represents the A380-800 plane model by Airbus." ;
+          rdfs:label "A380_800" .
+
+
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Airbus
+:Airbus rdf:type owl:Class ;
+        rdfs:subClassOf :AircraftManufacturer ;
+        owl:disjointWith :Boeing ;
+        rdfs:comment "This class represents the aircraft manufacturing company Airbus." ;
+        rdfs:label "Airbus" .
+
+
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Aircraft
+:Aircraft rdf:type owl:Class ;
+          rdfs:subClassOf [ rdf:type owl:Restriction ;
+                            owl:onProperty :manufacturedBy ;
+                            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onClass :AircraftManufacturer
+                          ] ;
+          rdfs:comment "Airliner used to travel between airports. This class groups existing plane models." ;
+          rdfs:label "Airplane" ;
+          rdfs:sameAs "https://dbpedia.org/ontology/Aircraft" .
+
+
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#AircraftManufacturer
+:AircraftManufacturer rdf:type owl:Class ;
+                      rdfs:comment "Company that builds, tests and sells planes to the airlines. This class groups existing aircraft manufacturers." ;
+                      rdfs:label "AircraftManufacturer" .
+
+
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Airline
+:Airline rdf:type owl:Class ;
+         rdfs:comment "Company that operates airplanes covering flight routes. This class groups existing airlines." ;
+         rdfs:label "Airline" ;
+         rdfs:sameAs "https://dbpedia.org/ontology/Airline" .
+
+
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Airport
+:Airport rdf:type owl:Class ;
+         rdfs:comment "This class represents the place from which aircraft operate that usually has paved runways and maintenance facilities and often serves as a terminal." ;
+         rdfs:label "Airport" ;
+         rdfs:sameAs "https://dbpedia.org/ontology/Airport" .
+
+
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#BeveragesRating
+:BeveragesRating rdf:type owl:Class ;
+                 rdfs:subClassOf :SpecificRating ;
+                 rdfs:comment "This class represents the rating given to the beverages." ;
+                 rdfs:label "BeveragesRating" .
+
+
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Boeing
+:Boeing rdf:type owl:Class ;
+        rdfs:subClassOf :AircraftManufacturer ;
+        rdfs:comment "This class represents the aircraft manufacturing company Boeing." ;
+        rdfs:label "Boeing" .
+
+
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Boeing_777
+:Boeing_777 rdf:type owl:Class ;
+            rdfs:subClassOf :Aircraft ;
+            rdfs:comment "This class represents the Boeing-777 plane model by Boeing." ;
+            rdfs:label "Boeing_777" .
+
+
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Boeing_787
+:Boeing_787 rdf:type owl:Class ;
+            rdfs:subClassOf :Aircraft ;
+            rdfs:comment "This class represents the Boeing-787 plane model by Boeing." ;
+            rdfs:label "Boeing_787" .
+
+
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Business
+:Business rdf:type owl:Class ;
+          rdfs:subClassOf :TravellerType ;
+          owl:disjointWith :Leisure ;
+          rdfs:comment "This class represents those travel motivations related with business." ;
+          rdfs:label "Business" .
+
+
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#BusinessClass
+:BusinessClass rdf:type owl:Class ;
+               rdfs:subClassOf :SeatType ;
+               rdfs:comment "This class represents the Business Class seat type." ;
+               rdfs:label "BusinessClass" .
+
+
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#CabinStaffServiceRating
+:CabinStaffServiceRating rdf:type owl:Class ;
+                         rdfs:subClassOf :SpecificRating ;
+                         rdfs:comment "This class represents the rating given to the cabin staff service." ;
+                         rdfs:label "CabinStaffServiceRating" .
+
+
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Country
+:Country rdf:type owl:Class ;
+         rdfs:subClassOf owl:Thing ;
+         rdfs:comment "This class represents existing countries." ;
+         rdfs:label "Country" ;
+         rdfs:sameAs "https://dbpedia.org/ontology/Country" .
+
+
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#CoupleLeisure
+:CoupleLeisure rdf:type owl:Class ;
+               rdfs:subClassOf :Leisure ;
+               rdfs:comment "This class represents those travel motivations related with couple leisure." ;
+               rdfs:label "CoupleLeisure" .
+
+
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#DissatisfiedSurvey
+:DissatisfiedSurvey rdf:type owl:Class ;
+                    rdfs:subClassOf :SatisfactionSurvey ;
+                    rdfs:comment "This class represents satisfaction surveys where the client is dissatisfied with the experience." ;
+                    rdfs:label "DissatisfiedSurvey" .
+
+
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#EconomyClass
+:EconomyClass rdf:type owl:Class ;
+              rdfs:subClassOf :SeatType ;
+              rdfs:comment "This class represents the Economy Class seat type." ;
+              rdfs:label "EconomyClass" .
+
+
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#FamilyLeisure
+:FamilyLeisure rdf:type owl:Class ;
+               rdfs:subClassOf :Leisure ;
+               rdfs:comment "This class represents those travel motivations related with family leisure." ;
+               rdfs:label "FamilyLeisure" .
+
+
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#FirstClass
+:FirstClass rdf:type owl:Class ;
+            rdfs:subClassOf :SeatType ;
+            rdfs:comment "This class represents the First Class seat type." ;
+            rdfs:label "FirstClass" .
+
+
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Flight
+:Flight rdf:type owl:Class ;
+        rdfs:comment "This class represents a designated route followed by a specific airplane in flying from one airport to another, on a specific date." ;
+        rdfs:label "Flight" .
+
+
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#FoodRating
+:FoodRating rdf:type owl:Class ;
+            rdfs:subClassOf :SpecificRating ;
+            rdfs:comment "This class represents the rating given to the food." ;
+            rdfs:label "FoodRating" .
+
+
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#GroundServiceRating
+:GroundServiceRating rdf:type owl:Class ;
+                     rdfs:subClassOf :SpecificRating ;
+                     rdfs:comment "This class represents the rating given to the ground staff service." ;
+                     rdfs:label "GroundServiceRating" .
+
+
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#InflightEntertainmentRating
+:InflightEntertainmentRating rdf:type owl:Class ;
+                             rdfs:subClassOf :SpecificRating ;
+                             rdfs:comment "This class represents the rating given to the inflight entertainment service." ;
+                             rdfs:label "InflightEntertainmentRating" .
+
+
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Leisure
+:Leisure rdf:type owl:Class ;
+         rdfs:subClassOf :TravellerType ;
+         rdfs:comment "This class groups those travel motivations related with leisure." ;
+         rdfs:label "Leisure" .
+
+
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#NeutralSurvey
+:NeutralSurvey rdf:type owl:Class ;
+               rdfs:subClassOf :SatisfactionSurvey ;
+               rdfs:comment "This class represents satisfaction surveys where the client is neutral regarding the experience." ;
+               rdfs:label "NeutralSurvey" .
+
+
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#OverallRating
+:OverallRating rdf:type owl:Class ;
+               rdfs:subClassOf :Rating ;
+               owl:disjointWith :SpecificRating ;
+               rdfs:comment "This class represents a global rating given for the complete experience." ;
+               rdfs:label "OverallRating" .
+
+
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Passenger
+:Passenger rdf:type owl:Class ;
+           owl:equivalentClass [ owl:intersectionOf ( :Person
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty :takes ;
+                                                        owl:someValuesFrom :Flight
+                                                      ]
+                                                    ) ;
+                                 rdf:type owl:Class
+                               ] ;
+           rdfs:subClassOf :Person ;
+           rdfs:comment "This class represents a Person who has flown at least once." ;
+           rdfs:label "Passenger" .
+
+
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Person
+:Person rdf:type owl:Class ;
+        rdfs:comment "This class represents a specific individual that might be a passenger." ;
+        rdfs:label "Person" ;
+        rdfs:sameAs "https://dbpedia.org/ontology/Person" .
+
+
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#PremiumEconomy
+:PremiumEconomy rdf:type owl:Class ;
+                rdfs:subClassOf :SeatType ;
+                rdfs:comment "This class represents the Premium Economy seat type." ;
+                rdfs:label "PremiumEconomy" .
+
+
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Qatar_Airways
+:Qatar_Airways rdf:type owl:Class ;
+               rdfs:subClassOf :Airline ;
+               owl:disjointWith :Ryanair ;
+               rdfs:comment "This class represents the Qatar Airways airline." ;
+               rdfs:label "Qatar_Airways" .
+
+
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Rating
+:Rating rdf:type owl:Class ;
+        owl:equivalentClass [ rdf:type owl:Restriction ;
+                              owl:onProperty :ratingScore ;
+                              owl:someValuesFrom xsd:int
+                            ] ;
+        rdfs:comment "This class represents a given rating from 0 to 10 to evaluate aspects of an experience." ;
+        rdfs:label "Rating" .
+
+
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Ryanair
+:Ryanair rdf:type owl:Class ;
+         rdfs:subClassOf :Airline ;
+         rdfs:comment "This class represents the Ryanair airline." ;
+         rdfs:label "Ryanair" .
+
+
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#SatisfactionSurvey
+:SatisfactionSurvey rdf:type owl:Class ;
+                    rdfs:subClassOf :Survey ;
+                    rdfs:comment "Marketing instrument used by businesses to determine clients' level of satisfaction with a brand. This class represents the satisfaction surveys completed by clients." ;
+                    rdfs:label "SatisfactionSurvey" .
+
+
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#SatisfiedSurvey
+:SatisfiedSurvey rdf:type owl:Class ;
+                 rdfs:subClassOf :SatisfactionSurvey ;
+                 rdfs:comment "This class represents satisfaction surveys where the client is satisfied with the experience." ;
+                 rdfs:label "SatisfiedSurvey" .
+
+
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#SeatComfortRating
+:SeatComfortRating rdf:type owl:Class ;
+                   rdfs:subClassOf :SpecificRating ;
+                   rdfs:comment "This class represents the rating given to the seat comfort." ;
+                   rdfs:label "SeatComfortRating" .
+
+
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#SeatType
+:SeatType rdf:type owl:Class ;
+          rdfs:comment "This class groups the existing seat types on any airplane." ;
+          rdfs:label "SeatType" .
+
+
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#SoloLeisure
+:SoloLeisure rdf:type owl:Class ;
+             rdfs:subClassOf :Leisure ;
+             rdfs:comment "This class represents those travel motivations related with solo leisure." ;
+             rdfs:label "SoloLeisure" .
+
+
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#SpecificRating
+:SpecificRating rdf:type owl:Class ;
+                rdfs:subClassOf :Rating ;
+                rdfs:comment "This class represents a specific rating given for some specific parts of the experience." ;
+                rdfs:label "SpecificRating" .
+
+
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Survey
+:Survey rdf:type owl:Class ;
+        rdfs:comment "Marketing instrument used by businesses to engourage clients' to express their opinions on a specific brand. This class groups existing survey types. At the moment only the satisfaction surveys are contemplated." ;
+        rdfs:label "Survey" .
+
+
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#TravellerType
+:TravellerType rdf:type owl:Class ;
+               rdfs:comment "This class groups different travel motivations." ;
+               rdfs:label "TravellerType" .
+
+
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#ValueForMoneyRating
+:ValueForMoneyRating rdf:type owl:Class ;
+                     rdfs:subClassOf :SpecificRating ;
+                     rdfs:comment "This class represents the rating given to the Value-for-Money ratio of the experience." ;
+                     rdfs:label "ValueForMoneyRating" .
+
+
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#VeryDissatisfiedSurvey
+:VeryDissatisfiedSurvey rdf:type owl:Class ;
+                        rdfs:subClassOf :SatisfactionSurvey ;
+                        rdfs:comment "This class represents satisfaction surveys where the client is deeply dissatisfied with the experience." ;
+                        rdfs:label "VeryDissatisfiedSurvey" .
+
+
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#VerySatisfiedSurvey
+:VerySatisfiedSurvey rdf:type owl:Class ;
+                     rdfs:subClassOf :SatisfactionSurvey ;
+                     rdfs:comment "This class represents satisfaction surveys where the client is very satisfied with the experience." ;
+                     rdfs:label "VerySatisfiedSurvey" .
+
+
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#WifiConnectivityRating
+:WifiConnectivityRating rdf:type owl:Class ;
+                        rdfs:subClassOf :SpecificRating ;
+                        rdfs:comment "This class represents the rating given to the Wifi service." ;
+                        rdfs:label "WifiConnectivityRating" .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#AircraftManufacturer_Airbus
+:AircraftManufacturer_Airbus rdf:type owl:NamedIndividual ,
+                                      :Airbus ;
+                             :manufacturerName "Airbus" .
+
+
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#AircraftManufacturer_Boeing
+:AircraftManufacturer_Boeing rdf:type owl:NamedIndividual ,
+                                      :Boeing ;
+                             :manufacturerName "Boeing" .
+
+
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Airline_1
+:Airline_1 rdf:type owl:NamedIndividual ,
+                    :Airline ;
+           :airlineName "Airline 1" .
+
+
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Airplane_A7-AJN
+:Airplane_A7-AJN rdf:type owl:NamedIndividual ,
+                          :A380_800 ;
+                 :aircraftCode "A7-AJN" .
+
+
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Airplane_A8-GTR
+:Airplane_A8-GTR rdf:type owl:NamedIndividual ,
+                          :Aircraft ;
+                 :manufacturedBy :AircraftManufacturer_Airbus ;
+                 :aircraftCode "A8-GTR" .
+
+
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Airplane_B7-MLG
+:Airplane_B7-MLG rdf:type owl:NamedIndividual ,
+                          :Boeing_777 ;
+                 :covers :Flight_QA4563 ;
+                 :operatedBy :Airline_1 ;
+                 :aircraftCode "B7-MLG" .
+
+
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Airport_Barcelona
+:Airport_Barcelona rdf:type owl:NamedIndividual ,
+                            :Airport ;
+                   :locatedIn :Country_Spain ;
+                   :airportCode "BCN" ;
+                   :airportName "Barcelona Airport" .
+
+
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Airport_London_Stansted
+:Airport_London_Stansted rdf:type owl:NamedIndividual ,
+                                  :Airport ;
+                         :locatedIn :Country_United_Kingdom ;
+                         :airportCode "LST" ;
+                         :airportName "London Stansted Airport" .
+
+
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Airport_Malaga
+:Airport_Malaga rdf:type owl:NamedIndividual ,
+                         :Airport ;
+                :airportCode "MLG" ;
+                :airportName "Malaga Airport" .
+
+
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Country_Spain
+:Country_Spain rdf:type owl:NamedIndividual ,
+                        :Country ;
+               :countryName "Spain" .
+
+
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Country_United_Kingdom
+:Country_United_Kingdom rdf:type owl:NamedIndividual ,
+                                 :Country ;
+                        :countryName "United Kingdom" .
+
+
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Flight_QA4563
+:Flight_QA4563 rdf:type owl:NamedIndividual ,
+                        :Flight ;
+               :arrivesTo :Airport_London_Stansted ;
+               :departsFrom :Airport_Barcelona ;
+               :flightCode "QA4563" ;
+               :flightDate "2024-01-09T14:00:00"^^xsd:dateTime .
+
+
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Person_Mary_Le
+:Person_Mary_Le rdf:type owl:NamedIndividual ,
+                         :Person ;
+                :livesIn :Country_United_Kingdom ;
+                :takes :Flight_QA4563 ;
+                :personName "Mary Le" .
+
+
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Person_Nestor_Carreno_Gimeno
+:Person_Nestor_Carreno_Gimeno rdf:type owl:NamedIndividual ,
+                                       :Person ;
+                              :livesIn :Country_Spain ;
+                              :takes :Flight_QA4563 ;
+                              :personName "Nestor Carreno Gimeno" ;
+                              :personPassportCode "56879054C" .
+
+
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Rating_1
+:Rating_1 rdf:type owl:NamedIndividual ,
+                   :OverallRating ;
+          :ratingScore "10"^^xsd:int .
+
+
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Rating_2
+:Rating_2 rdf:type owl:NamedIndividual ,
+                   :OverallRating ;
+          :ratingScore "3"^^xsd:int .
+
+
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#SatisfactionSurvey_1
+:SatisfactionSurvey_1 rdf:type owl:NamedIndividual ,
+                               :SatisfactionSurvey ;
+                      :explainsExperienceOf :TravellerType_FamilyLeisure ;
+                      :exposes :Rating_1 ;
+                      :isCompletedBy :Person_Nestor_Carreno_Gimeno ;
+                      :isEvaluating :SeatType_EconomyClass ;
+                      :rates :Flight_QA4563 ;
+                      :surveyCommentBody "The flight was on time. Everything perfect." ;
+                      :surveyCommentTitle "Very happy with the service." ;
+                      :surveyIdentifier "1"^^xsd:int ;
+                      :surveyPublicationDate "2024-02-23T16:30:47"^^xsd:dateTime .
+
+
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#SatisfactionSurvey_2
+:SatisfactionSurvey_2 rdf:type owl:NamedIndividual ,
+                               :SatisfactionSurvey ;
+                      :explainsExperienceOf :TravellerType_Business ;
+                      :exposes :Rating_2 ;
+                      :isCompletedBy :Person_Mary_Le ;
+                      :isEvaluating :SeatType_EconomyClass ;
+                      :rates :Flight_QA4563 ;
+                      :surveyCommentBody "The delay of my flight from Haneda to Doha caused a bit of chaos upon arrival. Despite my efforts to reach the gate promptly, I was denied boarding due to luggage issues, and the lack of assistance added to the frustration. I paid for an Economy Comfort package, which was supposed to include an aisle seat. However, upon boarding, I was informed that no aisle seats were available, despite assurances beforehand. Additionally, my luggage tag was lost during the boarding pass exchange, leading to further uncertainty upon arrival in London. What was meant to be a 19-hour journey turned into a 27-hour ordeal. When I requested assistance from staff regarding a re-arrangement they promised to get back to me within 5-10 minutes, but no one followed up until I reached out again. The security queue at Heathrow on departure from the UK was incredibly long, with a wait time of about 1.5 hours just to get through. Overall, while the crew onboard was courteous and provided great service, the experience was marred by these inconveniences." ;
+                      :surveyCommentTitle "Marred by inconveniences" ;
+                      :surveyIdentifier "2"^^xsd:int ;
+                      :surveyPublicationDate "2024-02-02T13:45:32"^^xsd:dateTime .
+
+
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#SeatType_EconomyClass
+:SeatType_EconomyClass rdf:type owl:NamedIndividual ,
+                                :EconomyClass .
+
+
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#TravellerType_Business
+:TravellerType_Business rdf:type owl:NamedIndividual ,
+                                 :Business .
+
+
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#TravellerType_FamilyLeisure
+:TravellerType_FamilyLeisure rdf:type owl:NamedIndividual ,
+                                      :FamilyLeisure .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :A350
+                :A350_1000
+                :A380
+                :A380_800
+                :Boeing_777
+                :Boeing_787
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :BeveragesRating
+                :CabinStaffServiceRating
+                :FoodRating
+                :GroundServiceRating
+                :InflightEntertainmentRating
+                :SeatComfortRating
+                :ValueForMoneyRating
+                :WifiConnectivityRating
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :BusinessClass
+                :EconomyClass
+                :FirstClass
+                :PremiumEconomy
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :CoupleLeisure
+                :FamilyLeisure
+                :SoloLeisure
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :DissatisfiedSurvey
+                :NeutralSurvey
+                :SatisfiedSurvey
+                :VeryDissatisfiedSurvey
+                :VerySatisfiedSurvey
+              )
+] .
+
+
+#################################################################
+#    Rules
+#################################################################
+
+<urn:swrl:var#b> rdf:type swrl:Variable .
+
+<urn:swrl:var#f> rdf:type swrl:Variable .
+
+<urn:swrl:var#a> rdf:type swrl:Variable .
+
+<urn:swrl:var#o> rdf:type swrl:Variable .
+
+<urn:swrl:var#s> rdf:type swrl:Variable .
+
+<urn:swrl:var#x> rdf:type swrl:Variable .
+
+<urn:swrl:var#r> rdf:type swrl:Variable .
+
+[ rdf:type swrl:Imp ;
+   swrl:body [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:ClassAtom ;
+                           swrl:classPredicate :SatisfactionSurvey ;
+                           swrl:argument1 <urn:swrl:var#s>
+                         ] ;
+               rdf:rest [ rdf:type swrl:AtomList ;
+                          rdf:first [ rdf:type swrl:BuiltinAtom ;
+                                      swrl:builtin swrlb:lessThanOrEqual ;
+                                      swrl:arguments [ rdf:type rdf:List ;
+                                                       rdf:first <urn:swrl:var#x> ;
+                                                       rdf:rest [ rdf:type rdf:List ;
+                                                                  rdf:first 6 ;
+                                                                  rdf:rest rdf:nil
+                                                                ]
+                                                     ]
+                                    ] ;
+                          rdf:rest [ rdf:type swrl:AtomList ;
+                                     rdf:first [ rdf:type swrl:BuiltinAtom ;
+                                                 swrl:builtin swrlb:greaterThan ;
+                                                 swrl:arguments [ rdf:type rdf:List ;
+                                                                  rdf:first <urn:swrl:var#x> ;
+                                                                  rdf:rest [ rdf:type rdf:List ;
+                                                                             rdf:first 4 ;
+                                                                             rdf:rest rdf:nil
+                                                                           ]
+                                                                ]
+                                               ] ;
+                                     rdf:rest [ rdf:type swrl:AtomList ;
+                                                rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                                            swrl:propertyPredicate :exposes ;
+                                                            swrl:argument1 <urn:swrl:var#s> ;
+                                                            swrl:argument2 <urn:swrl:var#r>
+                                                          ] ;
+                                                rdf:rest [ rdf:type swrl:AtomList ;
+                                                           rdf:first [ rdf:type swrl:DatavaluedPropertyAtom ;
+                                                                       swrl:propertyPredicate :ratingScore ;
+                                                                       swrl:argument1 <urn:swrl:var#r> ;
+                                                                       swrl:argument2 <urn:swrl:var#x>
+                                                                     ] ;
+                                                           rdf:rest rdf:nil
+                                                         ]
+                                              ]
+                                   ]
+                        ]
+             ] ;
+   swrl:head [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:ClassAtom ;
+                           swrl:classPredicate :NeutralSurvey ;
+                           swrl:argument1 <urn:swrl:var#s>
+                         ] ;
+               rdf:rest rdf:nil
+             ]
+ ] .
+
+[ rdf:type swrl:Imp ;
+   swrl:body [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:ClassAtom ;
+                           swrl:classPredicate :SatisfactionSurvey ;
+                           swrl:argument1 <urn:swrl:var#s>
+                         ] ;
+               rdf:rest [ rdf:type swrl:AtomList ;
+                          rdf:first [ rdf:type swrl:BuiltinAtom ;
+                                      swrl:builtin swrlb:lessThanOrEqual ;
+                                      swrl:arguments [ rdf:type rdf:List ;
+                                                       rdf:first <urn:swrl:var#x> ;
+                                                       rdf:rest [ rdf:type rdf:List ;
+                                                                  rdf:first 8 ;
+                                                                  rdf:rest rdf:nil
+                                                                ]
+                                                     ]
+                                    ] ;
+                          rdf:rest [ rdf:type swrl:AtomList ;
+                                     rdf:first [ rdf:type swrl:BuiltinAtom ;
+                                                 swrl:builtin swrlb:greaterThan ;
+                                                 swrl:arguments [ rdf:type rdf:List ;
+                                                                  rdf:first <urn:swrl:var#x> ;
+                                                                  rdf:rest [ rdf:type rdf:List ;
+                                                                             rdf:first 6 ;
+                                                                             rdf:rest rdf:nil
+                                                                           ]
+                                                                ]
+                                               ] ;
+                                     rdf:rest [ rdf:type swrl:AtomList ;
+                                                rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                                            swrl:propertyPredicate :exposes ;
+                                                            swrl:argument1 <urn:swrl:var#s> ;
+                                                            swrl:argument2 <urn:swrl:var#r>
+                                                          ] ;
+                                                rdf:rest [ rdf:type swrl:AtomList ;
+                                                           rdf:first [ rdf:type swrl:DatavaluedPropertyAtom ;
+                                                                       swrl:propertyPredicate :ratingScore ;
+                                                                       swrl:argument1 <urn:swrl:var#r> ;
+                                                                       swrl:argument2 <urn:swrl:var#x>
+                                                                     ] ;
+                                                           rdf:rest rdf:nil
+                                                         ]
+                                              ]
+                                   ]
+                        ]
+             ] ;
+   swrl:head [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:ClassAtom ;
+                           swrl:classPredicate :SatisfiedSurvey ;
+                           swrl:argument1 <urn:swrl:var#s>
+                         ] ;
+               rdf:rest rdf:nil
+             ]
+ ] .
+
+[ rdf:type swrl:Imp ;
+   swrl:body [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:ClassAtom ;
+                           swrl:classPredicate :SatisfactionSurvey ;
+                           swrl:argument1 <urn:swrl:var#s>
+                         ] ;
+               rdf:rest [ rdf:type swrl:AtomList ;
+                          rdf:first [ rdf:type swrl:BuiltinAtom ;
+                                      swrl:builtin swrlb:greaterThan ;
+                                      swrl:arguments [ rdf:type rdf:List ;
+                                                       rdf:first <urn:swrl:var#x> ;
+                                                       rdf:rest [ rdf:type rdf:List ;
+                                                                  rdf:first 8 ;
+                                                                  rdf:rest rdf:nil
+                                                                ]
+                                                     ]
+                                    ] ;
+                          rdf:rest [ rdf:type swrl:AtomList ;
+                                     rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                                 swrl:propertyPredicate :exposes ;
+                                                 swrl:argument1 <urn:swrl:var#s> ;
+                                                 swrl:argument2 <urn:swrl:var#r>
+                                               ] ;
+                                     rdf:rest [ rdf:type swrl:AtomList ;
+                                                rdf:first [ rdf:type swrl:DatavaluedPropertyAtom ;
+                                                            swrl:propertyPredicate :ratingScore ;
+                                                            swrl:argument1 <urn:swrl:var#r> ;
+                                                            swrl:argument2 <urn:swrl:var#x>
+                                                          ] ;
+                                                rdf:rest [ rdf:type swrl:AtomList ;
+                                                           rdf:first [ rdf:type swrl:BuiltinAtom ;
+                                                                       swrl:builtin swrlb:lessThanOrEqual ;
+                                                                       swrl:arguments [ rdf:type rdf:List ;
+                                                                                        rdf:first <urn:swrl:var#x> ;
+                                                                                        rdf:rest [ rdf:type rdf:List ;
+                                                                                                   rdf:first 10 ;
+                                                                                                   rdf:rest rdf:nil
+                                                                                                 ]
+                                                                                      ]
+                                                                     ] ;
+                                                           rdf:rest rdf:nil
+                                                         ]
+                                              ]
+                                   ]
+                        ]
+             ] ;
+   swrl:head [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:ClassAtom ;
+                           swrl:classPredicate :VerySatisfiedSurvey ;
+                           swrl:argument1 <urn:swrl:var#s>
+                         ] ;
+               rdf:rest rdf:nil
+             ]
+ ] .
+
+[ rdf:type swrl:Imp ;
+   swrl:body [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:ClassAtom ;
+                           swrl:classPredicate :SatisfactionSurvey ;
+                           swrl:argument1 <urn:swrl:var#s>
+                         ] ;
+               rdf:rest [ rdf:type swrl:AtomList ;
+                          rdf:first [ rdf:type swrl:BuiltinAtom ;
+                                      swrl:builtin swrlb:lessThanOrEqual ;
+                                      swrl:arguments [ rdf:type rdf:List ;
+                                                       rdf:first <urn:swrl:var#x> ;
+                                                       rdf:rest [ rdf:type rdf:List ;
+                                                                  rdf:first 2 ;
+                                                                  rdf:rest rdf:nil
+                                                                ]
+                                                     ]
+                                    ] ;
+                          rdf:rest [ rdf:type swrl:AtomList ;
+                                     rdf:first [ rdf:type swrl:BuiltinAtom ;
+                                                 swrl:builtin swrlb:greaterThanOrEqual ;
+                                                 swrl:arguments [ rdf:type rdf:List ;
+                                                                  rdf:first <urn:swrl:var#x> ;
+                                                                  rdf:rest [ rdf:type rdf:List ;
+                                                                             rdf:first 0 ;
+                                                                             rdf:rest rdf:nil
+                                                                           ]
+                                                                ]
+                                               ] ;
+                                     rdf:rest [ rdf:type swrl:AtomList ;
+                                                rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                                            swrl:propertyPredicate :exposes ;
+                                                            swrl:argument1 <urn:swrl:var#s> ;
+                                                            swrl:argument2 <urn:swrl:var#r>
+                                                          ] ;
+                                                rdf:rest [ rdf:type swrl:AtomList ;
+                                                           rdf:first [ rdf:type swrl:DatavaluedPropertyAtom ;
+                                                                       swrl:propertyPredicate :ratingScore ;
+                                                                       swrl:argument1 <urn:swrl:var#r> ;
+                                                                       swrl:argument2 <urn:swrl:var#x>
+                                                                     ] ;
+                                                           rdf:rest rdf:nil
+                                                         ]
+                                              ]
+                                   ]
+                        ]
+             ] ;
+   swrl:head [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:ClassAtom ;
+                           swrl:classPredicate :VeryDissatisfiedSurvey ;
+                           swrl:argument1 <urn:swrl:var#s>
+                         ] ;
+               rdf:rest rdf:nil
+             ]
+ ] .
+
+[ rdf:type swrl:Imp ;
+   swrl:body [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:ClassAtom ;
+                           swrl:classPredicate :A350 ;
+                           swrl:argument1 <urn:swrl:var#b>
+                         ] ;
+               rdf:rest rdf:nil
+             ] ;
+   swrl:head [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                           swrl:propertyPredicate :manufacturedBy ;
+                           swrl:argument1 <urn:swrl:var#b> ;
+                           swrl:argument2 :AircraftManufacturer_Airbus
+                         ] ;
+               rdf:rest rdf:nil
+             ]
+ ] .
+
+[ rdf:type swrl:Imp ;
+   swrl:body [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:ClassAtom ;
+                           swrl:classPredicate :A350_1000 ;
+                           swrl:argument1 <urn:swrl:var#b>
+                         ] ;
+               rdf:rest rdf:nil
+             ] ;
+   swrl:head [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                           swrl:propertyPredicate :manufacturedBy ;
+                           swrl:argument1 <urn:swrl:var#b> ;
+                           swrl:argument2 :AircraftManufacturer_Airbus
+                         ] ;
+               rdf:rest rdf:nil
+             ]
+ ] .
+
+[ rdf:type swrl:Imp ;
+   swrl:body [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:ClassAtom ;
+                           swrl:classPredicate :A380 ;
+                           swrl:argument1 <urn:swrl:var#b>
+                         ] ;
+               rdf:rest rdf:nil
+             ] ;
+   swrl:head [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                           swrl:propertyPredicate :manufacturedBy ;
+                           swrl:argument1 <urn:swrl:var#b> ;
+                           swrl:argument2 :AircraftManufacturer_Airbus
+                         ] ;
+               rdf:rest rdf:nil
+             ]
+ ] .
+
+[ rdf:type swrl:Imp ;
+   swrl:body [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:ClassAtom ;
+                           swrl:classPredicate :A380_800 ;
+                           swrl:argument1 <urn:swrl:var#b>
+                         ] ;
+               rdf:rest rdf:nil
+             ] ;
+   swrl:head [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                           swrl:propertyPredicate :manufacturedBy ;
+                           swrl:argument1 <urn:swrl:var#b> ;
+                           swrl:argument2 :AircraftManufacturer_Airbus
+                         ] ;
+               rdf:rest rdf:nil
+             ]
+ ] .
+
+[ rdf:type swrl:Imp ;
+   swrl:body [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:ClassAtom ;
+                           swrl:classPredicate :Boeing_777 ;
+                           swrl:argument1 <urn:swrl:var#b>
+                         ] ;
+               rdf:rest rdf:nil
+             ] ;
+   swrl:head [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                           swrl:propertyPredicate :manufacturedBy ;
+                           swrl:argument1 <urn:swrl:var#b> ;
+                           swrl:argument2 :AircraftManufacturer_Boeing
+                         ] ;
+               rdf:rest rdf:nil
+             ]
+ ] .
+
+[ rdf:type swrl:Imp ;
+   swrl:body [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:ClassAtom ;
+                           swrl:classPredicate :Boeing_787 ;
+                           swrl:argument1 <urn:swrl:var#b>
+                         ] ;
+               rdf:rest rdf:nil
+             ] ;
+   swrl:head [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                           swrl:propertyPredicate :manufacturedBy ;
+                           swrl:argument1 <urn:swrl:var#b> ;
+                           swrl:argument2 :AircraftManufacturer_Boeing
+                         ] ;
+               rdf:rest rdf:nil
+             ]
+ ] .
+
+[ rdf:type swrl:Imp ;
+   swrl:body [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:ClassAtom ;
+                           swrl:classPredicate :Flight ;
+                           swrl:argument1 <urn:swrl:var#f>
+                         ] ;
+               rdf:rest [ rdf:type swrl:AtomList ;
+                          rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                      swrl:propertyPredicate :coveredBy ;
+                                      swrl:argument1 <urn:swrl:var#f> ;
+                                      swrl:argument2 <urn:swrl:var#a>
+                                    ] ;
+                          rdf:rest [ rdf:type swrl:AtomList ;
+                                     rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                                 swrl:propertyPredicate :departsFrom ;
+                                                 swrl:argument1 <urn:swrl:var#f> ;
+                                                 swrl:argument2 :Airport_Barcelona
+                                               ] ;
+                                     rdf:rest [ rdf:type swrl:AtomList ;
+                                                rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                                            swrl:propertyPredicate :arrivesTo ;
+                                                            swrl:argument1 <urn:swrl:var#f> ;
+                                                            swrl:argument2 :Airport_London_Stansted
+                                                          ] ;
+                                                rdf:rest [ rdf:type swrl:AtomList ;
+                                                           rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                                                       swrl:propertyPredicate :operatedBy ;
+                                                                       swrl:argument1 <urn:swrl:var#a> ;
+                                                                       swrl:argument2 <urn:swrl:var#o>
+                                                                     ] ;
+                                                           rdf:rest rdf:nil
+                                                         ]
+                                              ]
+                                   ]
+                        ]
+             ] ;
+   swrl:head [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:ClassAtom ;
+                           swrl:classPredicate :Ryanair ;
+                           swrl:argument1 <urn:swrl:var#o>
+                         ] ;
+               rdf:rest rdf:nil
+             ]
+ ] .
+
+[ rdf:type swrl:Imp ;
+   swrl:body [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:ClassAtom ;
+                           swrl:classPredicate :SatisfactionSurvey ;
+                           swrl:argument1 <urn:swrl:var#s>
+                         ] ;
+               rdf:rest [ rdf:type swrl:AtomList ;
+                          rdf:first [ rdf:type swrl:BuiltinAtom ;
+                                      swrl:builtin swrlb:lessThanOrEqual ;
+                                      swrl:arguments [ rdf:type rdf:List ;
+                                                       rdf:first <urn:swrl:var#x> ;
+                                                       rdf:rest [ rdf:type rdf:List ;
+                                                                  rdf:first 4 ;
+                                                                  rdf:rest rdf:nil
+                                                                ]
+                                                     ]
+                                    ] ;
+                          rdf:rest [ rdf:type swrl:AtomList ;
+                                     rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                                 swrl:propertyPredicate :exposes ;
+                                                 swrl:argument1 <urn:swrl:var#s> ;
+                                                 swrl:argument2 <urn:swrl:var#r>
+                                               ] ;
+                                     rdf:rest [ rdf:type swrl:AtomList ;
+                                                rdf:first [ rdf:type swrl:DatavaluedPropertyAtom ;
+                                                            swrl:propertyPredicate :ratingScore ;
+                                                            swrl:argument1 <urn:swrl:var#r> ;
+                                                            swrl:argument2 <urn:swrl:var#x>
+                                                          ] ;
+                                                rdf:rest [ rdf:type swrl:AtomList ;
+                                                           rdf:first [ rdf:type swrl:BuiltinAtom ;
+                                                                       swrl:builtin swrlb:greaterThan ;
+                                                                       swrl:arguments [ rdf:type rdf:List ;
+                                                                                        rdf:first <urn:swrl:var#x> ;
+                                                                                        rdf:rest [ rdf:type rdf:List ;
+                                                                                                   rdf:first 2 ;
+                                                                                                   rdf:rest rdf:nil
+                                                                                                 ]
+                                                                                      ]
+                                                                     ] ;
+                                                           rdf:rest rdf:nil
+                                                         ]
+                                              ]
+                                   ]
+                        ]
+             ] ;
+   swrl:head [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:ClassAtom ;
+                           swrl:classPredicate :DissatisfiedSurvey ;
+                           swrl:argument1 <urn:swrl:var#s>
+                         ] ;
+               rdf:rest rdf:nil
+             ]
+ ] .
+
+###  Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi
