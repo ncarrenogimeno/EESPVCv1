@@ -18,7 +18,7 @@
     "@id" : "urn:swrl:var#s"
   } ],
   "http://www.w3.org/2003/11/swrl#classPredicate" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SatisfactionSurvey"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#SatisfactionSurvey"
   } ]
 }, {
   "@id" : "_:genid102",
@@ -27,7 +27,7 @@
     "@id" : "urn:swrl:var#s"
   } ],
   "http://www.w3.org/2003/11/swrl#classPredicate" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/VeryDissatisfiedSurvey"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#VeryDissatisfiedSurvey"
   } ]
 }, {
   "@id" : "_:genid103",
@@ -74,13 +74,13 @@
     "@id" : "urn:swrl:var#x"
   } ],
   "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/ratingScore"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#ratingScore"
   } ]
 }, {
   "@id" : "_:genid11",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/ratingScore"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#ratingScore"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#int"
@@ -95,7 +95,7 @@
     "@id" : "urn:swrl:var#r"
   } ],
   "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/exposes"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#exposes"
   } ]
 }, {
   "@id" : "_:genid113",
@@ -118,7 +118,7 @@
     "@id" : "urn:swrl:var#s"
   } ],
   "http://www.w3.org/2003/11/swrl#classPredicate" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SatisfactionSurvey"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#SatisfactionSurvey"
   } ]
 }, {
   "@id" : "_:genid119",
@@ -127,24 +127,24 @@
     "@id" : "urn:swrl:var#s"
   } ],
   "http://www.w3.org/2003/11/swrl#classPredicate" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/DissatisfiedSurvey"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#DissatisfiedSurvey"
   } ]
 }, {
   "@id" : "_:genid12",
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
-      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/A350"
+      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#A350"
     }, {
-      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/A350_1000"
+      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#A350_1000"
     }, {
-      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/A380"
+      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#A380"
     }, {
-      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/A380_800"
+      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#A380_800"
     }, {
-      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Boeing_777"
+      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Boeing_777"
     }, {
-      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Boeing_787"
+      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Boeing_787"
     } ]
   } ]
 }, {
@@ -178,7 +178,7 @@
     "@id" : "urn:swrl:var#x"
   } ],
   "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/ratingScore"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#ratingScore"
   } ]
 }, {
   "@id" : "_:genid124",
@@ -190,7 +190,7 @@
     "@id" : "urn:swrl:var#r"
   } ],
   "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/exposes"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#exposes"
   } ]
 }, {
   "@id" : "_:genid126",
@@ -227,7 +227,7 @@
     "@id" : "urn:swrl:var#s"
   } ],
   "http://www.w3.org/2003/11/swrl#classPredicate" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SatisfactionSurvey"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#SatisfactionSurvey"
   } ]
 }, {
   "@id" : "_:genid136",
@@ -236,7 +236,7 @@
     "@id" : "urn:swrl:var#s"
   } ],
   "http://www.w3.org/2003/11/swrl#classPredicate" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/NeutralSurvey"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#NeutralSurvey"
   } ]
 }, {
   "@id" : "_:genid137",
@@ -283,7 +283,7 @@
     "@id" : "urn:swrl:var#x"
   } ],
   "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/ratingScore"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#ratingScore"
   } ]
 }, {
   "@id" : "_:genid145",
@@ -295,7 +295,7 @@
     "@id" : "urn:swrl:var#r"
   } ],
   "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/exposes"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#exposes"
   } ]
 }, {
   "@id" : "_:genid147",
@@ -318,7 +318,7 @@
     "@id" : "urn:swrl:var#s"
   } ],
   "http://www.w3.org/2003/11/swrl#classPredicate" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SatisfactionSurvey"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#SatisfactionSurvey"
   } ]
 }, {
   "@id" : "_:genid153",
@@ -327,7 +327,7 @@
     "@id" : "urn:swrl:var#s"
   } ],
   "http://www.w3.org/2003/11/swrl#classPredicate" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/VerySatisfiedSurvey"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#VerySatisfiedSurvey"
   } ]
 }, {
   "@id" : "_:genid154",
@@ -360,7 +360,7 @@
     "@id" : "urn:swrl:var#x"
   } ],
   "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/ratingScore"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#ratingScore"
   } ]
 }, {
   "@id" : "_:genid158",
@@ -372,7 +372,7 @@
     "@id" : "urn:swrl:var#r"
   } ],
   "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/exposes"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#exposes"
   } ]
 }, {
   "@id" : "_:genid160",
@@ -409,7 +409,7 @@
     "@id" : "urn:swrl:var#s"
   } ],
   "http://www.w3.org/2003/11/swrl#classPredicate" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SatisfactionSurvey"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#SatisfactionSurvey"
   } ]
 }, {
   "@id" : "_:genid170",
@@ -418,28 +418,28 @@
     "@id" : "urn:swrl:var#s"
   } ],
   "http://www.w3.org/2003/11/swrl#classPredicate" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SatisfiedSurvey"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#SatisfiedSurvey"
   } ]
 }, {
   "@id" : "_:genid19",
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
-      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/BeveragesRating"
+      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#BeveragesRating"
     }, {
-      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/CabinStaffServiceRating"
+      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#CabinStaffServiceRating"
     }, {
-      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/FoodRating"
+      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#FoodRating"
     }, {
-      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/GroundServiceRating"
+      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#GroundServiceRating"
     }, {
-      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/InflightEntertainmentRating"
+      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#InflightEntertainmentRating"
     }, {
-      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SeatComfortRating"
+      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#SeatComfortRating"
     }, {
-      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/ValueForMoneyRating"
+      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#ValueForMoneyRating"
     }, {
-      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/WifiConnectivityRating"
+      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#WifiConnectivityRating"
     } ]
   } ]
 }, {
@@ -447,13 +447,13 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
-      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/BusinessClass"
+      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#BusinessClass"
     }, {
-      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/EconomyClass"
+      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#EconomyClass"
     }, {
-      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/FirstClass"
+      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#FirstClass"
     }, {
-      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/PremiumEconomy"
+      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#PremiumEconomy"
     } ]
   } ]
 }, {
@@ -467,11 +467,11 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
-      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/CoupleLeisure"
+      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#CoupleLeisure"
     }, {
-      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/FamilyLeisure"
+      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#FamilyLeisure"
     }, {
-      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SoloLeisure"
+      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#SoloLeisure"
     } ]
   } ]
 }, {
@@ -479,15 +479,15 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
-      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/DissatisfiedSurvey"
+      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#DissatisfiedSurvey"
     }, {
-      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/NeutralSurvey"
+      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#NeutralSurvey"
     }, {
-      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SatisfiedSurvey"
+      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#SatisfiedSurvey"
     }, {
-      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/VeryDissatisfiedSurvey"
+      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#VeryDissatisfiedSurvey"
     }, {
-      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/VerySatisfiedSurvey"
+      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#VerySatisfiedSurvey"
     } ]
   } ]
 }, {
@@ -510,7 +510,7 @@
     "@id" : "urn:swrl:var#b"
   } ],
   "http://www.w3.org/2003/11/swrl#classPredicate" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/A350"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#A350"
   } ]
 }, {
   "@id" : "_:genid47",
@@ -519,10 +519,10 @@
     "@id" : "urn:swrl:var#b"
   } ],
   "http://www.w3.org/2003/11/swrl#argument2" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/AircraftManufacturer_Airbus"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#AircraftManufacturer_Airbus"
   } ],
   "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/manufacturedBy"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#manufacturedBy"
   } ]
 }, {
   "@id" : "_:genid48",
@@ -550,7 +550,7 @@
     "@id" : "urn:swrl:var#b"
   } ],
   "http://www.w3.org/2003/11/swrl#classPredicate" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/A350_1000"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#A350_1000"
   } ]
 }, {
   "@id" : "_:genid52",
@@ -559,10 +559,10 @@
     "@id" : "urn:swrl:var#b"
   } ],
   "http://www.w3.org/2003/11/swrl#argument2" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/AircraftManufacturer_Airbus"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#AircraftManufacturer_Airbus"
   } ],
   "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/manufacturedBy"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#manufacturedBy"
   } ]
 }, {
   "@id" : "_:genid53",
@@ -584,7 +584,7 @@
     "@id" : "urn:swrl:var#b"
   } ],
   "http://www.w3.org/2003/11/swrl#classPredicate" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/A380"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#A380"
   } ]
 }, {
   "@id" : "_:genid57",
@@ -593,10 +593,10 @@
     "@id" : "urn:swrl:var#b"
   } ],
   "http://www.w3.org/2003/11/swrl#argument2" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/AircraftManufacturer_Airbus"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#AircraftManufacturer_Airbus"
   } ],
   "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/manufacturedBy"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#manufacturedBy"
   } ]
 }, {
   "@id" : "_:genid58",
@@ -615,10 +615,10 @@
   "@id" : "_:genid6",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/AircraftManufacturer"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#AircraftManufacturer"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/manufacturedBy"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#manufacturedBy"
   } ],
   "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -631,7 +631,7 @@
     "@id" : "urn:swrl:var#b"
   } ],
   "http://www.w3.org/2003/11/swrl#classPredicate" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/A380_800"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#A380_800"
   } ]
 }, {
   "@id" : "_:genid62",
@@ -640,10 +640,10 @@
     "@id" : "urn:swrl:var#b"
   } ],
   "http://www.w3.org/2003/11/swrl#argument2" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/AircraftManufacturer_Airbus"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#AircraftManufacturer_Airbus"
   } ],
   "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/manufacturedBy"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#manufacturedBy"
   } ]
 }, {
   "@id" : "_:genid63",
@@ -665,7 +665,7 @@
     "@id" : "urn:swrl:var#b"
   } ],
   "http://www.w3.org/2003/11/swrl#classPredicate" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Boeing_777"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Boeing_777"
   } ]
 }, {
   "@id" : "_:genid67",
@@ -674,10 +674,10 @@
     "@id" : "urn:swrl:var#b"
   } ],
   "http://www.w3.org/2003/11/swrl#argument2" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/AircraftManufacturer_Boeing"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#AircraftManufacturer_Boeing"
   } ],
   "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/manufacturedBy"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#manufacturedBy"
   } ]
 }, {
   "@id" : "_:genid68",
@@ -697,7 +697,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
-      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Person"
+      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Person"
     }, {
       "@id" : "_:genid9"
     } ]
@@ -709,7 +709,7 @@
     "@id" : "urn:swrl:var#b"
   } ],
   "http://www.w3.org/2003/11/swrl#classPredicate" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Boeing_787"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Boeing_787"
   } ]
 }, {
   "@id" : "_:genid72",
@@ -718,10 +718,10 @@
     "@id" : "urn:swrl:var#b"
   } ],
   "http://www.w3.org/2003/11/swrl#argument2" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/AircraftManufacturer_Boeing"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#AircraftManufacturer_Boeing"
   } ],
   "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/manufacturedBy"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#manufacturedBy"
   } ]
 }, {
   "@id" : "_:genid73",
@@ -754,7 +754,7 @@
     "@id" : "urn:swrl:var#o"
   } ],
   "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/operatedBy"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#operatedBy"
   } ]
 }, {
   "@id" : "_:genid77",
@@ -763,10 +763,10 @@
     "@id" : "urn:swrl:var#f"
   } ],
   "http://www.w3.org/2003/11/swrl#argument2" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Airport_London_Stansted"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Airport_London_Stansted"
   } ],
   "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/arrivesTo"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#arrivesTo"
   } ]
 }, {
   "@id" : "_:genid79",
@@ -775,10 +775,10 @@
     "@id" : "urn:swrl:var#f"
   } ],
   "http://www.w3.org/2003/11/swrl#argument2" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Airport_Barcelona"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Airport_Barcelona"
   } ],
   "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/departsFrom"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#departsFrom"
   } ]
 }, {
   "@id" : "_:genid81",
@@ -790,7 +790,7 @@
     "@id" : "urn:swrl:var#a"
   } ],
   "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/coveredBy"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#coveredBy"
   } ]
 }, {
   "@id" : "_:genid83",
@@ -799,7 +799,7 @@
     "@id" : "urn:swrl:var#f"
   } ],
   "http://www.w3.org/2003/11/swrl#classPredicate" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Flight"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Flight"
   } ]
 }, {
   "@id" : "_:genid85",
@@ -808,7 +808,7 @@
     "@id" : "urn:swrl:var#o"
   } ],
   "http://www.w3.org/2003/11/swrl#classPredicate" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Ryanair"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Ryanair"
   } ]
 }, {
   "@id" : "_:genid86",
@@ -841,16 +841,16 @@
     "@id" : "urn:swrl:var#x"
   } ],
   "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/ratingScore"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#ratingScore"
   } ]
 }, {
   "@id" : "_:genid9",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/takes"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#takes"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Flight"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Flight"
   } ]
 }, {
   "@id" : "_:genid90",
@@ -862,7 +862,7 @@
     "@id" : "urn:swrl:var#r"
   } ],
   "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/exposes"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#exposes"
   } ]
 }, {
   "@id" : "_:genid92",
@@ -893,6 +893,9 @@
     "@id" : "http://www.w3.org/2003/11/swrlb#lessThanOrEqual"
   } ]
 }, {
+  "@id" : "http://purl.org/dc/elements/1.1/created",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
   "@id" : "http://purl.org/dc/elements/1.1/creator",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
@@ -904,17 +907,20 @@
 }, {
   "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://purl.org/dc/elements/1.1/created" : [ {
+    "@value" : "2024-04-30"
+  } ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Nestor Carreno Gimeno"
   } ],
   "http://purl.org/dc/elements/1.1/description" : [ {
-    "@value" : "Ésta ontología propone un formato estándar para representar, clasificar y analizar las experiencias de los clientes de aerolíneas comerciales que quedan reflejadas en las encuestas de satisfacción que las mismas compañías ponen a disposición de sus pasajeros. \nLa estructura de datos sigue un esquema claro en el que se puede plasmar de forma inequívoca y unificada la información recogida en encuestas de distintas aerolíneas (que por tanto pueden seguir formatos distintos). Concretamente, la ontología se ha desarrollado a partir de encuestas hechas por Qatar Airways y Ryanair a sus respectivos clientes.\nEn la ontología se describen y se incluyen datos relativos a la experiencia del cliente, información sobre la persona encuestada, información sobre la ruta realizada, forma y contenido de los comentarios y otros campos de utilidad."
+    "@value" : "This ontology proposes a standard format for representing, classifying and analyzing the experiences of commercial airline customers as reflected in the satisfaction surveys that the airlines themselves make available to their passengers. \r\nThe data structure follows a clear schema in which the information collected in surveys from different airlines (which can therefore follow different formats) can be captured in an unambiguous and unified way. Specifically, the ontology has been developed from surveys conducted by Qatar Airways and Ryanair with their respective customers.\r\nThe ontology describes and includes data related to the customer experience, information about the respondent, information about the route flown, form and content of the comments and other useful fields."
   } ],
   "http://purl.org/dc/elements/1.1/title" : [ {
-    "@value" : "EESPVC - Encuestas Estandarizadas de Satisfacción de Pasajeros en Vuelos Comerciales"
+    "@value" : "EESPVC - Encuestas Estandarizadas de Satisfacción de Pasajeros en Vuelos Comerciales / Standardized Passenger Satisfaction Surveys on Commercial Flights"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/A350",
+  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#A350",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "This class represents the A350 plane model by Airbus."
@@ -923,10 +929,10 @@
     "@value" : "A350"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Aircraft"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Aircraft"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/A350_1000",
+  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#A350_1000",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "This class represents the A350-1000 plane model by Airbus."
@@ -935,10 +941,10 @@
     "@value" : "A350_1000"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Aircraft"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Aircraft"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/A380",
+  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#A380",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "This class represents the A380 plane model by Airbus."
@@ -947,10 +953,10 @@
     "@value" : "A380"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Aircraft"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Aircraft"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/A380_800",
+  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#A380_800",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "This class represents the A380-800 plane model by Airbus."
@@ -959,10 +965,10 @@
     "@value" : "A380_800"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Aircraft"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Aircraft"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Airbus",
+  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Airbus",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "This class represents the aircraft manufacturing company Airbus."
@@ -971,13 +977,13 @@
     "@value" : "Airbus"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/AircraftManufacturer"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#AircraftManufacturer"
   } ],
   "http://www.w3.org/2002/07/owl#disjointWith" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Boeing"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Boeing"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Aircraft",
+  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Aircraft",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Airliner used to travel between airports. This class groups existing plane models."
@@ -992,7 +998,7 @@
     "@id" : "_:genid6"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/AircraftManufacturer",
+  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#AircraftManufacturer",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Company that builds, tests and sells planes to the airlines. This class groups existing aircraft manufacturers."
@@ -1001,25 +1007,37 @@
     "@value" : "AircraftManufacturer"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/AircraftManufacturer_Airbus",
+  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#AircraftManufacturer_Airbus",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/manufacturerName" : [ {
+  "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#manufacturerName" : [ {
     "@value" : "Airbus"
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Airbus"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Airbus"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Airbus instance of AircraftManufacturer"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Aircraft_Manufacturer_Airbus"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/AircraftManufacturer_Boeing",
+  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#AircraftManufacturer_Boeing",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/manufacturerName" : [ {
+  "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#manufacturerName" : [ {
     "@value" : "Boeing"
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Boeing"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Boeing"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Boeing instance of AircraftManufacturer"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "AircraftManufacturer_Boeing"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Airline",
+  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Airline",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Company that operates airplanes covering flight routes. This class groups existing airlines."
@@ -1031,52 +1049,76 @@
     "@value" : "https://dbpedia.org/ontology/Airline"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Airline_1",
+  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Airline_1",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/airlineName" : [ {
+  "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#airlineName" : [ {
     "@value" : "Airline 1"
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Airline"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Airline"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Instance of an Airline with an unknown sub-type"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Airline_1"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Airplane_A7-AJN",
+  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Airplane_A7-AJN",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/aircraftCode" : [ {
+  "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#aircraftCode" : [ {
     "@value" : "A7-AJN"
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/A380_800"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#A380_800"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Instance of A7-AJN airplane"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Airplane_A7-AJN"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Airplane_A8-GTR",
+  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Airplane_A8-GTR",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/aircraftCode" : [ {
+  "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#aircraftCode" : [ {
     "@value" : "A8-GTR"
   } ],
-  "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/manufacturedBy" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/AircraftManufacturer_Airbus"
+  "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#manufacturedBy" : [ {
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#AircraftManufacturer_Airbus"
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Aircraft"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Aircraft"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Instance of A8-GTR airplane"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Airplane_A8-GTR"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Airplane_B7-MLG",
+  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Airplane_B7-MLG",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/aircraftCode" : [ {
+  "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#aircraftCode" : [ {
     "@value" : "B7-MLG"
   } ],
-  "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/covers" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Flight_QA4563"
+  "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#covers" : [ {
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Flight_QA4563"
   } ],
-  "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/operatedBy" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Airline_1"
+  "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#operatedBy" : [ {
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Airline_1"
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Boeing_777"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Boeing_777"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Instance of B7-MLG airplane"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Airplane_B7-MLG"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Airport",
+  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Airport",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "This class represents the place from which aircraft operate that usually has paved runways and maintenance facilities and often serves as a terminal."
@@ -1088,49 +1130,67 @@
     "@value" : "https://dbpedia.org/ontology/Airport"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Airport_Barcelona",
+  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Airport_Barcelona",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/airportCode" : [ {
+  "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#airportCode" : [ {
     "@value" : "BCN"
   } ],
-  "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/airportName" : [ {
+  "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#airportName" : [ {
     "@value" : "Barcelona Airport"
   } ],
-  "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/locatedIn" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Country_Spain"
+  "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#locatedIn" : [ {
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Country_Spain"
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Airport"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Airport"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Instance of Barcelona's airport"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Airport_Barcelona"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Airport_London_Stansted",
+  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Airport_London_Stansted",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/airportCode" : [ {
+  "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#airportCode" : [ {
     "@value" : "LST"
   } ],
-  "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/airportName" : [ {
+  "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#airportName" : [ {
     "@value" : "London Stansted Airport"
   } ],
-  "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/locatedIn" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Country_United_Kingdom"
+  "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#locatedIn" : [ {
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Country_United_Kingdom"
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Airport"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Airport"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Instance of London Stansted's airport"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Airport_London_Stansted"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Airport_Malaga",
+  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Airport_Malaga",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/airportCode" : [ {
+  "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#airportCode" : [ {
     "@value" : "MLG"
   } ],
-  "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/airportName" : [ {
+  "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#airportName" : [ {
     "@value" : "Malaga Airport"
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Airport"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Airport"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Instance of Malaga's airport"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Airport_Malaga"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/BeveragesRating",
+  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#BeveragesRating",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "This class represents the rating given to the beverages."
@@ -1139,10 +1199,10 @@
     "@value" : "BeveragesRating"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SpecificRating"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#SpecificRating"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Boeing",
+  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Boeing",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "This class represents the aircraft manufacturing company Boeing."
@@ -1151,10 +1211,10 @@
     "@value" : "Boeing"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/AircraftManufacturer"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#AircraftManufacturer"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Boeing_777",
+  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Boeing_777",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "This class represents the Boeing-777 plane model by Boeing."
@@ -1163,10 +1223,10 @@
     "@value" : "Boeing_777"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Aircraft"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Aircraft"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Boeing_787",
+  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Boeing_787",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "This class represents the Boeing-787 plane model by Boeing."
@@ -1175,10 +1235,10 @@
     "@value" : "Boeing_787"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Aircraft"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Aircraft"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Business",
+  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Business",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "This class represents those travel motivations related with business."
@@ -1187,13 +1247,13 @@
     "@value" : "Business"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/TravellerType"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#TravellerType"
   } ],
   "http://www.w3.org/2002/07/owl#disjointWith" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Leisure"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Leisure"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/BusinessClass",
+  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#BusinessClass",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "This class represents the Business Class seat type."
@@ -1202,10 +1262,10 @@
     "@value" : "BusinessClass"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SeatType"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#SeatType"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/CabinStaffServiceRating",
+  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#CabinStaffServiceRating",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "This class represents the rating given to the cabin staff service."
@@ -1214,10 +1274,10 @@
     "@value" : "CabinStaffServiceRating"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SpecificRating"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#SpecificRating"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Country",
+  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Country",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "This class represents existing countries."
@@ -1232,25 +1292,37 @@
     "@id" : "http://www.w3.org/2002/07/owl#Thing"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Country_Spain",
+  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Country_Spain",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/countryName" : [ {
+  "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#countryName" : [ {
     "@value" : "Spain"
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Country"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Country"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Instance of Spain - Country"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Country_Spain"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Country_United_Kingdom",
+  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Country_United_Kingdom",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/countryName" : [ {
+  "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#countryName" : [ {
     "@value" : "United Kingdom"
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Country"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Country"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Instance of United Kingdom - Country"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Country_United_Kingdom"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/CoupleLeisure",
+  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#CoupleLeisure",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "This class represents those travel motivations related with couple leisure."
@@ -1259,10 +1331,10 @@
     "@value" : "CoupleLeisure"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Leisure"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Leisure"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/DissatisfiedSurvey",
+  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#DissatisfiedSurvey",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "This class represents satisfaction surveys where the client is dissatisfied with the experience."
@@ -1271,10 +1343,10 @@
     "@value" : "DissatisfiedSurvey"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SatisfactionSurvey"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#SatisfactionSurvey"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/EconomyClass",
+  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#EconomyClass",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "This class represents the Economy Class seat type."
@@ -1283,10 +1355,10 @@
     "@value" : "EconomyClass"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SeatType"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#SeatType"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/FamilyLeisure",
+  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#FamilyLeisure",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "This class represents those travel motivations related with family leisure."
@@ -1295,10 +1367,10 @@
     "@value" : "FamilyLeisure"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Leisure"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Leisure"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/FirstClass",
+  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#FirstClass",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "This class represents the First Class seat type."
@@ -1307,10 +1379,10 @@
     "@value" : "FirstClass"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SeatType"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#SeatType"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Flight",
+  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Flight",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "This class represents a designated route followed by a specific airplane in flying from one airport to another, on a specific date."
@@ -1319,26 +1391,32 @@
     "@value" : "Flight"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Flight_QA4563",
+  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Flight_QA4563",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/arrivesTo" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Airport_London_Stansted"
+  "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#arrivesTo" : [ {
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Airport_London_Stansted"
   } ],
-  "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/departsFrom" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Airport_Barcelona"
+  "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#departsFrom" : [ {
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Airport_Barcelona"
   } ],
-  "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/flightCode" : [ {
+  "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#flightCode" : [ {
     "@value" : "QA4563"
   } ],
-  "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/flightDate" : [ {
+  "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#flightDate" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
     "@value" : "2024-01-09T14:00:00"
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Flight"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Flight"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Instance of Flight QA4563"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Flight_QA4563"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/FoodRating",
+  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#FoodRating",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "This class represents the rating given to the food."
@@ -1347,10 +1425,10 @@
     "@value" : "FoodRating"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SpecificRating"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#SpecificRating"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/GroundServiceRating",
+  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#GroundServiceRating",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "This class represents the rating given to the ground staff service."
@@ -1359,10 +1437,10 @@
     "@value" : "GroundServiceRating"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SpecificRating"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#SpecificRating"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/InflightEntertainmentRating",
+  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#InflightEntertainmentRating",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "This class represents the rating given to the inflight entertainment service."
@@ -1371,10 +1449,10 @@
     "@value" : "InflightEntertainmentRating"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SpecificRating"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#SpecificRating"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Leisure",
+  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Leisure",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "This class groups those travel motivations related with leisure."
@@ -1383,10 +1461,10 @@
     "@value" : "Leisure"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/TravellerType"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#TravellerType"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/NeutralSurvey",
+  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#NeutralSurvey",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "This class represents satisfaction surveys where the client is neutral regarding the experience."
@@ -1395,10 +1473,10 @@
     "@value" : "NeutralSurvey"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SatisfactionSurvey"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#SatisfactionSurvey"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/OverallRating",
+  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#OverallRating",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "This class represents a global rating given for the complete experience."
@@ -1407,13 +1485,13 @@
     "@value" : "OverallRating"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Rating"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Rating"
   } ],
   "http://www.w3.org/2002/07/owl#disjointWith" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SpecificRating"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#SpecificRating"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Passenger",
+  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Passenger",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "This class represents a Person who has flown at least once."
@@ -1422,13 +1500,13 @@
     "@value" : "Passenger"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Person"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Person"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
     "@id" : "_:genid7"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Person",
+  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Person",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "This class represents a specific individual that might be a passenger."
@@ -1440,40 +1518,52 @@
     "@value" : "https://dbpedia.org/ontology/Person"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Person_Mary_Le",
+  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Person_Mary_Le",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/livesIn" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Country_United_Kingdom"
+  "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#livesIn" : [ {
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Country_United_Kingdom"
   } ],
-  "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/personName" : [ {
+  "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#personName" : [ {
     "@value" : "Mary Le"
   } ],
-  "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/takes" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Flight_QA4563"
+  "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#takes" : [ {
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Flight_QA4563"
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Person"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Person"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Instance of a Person, Mary Le"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Person_Mary_Le"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Person_Nestor_Carreno_Gimeno",
+  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Person_Nestor_Carreno_Gimeno",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/livesIn" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Country_Spain"
+  "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#livesIn" : [ {
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Country_Spain"
   } ],
-  "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/personName" : [ {
+  "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#personName" : [ {
     "@value" : "Nestor Carreno Gimeno"
   } ],
-  "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/personPassportCode" : [ {
+  "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#personPassportCode" : [ {
     "@value" : "56879054C"
   } ],
-  "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/takes" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Flight_QA4563"
+  "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#takes" : [ {
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Flight_QA4563"
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Person"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Person"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Instance of a Person, Nestor Carreno Gimeno"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Person_Nestor_Carreno_Gimeno"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/PremiumEconomy",
+  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#PremiumEconomy",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "This class represents the Premium Economy seat type."
@@ -1482,10 +1572,10 @@
     "@value" : "PremiumEconomy"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SeatType"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#SeatType"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Qatar_Airways",
+  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Qatar_Airways",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "This class represents the Qatar Airways airline."
@@ -1494,13 +1584,13 @@
     "@value" : "Qatar_Airways"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Airline"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Airline"
   } ],
   "http://www.w3.org/2002/07/owl#disjointWith" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Ryanair"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Ryanair"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Rating",
+  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Rating",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "This class represents a given rating from 0 to 10 to evaluate aspects of an experience."
@@ -1512,27 +1602,39 @@
     "@id" : "_:genid11"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Rating_1",
+  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Rating_1",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/ratingScore" : [ {
+  "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#ratingScore" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#int",
     "@value" : "10"
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/OverallRating"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#OverallRating"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A numeric rating: 10"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Rating_1"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Rating_2",
+  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Rating_2",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/ratingScore" : [ {
+  "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#ratingScore" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#int",
     "@value" : "3"
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/OverallRating"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#OverallRating"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A numeric rating: 3"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Rating_2"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Ryanair",
+  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Ryanair",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "This class represents the Ryanair airline."
@@ -1541,10 +1643,10 @@
     "@value" : "Ryanair"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Airline"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Airline"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SatisfactionSurvey",
+  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#SatisfactionSurvey",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Marketing instrument used by businesses to determine clients' level of satisfaction with a brand. This class represents the satisfaction surveys completed by clients."
@@ -1553,80 +1655,92 @@
     "@value" : "SatisfactionSurvey"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Survey"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Survey"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SatisfactionSurvey_1",
+  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#SatisfactionSurvey_1",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/explainsExperienceOf" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/TravellerType_FamilyLeisure"
+  "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#explainsExperienceOf" : [ {
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#TravellerType_FamilyLeisure"
   } ],
-  "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/exposes" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Rating_1"
+  "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#exposes" : [ {
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Rating_1"
   } ],
-  "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/isCompletedBy" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Person_Nestor_Carreno_Gimeno"
+  "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#isCompletedBy" : [ {
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Person_Nestor_Carreno_Gimeno"
   } ],
-  "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/isEvaluating" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SeatType_EconomyClass"
+  "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#isEvaluating" : [ {
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#SeatType_EconomyClass"
   } ],
-  "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/rates" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Flight_QA4563"
+  "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#rates" : [ {
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Flight_QA4563"
   } ],
-  "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/surveyCommentBody" : [ {
+  "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#surveyCommentBody" : [ {
     "@value" : "The flight was on time. Everything perfect."
   } ],
-  "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/surveyCommentTitle" : [ {
+  "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#surveyCommentTitle" : [ {
     "@value" : "Very happy with the service."
   } ],
-  "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/surveyIdentifier" : [ {
+  "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#surveyIdentifier" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#int",
     "@value" : "1"
   } ],
-  "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/surveyPublicationDate" : [ {
+  "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#surveyPublicationDate" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
     "@value" : "2024-02-23T16:30:47"
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SatisfactionSurvey"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#SatisfactionSurvey"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "An instance of the SatisfactionSurvey with ID 1"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "SatisfactionSurvey_1"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SatisfactionSurvey_2",
+  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#SatisfactionSurvey_2",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/explainsExperienceOf" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/TravellerType_Business"
+  "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#explainsExperienceOf" : [ {
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#TravellerType_Business"
   } ],
-  "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/exposes" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Rating_2"
+  "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#exposes" : [ {
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Rating_2"
   } ],
-  "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/isCompletedBy" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Person_Mary_Le"
+  "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#isCompletedBy" : [ {
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Person_Mary_Le"
   } ],
-  "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/isEvaluating" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SeatType_EconomyClass"
+  "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#isEvaluating" : [ {
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#SeatType_EconomyClass"
   } ],
-  "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/rates" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Flight_QA4563"
+  "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#rates" : [ {
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Flight_QA4563"
   } ],
-  "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/surveyCommentBody" : [ {
+  "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#surveyCommentBody" : [ {
     "@value" : "The delay of my flight from Haneda to Doha caused a bit of chaos upon arrival. Despite my efforts to reach the gate promptly, I was denied boarding due to luggage issues, and the lack of assistance added to the frustration. I paid for an Economy Comfort package, which was supposed to include an aisle seat. However, upon boarding, I was informed that no aisle seats were available, despite assurances beforehand. Additionally, my luggage tag was lost during the boarding pass exchange, leading to further uncertainty upon arrival in London. What was meant to be a 19-hour journey turned into a 27-hour ordeal. When I requested assistance from staff regarding a re-arrangement they promised to get back to me within 5-10 minutes, but no one followed up until I reached out again. The security queue at Heathrow on departure from the UK was incredibly long, with a wait time of about 1.5 hours just to get through. Overall, while the crew onboard was courteous and provided great service, the experience was marred by these inconveniences."
   } ],
-  "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/surveyCommentTitle" : [ {
+  "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#surveyCommentTitle" : [ {
     "@value" : "Marred by inconveniences"
   } ],
-  "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/surveyIdentifier" : [ {
+  "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#surveyIdentifier" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#int",
     "@value" : "2"
   } ],
-  "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/surveyPublicationDate" : [ {
+  "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#surveyPublicationDate" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
     "@value" : "2024-02-02T13:45:32"
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SatisfactionSurvey"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#SatisfactionSurvey"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "An instance of the SatisfactionSurvey with ID 2"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "SatisfactionSurvey_2"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SatisfiedSurvey",
+  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#SatisfiedSurvey",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "This class represents satisfaction surveys where the client is satisfied with the experience."
@@ -1635,10 +1749,10 @@
     "@value" : "SatisfiedSurvey"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SatisfactionSurvey"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#SatisfactionSurvey"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SeatComfortRating",
+  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#SeatComfortRating",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "This class represents the rating given to the seat comfort."
@@ -1647,10 +1761,10 @@
     "@value" : "SeatComfortRating"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SpecificRating"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#SpecificRating"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SeatType",
+  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#SeatType",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "This class groups the existing seat types on any airplane."
@@ -1659,13 +1773,19 @@
     "@value" : "SeatType"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SeatType_EconomyClass",
+  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#SeatType_EconomyClass",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/EconomyClass"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#EconomyClass"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Instance of the SeatType Economy Class"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "SeatType_EconomyClass"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SoloLeisure",
+  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#SoloLeisure",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "This class represents those travel motivations related with solo leisure."
@@ -1674,10 +1794,10 @@
     "@value" : "SoloLeisure"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Leisure"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Leisure"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SpecificRating",
+  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#SpecificRating",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "This class represents a specific rating given for some specific parts of the experience."
@@ -1686,10 +1806,10 @@
     "@value" : "SpecificRating"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Rating"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Rating"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Survey",
+  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Survey",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Marketing instrument used by businesses to engourage clients' to express their opinions on a specific brand. This class groups existing survey types. At the moment only the satisfaction surveys are contemplated."
@@ -1698,7 +1818,7 @@
     "@value" : "Survey"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/TravellerType",
+  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#TravellerType",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "This class groups different travel motivations."
@@ -1707,19 +1827,31 @@
     "@value" : "TravellerType"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/TravellerType_Business",
+  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#TravellerType_Business",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Business"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Business"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Instance of the TravellerType Business"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "TravellerType_Business"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/TravellerType_FamilyLeisure",
+  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#TravellerType_FamilyLeisure",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/FamilyLeisure"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#FamilyLeisure"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Instance of the TravellerType Family Leisure"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "TravellerType_FamilyLeisure"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/ValueForMoneyRating",
+  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#ValueForMoneyRating",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "This class represents the rating given to the Value-for-Money ratio of the experience."
@@ -1728,10 +1860,10 @@
     "@value" : "ValueForMoneyRating"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SpecificRating"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#SpecificRating"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/VeryDissatisfiedSurvey",
+  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#VeryDissatisfiedSurvey",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "This class represents satisfaction surveys where the client is deeply dissatisfied with the experience."
@@ -1740,10 +1872,10 @@
     "@value" : "VeryDissatisfiedSurvey"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SatisfactionSurvey"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#SatisfactionSurvey"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/VerySatisfiedSurvey",
+  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#VerySatisfiedSurvey",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "This class represents satisfaction surveys where the client is very satisfied with the experience."
@@ -1752,10 +1884,10 @@
     "@value" : "VerySatisfiedSurvey"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SatisfactionSurvey"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#SatisfactionSurvey"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/WifiConnectivityRating",
+  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#WifiConnectivityRating",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "This class represents the rating given to the Wifi service."
@@ -1764,16 +1896,16 @@
     "@value" : "WifiConnectivityRating"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SpecificRating"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#SpecificRating"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/aircraftCode",
+  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#aircraftCode",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Code given to the airplane."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Aircraft"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Aircraft"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "airplaneCode"
@@ -1785,13 +1917,13 @@
     "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/airlineName",
+  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#airlineName",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Name of the airline."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Airline"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Airline"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "airlineName"
@@ -1803,13 +1935,13 @@
     "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/airportCode",
+  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#airportCode",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Code given to the airport."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Airport"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Airport"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "airportCode"
@@ -1821,13 +1953,13 @@
     "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/airportName",
+  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#airportName",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Name of the airport."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Airport"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Airport"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "airportName"
@@ -1839,55 +1971,55 @@
     "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/arrivesTo",
+  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#arrivesTo",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "A Flight arrives to an Airport"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Flight"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Flight"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "arrivesTo"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Airport"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Airport"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/hasArrival"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#hasArrival"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/completes",
+  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#completes",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "A Passenger completes a SatisfactionSurvey"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Passenger"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Passenger"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "completes"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SatisfactionSurvey"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#SatisfactionSurvey"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/isCompletedBy"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#isCompletedBy"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/countryName",
+  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#countryName",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Name of the country."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Country"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Country"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "countryName"
@@ -1899,109 +2031,109 @@
     "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/coveredBy",
+  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#coveredBy",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "A Flight is covered by an Airplane"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Flight"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Flight"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "coveredBy"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Aircraft"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Aircraft"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/covers"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#covers"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/covers",
+  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#covers",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "An Airplane covers a Flight"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Aircraft"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Aircraft"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "covers"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Flight"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Flight"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/departsFrom",
+  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#departsFrom",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "A Flight departs from an Airport"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Flight"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Flight"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "departsFrom"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Airport"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Airport"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/hasDeparture"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#hasDeparture"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/explainsExperienceOf",
+  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#explainsExperienceOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "A SatisfactionSurvey explains the experience of a specific TravellerType"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SatisfactionSurvey"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#SatisfactionSurvey"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "explainsExperienceOf"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/TravellerType"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#TravellerType"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/exposes",
+  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#exposes",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty", "http://www.w3.org/2002/07/owl#AsymmetricProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "A SatisfactionSurvey exposes an OverallRating of an experience"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SatisfactionSurvey"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#SatisfactionSurvey"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "exposes"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/OverallRating"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#OverallRating"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/flightCode",
+  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#flightCode",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Identifier given to a flight."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Flight"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Flight"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "flightCode"
@@ -2013,13 +2145,13 @@
     "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/flightDate",
+  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#flightDate",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Date the flight took place on."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Flight"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Flight"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "flightDate"
@@ -2031,226 +2163,226 @@
     "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/hasArrival",
+  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#hasArrival",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "An Airport has the arrival of a Flight"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Airport"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Airport"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "hasArrival"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Flight"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Flight"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/hasDeparture",
+  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#hasDeparture",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "An Airport has the departure of a Flight"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Airport"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Airport"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "hasDeparture"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Flight"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Flight"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/hasManufactured",
+  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#hasManufactured",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "An AircraftManufacturer has manufactured an Airplane"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/AircraftManufacturer"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#AircraftManufacturer"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "hasManufactured"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Aircraft"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Aircraft"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/manufacturedBy"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#manufacturedBy"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/isCompletedBy",
+  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#isCompletedBy",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "A SatisfactionSurvey is completed by a Passenger"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SatisfactionSurvey"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#SatisfactionSurvey"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "isCompletedBy"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Passenger"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Passenger"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/isEvaluatedIn",
+  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#isEvaluatedIn",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "A SeatType is evaluated in SatisfactionSurveys"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SeatType"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#SeatType"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "isEvaluatedIn"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SatisfactionSurvey"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#SatisfactionSurvey"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/isEvaluating"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#isEvaluating"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/isEvaluating",
+  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#isEvaluating",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty", "http://www.w3.org/2002/07/owl#AsymmetricProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "A SatisfactionSurvey is evaluating the SeatType that the Passenger chose"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SatisfactionSurvey"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#SatisfactionSurvey"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "isEvaluating"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SeatType"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#SeatType"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/isRatedOn",
+  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#isRatedOn",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "A Flight is rated on a SatisfactionSurvey"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Flight"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Flight"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "isRatedOn"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SatisfactionSurvey"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#SatisfactionSurvey"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/rates"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#rates"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/livesIn",
+  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#livesIn",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "A Person lives in a Country"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Person"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Person"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "livesIn"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Country"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Country"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/residenceOf"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#residenceOf"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/locatedIn",
+  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#locatedIn",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "An Airport is located in a Country"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Airport"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Airport"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "locatedIn"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Country"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Country"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/locates"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#locates"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/locates",
+  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#locates",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "A Country locates some Airports"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Country"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Country"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "locates"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Airport"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Airport"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/manufacturedBy",
+  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#manufacturedBy",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "An Airplane was manufactured by an AircraftManufacturer"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Aircraft"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Aircraft"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "manufacturedBy"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/AircraftManufacturer"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#AircraftManufacturer"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/manufacturerName",
+  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#manufacturerName",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Name of the aircraft manufacturer."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/AircraftManufacturer"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#AircraftManufacturer"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "manufacturerName"
@@ -2262,52 +2394,52 @@
     "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/operatedBy",
+  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#operatedBy",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "An Airplane is operated by an Airline"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Aircraft"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Aircraft"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "operatedBy"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Airline"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Airline"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/operates"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#operates"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/operates",
+  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#operates",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "An Airline operates an Airplane"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Airline"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Airline"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "operates"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Aircraft"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Aircraft"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/personName",
+  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#personName",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Name of an individual."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Person"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Person"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "personName"
@@ -2319,13 +2451,13 @@
     "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/personPassportCode",
+  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#personPassportCode",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Passport code of an individual."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Person"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Person"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "personPassportCode"
@@ -2337,31 +2469,31 @@
     "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/rates",
+  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#rates",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "A SatisfactionSurvey rates a Flight"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SatisfactionSurvey"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#SatisfactionSurvey"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "rates"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Flight"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Flight"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/ratingScore",
+  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#ratingScore",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Score given from 0 to 10."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Rating"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Rating"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "ratingScore"
@@ -2373,31 +2505,31 @@
     "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/residenceOf",
+  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#residenceOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "A Country is residence of a Person"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Country"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Country"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "residenceOf"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Person"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Person"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/surveyCommentBody",
+  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#surveyCommentBody",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Comment written on a survey."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SatisfactionSurvey"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#SatisfactionSurvey"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "surveyCommentBody"
@@ -2409,13 +2541,13 @@
     "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/surveyCommentTitle",
+  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#surveyCommentTitle",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Title of the comment written on a survey."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SatisfactionSurvey"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#SatisfactionSurvey"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "surveyCommentTitle"
@@ -2427,13 +2559,13 @@
     "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/surveyIdentifier",
+  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#surveyIdentifier",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Numerical identifier for the surveys."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Survey"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Survey"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "surveyIdentifier"
@@ -2445,13 +2577,13 @@
     "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/surveyPublicationDate",
+  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#surveyPublicationDate",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Date the survey was published on."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Survey"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Survey"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "surveyPublicationDate"
@@ -2463,40 +2595,40 @@
     "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/takenBy",
+  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#takenBy",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "A Flight is taken by a Passenger"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Flight"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Flight"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "takenBy"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Passenger"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Passenger"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/takes"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#takes"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/takes",
+  "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#takes",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "A Passenger takes a Flight"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Passenger"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Passenger"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "takes"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Flight"
+    "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Flight"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
