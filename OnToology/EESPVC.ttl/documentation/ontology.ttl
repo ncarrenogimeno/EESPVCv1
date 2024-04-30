@@ -7,15 +7,20 @@
 @base <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#> .
 
 <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC> rdf:type owl:Ontology ;
+                                                              <http://purl.org/dc/elements/1.1/created> "2024-04-30" ;
                                                               <http://purl.org/dc/elements/1.1/creator> "Nestor Carreno Gimeno" ;
-                                                              <http://purl.org/dc/elements/1.1/description> """Ésta ontología propone un formato estándar para representar, clasificar y analizar las experiencias de los clientes de aerolíneas comerciales que quedan reflejadas en las encuestas de satisfacción que las mismas compañías ponen a disposición de sus pasajeros. 
-La estructura de datos sigue un esquema claro en el que se puede plasmar de forma inequívoca y unificada la información recogida en encuestas de distintas aerolíneas (que por tanto pueden seguir formatos distintos). Concretamente, la ontología se ha desarrollado a partir de encuestas hechas por Qatar Airways y Ryanair a sus respectivos clientes.
-En la ontología se describen y se incluyen datos relativos a la experiencia del cliente, información sobre la persona encuestada, información sobre la ruta realizada, forma y contenido de los comentarios y otros campos de utilidad.""" ;
-                                                              <http://purl.org/dc/elements/1.1/title> "EESPVC - Encuestas Estandarizadas de Satisfacción de Pasajeros en Vuelos Comerciales" .
+                                                              <http://purl.org/dc/elements/1.1/description> """This ontology proposes a standard format for representing, classifying and analyzing the experiences of commercial airline customers as reflected in the satisfaction surveys that the airlines themselves make available to their passengers. 
+The data structure follows a clear schema in which the information collected in surveys from different airlines (which can therefore follow different formats) can be captured in an unambiguous and unified way. Specifically, the ontology has been developed from surveys conducted by Qatar Airways and Ryanair with their respective customers.
+The ontology describes and includes data related to the customer experience, information about the respondent, information about the route flown, form and content of the comments and other useful fields.""" ;
+                                                              <http://purl.org/dc/elements/1.1/title> "EESPVC - Encuestas Estandarizadas de Satisfacción de Pasajeros en Vuelos Comerciales / Standardized Passenger Satisfaction Surveys on Commercial Flights" .
 
 #################################################################
 #    Annotation properties
 #################################################################
+
+###  http://purl.org/dc/elements/1.1/created
+<http://purl.org/dc/elements/1.1/created> rdf:type owl:AnnotationProperty .
+
 
 ###  http://purl.org/dc/elements/1.1/creator
 <http://purl.org/dc/elements/1.1/creator> rdf:type owl:AnnotationProperty .
@@ -37,245 +42,245 @@ rdfs:sameAs rdf:type owl:AnnotationProperty .
 #    Object Properties
 #################################################################
 
-###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/arrivesTo
-<http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/arrivesTo> rdf:type owl:ObjectProperty ;
-                                                                       rdfs:subPropertyOf owl:topObjectProperty ;
-                                                                       owl:inverseOf <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/hasArrival> ;
-                                                                       rdf:type owl:FunctionalProperty ;
-                                                                       rdfs:domain <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Flight> ;
-                                                                       rdfs:range <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Airport> ;
-                                                                       rdfs:comment "A Flight arrives to an Airport" ;
-                                                                       rdfs:label "arrivesTo" .
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#arrivesTo
+:arrivesTo rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf owl:topObjectProperty ;
+           owl:inverseOf :hasArrival ;
+           rdf:type owl:FunctionalProperty ;
+           rdfs:domain :Flight ;
+           rdfs:range :Airport ;
+           rdfs:comment "A Flight arrives to an Airport" ;
+           rdfs:label "arrivesTo" .
 
 
-###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/completes
-<http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/completes> rdf:type owl:ObjectProperty ;
-                                                                       rdfs:subPropertyOf owl:topObjectProperty ;
-                                                                       owl:inverseOf <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/isCompletedBy> ;
-                                                                       rdfs:domain <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Passenger> ;
-                                                                       rdfs:range <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SatisfactionSurvey> ;
-                                                                       rdfs:comment "A Passenger completes a SatisfactionSurvey" ;
-                                                                       rdfs:label "completes" .
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#completes
+:completes rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf owl:topObjectProperty ;
+           owl:inverseOf :isCompletedBy ;
+           rdfs:domain :Passenger ;
+           rdfs:range :SatisfactionSurvey ;
+           rdfs:comment "A Passenger completes a SatisfactionSurvey" ;
+           rdfs:label "completes" .
 
 
-###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/coveredBy
-<http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/coveredBy> rdf:type owl:ObjectProperty ;
-                                                                       rdfs:subPropertyOf owl:topObjectProperty ;
-                                                                       owl:inverseOf <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/covers> ;
-                                                                       rdfs:domain <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Flight> ;
-                                                                       rdfs:range <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Aircraft> ;
-                                                                       rdfs:comment "A Flight is covered by an Airplane" ;
-                                                                       rdfs:label "coveredBy" .
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#coveredBy
+:coveredBy rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf owl:topObjectProperty ;
+           owl:inverseOf :covers ;
+           rdfs:domain :Flight ;
+           rdfs:range :Aircraft ;
+           rdfs:comment "A Flight is covered by an Airplane" ;
+           rdfs:label "coveredBy" .
 
 
-###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/covers
-<http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/covers> rdf:type owl:ObjectProperty ;
-                                                                    rdfs:subPropertyOf owl:topObjectProperty ;
-                                                                    rdf:type owl:FunctionalProperty ;
-                                                                    rdfs:domain <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Aircraft> ;
-                                                                    rdfs:range <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Flight> ;
-                                                                    rdfs:comment "An Airplane covers a Flight" ;
-                                                                    rdfs:label "covers" .
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#covers
+:covers rdf:type owl:ObjectProperty ;
+        rdfs:subPropertyOf owl:topObjectProperty ;
+        rdf:type owl:FunctionalProperty ;
+        rdfs:domain :Aircraft ;
+        rdfs:range :Flight ;
+        rdfs:comment "An Airplane covers a Flight" ;
+        rdfs:label "covers" .
 
 
-###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/departsFrom
-<http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/departsFrom> rdf:type owl:ObjectProperty ;
-                                                                         rdfs:subPropertyOf owl:topObjectProperty ;
-                                                                         owl:inverseOf <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/hasDeparture> ;
-                                                                         rdf:type owl:FunctionalProperty ;
-                                                                         rdfs:domain <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Flight> ;
-                                                                         rdfs:range <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Airport> ;
-                                                                         rdfs:comment "A Flight departs from an Airport" ;
-                                                                         rdfs:label "departsFrom" .
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#departsFrom
+:departsFrom rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf owl:topObjectProperty ;
+             owl:inverseOf :hasDeparture ;
+             rdf:type owl:FunctionalProperty ;
+             rdfs:domain :Flight ;
+             rdfs:range :Airport ;
+             rdfs:comment "A Flight departs from an Airport" ;
+             rdfs:label "departsFrom" .
 
 
-###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/explainsExperienceOf
-<http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/explainsExperienceOf> rdf:type owl:ObjectProperty ;
-                                                                                  rdfs:subPropertyOf owl:topObjectProperty ;
-                                                                                  rdf:type owl:FunctionalProperty ;
-                                                                                  rdfs:domain <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SatisfactionSurvey> ;
-                                                                                  rdfs:range <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/TravellerType> ;
-                                                                                  rdfs:comment "A SatisfactionSurvey explains the experience of a specific TravellerType" ;
-                                                                                  rdfs:label "explainsExperienceOf" .
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#explainsExperienceOf
+:explainsExperienceOf rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf owl:topObjectProperty ;
+                      rdf:type owl:FunctionalProperty ;
+                      rdfs:domain :SatisfactionSurvey ;
+                      rdfs:range :TravellerType ;
+                      rdfs:comment "A SatisfactionSurvey explains the experience of a specific TravellerType" ;
+                      rdfs:label "explainsExperienceOf" .
 
 
-###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/exposes
-<http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/exposes> rdf:type owl:ObjectProperty ;
-                                                                     rdfs:subPropertyOf owl:topObjectProperty ;
-                                                                     rdf:type owl:FunctionalProperty ,
-                                                                              owl:AsymmetricProperty ;
-                                                                     rdfs:domain <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SatisfactionSurvey> ;
-                                                                     rdfs:range <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/OverallRating> ;
-                                                                     rdfs:comment "A SatisfactionSurvey exposes an OverallRating of an experience" ;
-                                                                     rdfs:label "exposes" .
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#exposes
+:exposes rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf owl:topObjectProperty ;
+         rdf:type owl:FunctionalProperty ,
+                  owl:AsymmetricProperty ;
+         rdfs:domain :SatisfactionSurvey ;
+         rdfs:range :OverallRating ;
+         rdfs:comment "A SatisfactionSurvey exposes an OverallRating of an experience" ;
+         rdfs:label "exposes" .
 
 
-###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/hasArrival
-<http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/hasArrival> rdf:type owl:ObjectProperty ;
-                                                                        rdfs:subPropertyOf owl:topObjectProperty ;
-                                                                        rdfs:domain <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Airport> ;
-                                                                        rdfs:range <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Flight> ;
-                                                                        rdfs:comment "An Airport has the arrival of a Flight" ;
-                                                                        rdfs:label "hasArrival" .
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#hasArrival
+:hasArrival rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty ;
+            rdfs:domain :Airport ;
+            rdfs:range :Flight ;
+            rdfs:comment "An Airport has the arrival of a Flight" ;
+            rdfs:label "hasArrival" .
 
 
-###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/hasDeparture
-<http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/hasDeparture> rdf:type owl:ObjectProperty ;
-                                                                          rdfs:subPropertyOf owl:topObjectProperty ;
-                                                                          rdfs:domain <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Airport> ;
-                                                                          rdfs:range <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Flight> ;
-                                                                          rdfs:comment "An Airport has the departure of a Flight" ;
-                                                                          rdfs:label "hasDeparture" .
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#hasDeparture
+:hasDeparture rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf owl:topObjectProperty ;
+              rdfs:domain :Airport ;
+              rdfs:range :Flight ;
+              rdfs:comment "An Airport has the departure of a Flight" ;
+              rdfs:label "hasDeparture" .
 
 
-###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/hasManufactured
-<http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/hasManufactured> rdf:type owl:ObjectProperty ;
-                                                                             rdfs:subPropertyOf owl:topObjectProperty ;
-                                                                             owl:inverseOf <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/manufacturedBy> ;
-                                                                             rdfs:domain <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/AircraftManufacturer> ;
-                                                                             rdfs:range <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Aircraft> ;
-                                                                             rdfs:comment "An AircraftManufacturer has manufactured an Airplane" ;
-                                                                             rdfs:label "hasManufactured" .
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#hasManufactured
+:hasManufactured rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf owl:topObjectProperty ;
+                 owl:inverseOf :manufacturedBy ;
+                 rdfs:domain :AircraftManufacturer ;
+                 rdfs:range :Aircraft ;
+                 rdfs:comment "An AircraftManufacturer has manufactured an Airplane" ;
+                 rdfs:label "hasManufactured" .
 
 
-###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/isCompletedBy
-<http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/isCompletedBy> rdf:type owl:ObjectProperty ;
-                                                                           rdfs:subPropertyOf owl:topObjectProperty ;
-                                                                           rdf:type owl:FunctionalProperty ;
-                                                                           rdfs:domain <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SatisfactionSurvey> ;
-                                                                           rdfs:range <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Passenger> ;
-                                                                           rdfs:comment "A SatisfactionSurvey is completed by a Passenger" ;
-                                                                           rdfs:label "isCompletedBy" .
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#isCompletedBy
+:isCompletedBy rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf owl:topObjectProperty ;
+               rdf:type owl:FunctionalProperty ;
+               rdfs:domain :SatisfactionSurvey ;
+               rdfs:range :Passenger ;
+               rdfs:comment "A SatisfactionSurvey is completed by a Passenger" ;
+               rdfs:label "isCompletedBy" .
 
 
-###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/isEvaluatedIn
-<http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/isEvaluatedIn> rdf:type owl:ObjectProperty ;
-                                                                           rdfs:subPropertyOf owl:topObjectProperty ;
-                                                                           owl:inverseOf <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/isEvaluating> ;
-                                                                           rdfs:domain <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SeatType> ;
-                                                                           rdfs:range <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SatisfactionSurvey> ;
-                                                                           rdfs:comment "A SeatType is evaluated in SatisfactionSurveys" ;
-                                                                           rdfs:label "isEvaluatedIn" .
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#isEvaluatedIn
+:isEvaluatedIn rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf owl:topObjectProperty ;
+               owl:inverseOf :isEvaluating ;
+               rdfs:domain :SeatType ;
+               rdfs:range :SatisfactionSurvey ;
+               rdfs:comment "A SeatType is evaluated in SatisfactionSurveys" ;
+               rdfs:label "isEvaluatedIn" .
 
 
-###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/isEvaluating
-<http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/isEvaluating> rdf:type owl:ObjectProperty ;
-                                                                          rdfs:subPropertyOf owl:topObjectProperty ;
-                                                                          rdf:type owl:FunctionalProperty ,
-                                                                                   owl:AsymmetricProperty ;
-                                                                          rdfs:domain <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SatisfactionSurvey> ;
-                                                                          rdfs:range <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SeatType> ;
-                                                                          rdfs:comment "A SatisfactionSurvey is evaluating the SeatType that the Passenger chose" ;
-                                                                          rdfs:label "isEvaluating" .
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#isEvaluating
+:isEvaluating rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf owl:topObjectProperty ;
+              rdf:type owl:FunctionalProperty ,
+                       owl:AsymmetricProperty ;
+              rdfs:domain :SatisfactionSurvey ;
+              rdfs:range :SeatType ;
+              rdfs:comment "A SatisfactionSurvey is evaluating the SeatType that the Passenger chose" ;
+              rdfs:label "isEvaluating" .
 
 
-###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/isRatedOn
-<http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/isRatedOn> rdf:type owl:ObjectProperty ;
-                                                                       rdfs:subPropertyOf owl:topObjectProperty ;
-                                                                       owl:inverseOf <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/rates> ;
-                                                                       rdfs:domain <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Flight> ;
-                                                                       rdfs:range <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SatisfactionSurvey> ;
-                                                                       rdfs:comment "A Flight is rated on a SatisfactionSurvey" ;
-                                                                       rdfs:label "isRatedOn" .
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#isRatedOn
+:isRatedOn rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf owl:topObjectProperty ;
+           owl:inverseOf :rates ;
+           rdfs:domain :Flight ;
+           rdfs:range :SatisfactionSurvey ;
+           rdfs:comment "A Flight is rated on a SatisfactionSurvey" ;
+           rdfs:label "isRatedOn" .
 
 
-###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/livesIn
-<http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/livesIn> rdf:type owl:ObjectProperty ;
-                                                                     rdfs:subPropertyOf owl:topObjectProperty ;
-                                                                     owl:inverseOf <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/residenceOf> ;
-                                                                     rdf:type owl:FunctionalProperty ;
-                                                                     rdfs:domain <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Person> ;
-                                                                     rdfs:range <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Country> ;
-                                                                     rdfs:comment "A Person lives in a Country" ;
-                                                                     rdfs:label "livesIn" .
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#livesIn
+:livesIn rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf owl:topObjectProperty ;
+         owl:inverseOf :residenceOf ;
+         rdf:type owl:FunctionalProperty ;
+         rdfs:domain :Person ;
+         rdfs:range :Country ;
+         rdfs:comment "A Person lives in a Country" ;
+         rdfs:label "livesIn" .
 
 
-###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/locatedIn
-<http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/locatedIn> rdf:type owl:ObjectProperty ;
-                                                                       rdfs:subPropertyOf owl:topObjectProperty ;
-                                                                       owl:inverseOf <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/locates> ;
-                                                                       rdf:type owl:FunctionalProperty ;
-                                                                       rdfs:domain <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Airport> ;
-                                                                       rdfs:range <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Country> ;
-                                                                       rdfs:comment "An Airport is located in a Country" ;
-                                                                       rdfs:label "locatedIn" .
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#locatedIn
+:locatedIn rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf owl:topObjectProperty ;
+           owl:inverseOf :locates ;
+           rdf:type owl:FunctionalProperty ;
+           rdfs:domain :Airport ;
+           rdfs:range :Country ;
+           rdfs:comment "An Airport is located in a Country" ;
+           rdfs:label "locatedIn" .
 
 
-###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/locates
-<http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/locates> rdf:type owl:ObjectProperty ;
-                                                                     rdfs:subPropertyOf owl:topObjectProperty ;
-                                                                     rdfs:domain <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Country> ;
-                                                                     rdfs:range <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Airport> ;
-                                                                     rdfs:comment "A Country locates some Airports" ;
-                                                                     rdfs:label "locates" .
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#locates
+:locates rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf owl:topObjectProperty ;
+         rdfs:domain :Country ;
+         rdfs:range :Airport ;
+         rdfs:comment "A Country locates some Airports" ;
+         rdfs:label "locates" .
 
 
-###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/manufacturedBy
-<http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/manufacturedBy> rdf:type owl:ObjectProperty ;
-                                                                            rdfs:subPropertyOf owl:topObjectProperty ;
-                                                                            rdf:type owl:FunctionalProperty ;
-                                                                            rdfs:domain <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Aircraft> ;
-                                                                            rdfs:range <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/AircraftManufacturer> ;
-                                                                            rdfs:comment "An Airplane was manufactured by an AircraftManufacturer" ;
-                                                                            rdfs:label "manufacturedBy" .
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#manufacturedBy
+:manufacturedBy rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf owl:topObjectProperty ;
+                rdf:type owl:FunctionalProperty ;
+                rdfs:domain :Aircraft ;
+                rdfs:range :AircraftManufacturer ;
+                rdfs:comment "An Airplane was manufactured by an AircraftManufacturer" ;
+                rdfs:label "manufacturedBy" .
 
 
-###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/operatedBy
-<http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/operatedBy> rdf:type owl:ObjectProperty ;
-                                                                        rdfs:subPropertyOf owl:topObjectProperty ;
-                                                                        owl:inverseOf <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/operates> ;
-                                                                        rdf:type owl:FunctionalProperty ;
-                                                                        rdfs:domain <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Aircraft> ;
-                                                                        rdfs:range <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Airline> ;
-                                                                        rdfs:comment "An Airplane is operated by an Airline" ;
-                                                                        rdfs:label "operatedBy" .
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#operatedBy
+:operatedBy rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty ;
+            owl:inverseOf :operates ;
+            rdf:type owl:FunctionalProperty ;
+            rdfs:domain :Aircraft ;
+            rdfs:range :Airline ;
+            rdfs:comment "An Airplane is operated by an Airline" ;
+            rdfs:label "operatedBy" .
 
 
-###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/operates
-<http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/operates> rdf:type owl:ObjectProperty ;
-                                                                      rdfs:subPropertyOf owl:topObjectProperty ;
-                                                                      rdfs:domain <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Airline> ;
-                                                                      rdfs:range <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Aircraft> ;
-                                                                      rdfs:comment "An Airline operates an Airplane" ;
-                                                                      rdfs:label "operates" .
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#operates
+:operates rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf owl:topObjectProperty ;
+          rdfs:domain :Airline ;
+          rdfs:range :Aircraft ;
+          rdfs:comment "An Airline operates an Airplane" ;
+          rdfs:label "operates" .
 
 
-###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/rates
-<http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/rates> rdf:type owl:ObjectProperty ;
-                                                                   rdfs:subPropertyOf owl:topObjectProperty ;
-                                                                   rdf:type owl:FunctionalProperty ;
-                                                                   rdfs:domain <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SatisfactionSurvey> ;
-                                                                   rdfs:range <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Flight> ;
-                                                                   rdfs:comment "A SatisfactionSurvey rates a Flight" ;
-                                                                   rdfs:label "rates" .
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#rates
+:rates rdf:type owl:ObjectProperty ;
+       rdfs:subPropertyOf owl:topObjectProperty ;
+       rdf:type owl:FunctionalProperty ;
+       rdfs:domain :SatisfactionSurvey ;
+       rdfs:range :Flight ;
+       rdfs:comment "A SatisfactionSurvey rates a Flight" ;
+       rdfs:label "rates" .
 
 
-###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/residenceOf
-<http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/residenceOf> rdf:type owl:ObjectProperty ;
-                                                                         rdfs:subPropertyOf owl:topObjectProperty ;
-                                                                         rdfs:domain <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Country> ;
-                                                                         rdfs:range <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Person> ;
-                                                                         rdfs:comment "A Country is residence of a Person" ;
-                                                                         rdfs:label "residenceOf" .
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#residenceOf
+:residenceOf rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf owl:topObjectProperty ;
+             rdfs:domain :Country ;
+             rdfs:range :Person ;
+             rdfs:comment "A Country is residence of a Person" ;
+             rdfs:label "residenceOf" .
 
 
-###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/takenBy
-<http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/takenBy> rdf:type owl:ObjectProperty ;
-                                                                     rdfs:subPropertyOf owl:topObjectProperty ;
-                                                                     owl:inverseOf <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/takes> ;
-                                                                     rdfs:domain <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Flight> ;
-                                                                     rdfs:range <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Passenger> ;
-                                                                     rdfs:comment "A Flight is taken by a Passenger" ;
-                                                                     rdfs:label "takenBy" .
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#takenBy
+:takenBy rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf owl:topObjectProperty ;
+         owl:inverseOf :takes ;
+         rdfs:domain :Flight ;
+         rdfs:range :Passenger ;
+         rdfs:comment "A Flight is taken by a Passenger" ;
+         rdfs:label "takenBy" .
 
 
-###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/takes
-<http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/takes> rdf:type owl:ObjectProperty ;
-                                                                   rdfs:subPropertyOf owl:topObjectProperty ;
-                                                                   rdfs:domain <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Passenger> ;
-                                                                   rdfs:range <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Flight> ;
-                                                                   rdfs:comment "A Passenger takes a Flight" ;
-                                                                   rdfs:label "takes" .
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#takes
+:takes rdf:type owl:ObjectProperty ;
+       rdfs:subPropertyOf owl:topObjectProperty ;
+       rdfs:domain :Passenger ;
+       rdfs:range :Flight ;
+       rdfs:comment "A Passenger takes a Flight" ;
+       rdfs:label "takes" .
 
 
 ###  http://www.w3.org/2002/07/owl#topObjectProperty
@@ -286,663 +291,705 @@ owl:topObjectProperty rdfs:subPropertyOf owl:topObjectProperty .
 #    Data properties
 #################################################################
 
-###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/aircraftCode
-<http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/aircraftCode> rdf:type owl:DatatypeProperty ;
-                                                                          rdfs:subPropertyOf owl:topDataProperty ;
-                                                                          rdf:type owl:FunctionalProperty ;
-                                                                          rdfs:domain <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Aircraft> ;
-                                                                          rdfs:range xsd:string ;
-                                                                          rdfs:comment "Code given to the airplane." ;
-                                                                          rdfs:label "airplaneCode" .
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#aircraftCode
+:aircraftCode rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf owl:topDataProperty ;
+              rdf:type owl:FunctionalProperty ;
+              rdfs:domain :Aircraft ;
+              rdfs:range xsd:string ;
+              rdfs:comment "Code given to the airplane." ;
+              rdfs:label "airplaneCode" .
 
 
-###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/airlineName
-<http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/airlineName> rdf:type owl:DatatypeProperty ;
-                                                                         rdfs:subPropertyOf owl:topDataProperty ;
-                                                                         rdfs:domain <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Airline> ;
-                                                                         rdfs:range xsd:string ;
-                                                                         rdfs:comment "Name of the airline." ;
-                                                                         rdfs:label "airlineName" .
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#airlineName
+:airlineName rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf owl:topDataProperty ;
+             rdfs:domain :Airline ;
+             rdfs:range xsd:string ;
+             rdfs:comment "Name of the airline." ;
+             rdfs:label "airlineName" .
 
 
-###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/airportCode
-<http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/airportCode> rdf:type owl:DatatypeProperty ;
-                                                                         rdfs:subPropertyOf owl:topDataProperty ;
-                                                                         rdf:type owl:FunctionalProperty ;
-                                                                         rdfs:domain <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Airport> ;
-                                                                         rdfs:range xsd:string ;
-                                                                         rdfs:comment "Code given to the airport." ;
-                                                                         rdfs:label "airportCode" .
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#airportCode
+:airportCode rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf owl:topDataProperty ;
+             rdf:type owl:FunctionalProperty ;
+             rdfs:domain :Airport ;
+             rdfs:range xsd:string ;
+             rdfs:comment "Code given to the airport." ;
+             rdfs:label "airportCode" .
 
 
-###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/airportName
-<http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/airportName> rdf:type owl:DatatypeProperty ;
-                                                                         rdfs:subPropertyOf owl:topDataProperty ;
-                                                                         rdfs:domain <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Airport> ;
-                                                                         rdfs:range xsd:string ;
-                                                                         rdfs:comment "Name of the airport." ;
-                                                                         rdfs:label "airportName" .
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#airportName
+:airportName rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf owl:topDataProperty ;
+             rdfs:domain :Airport ;
+             rdfs:range xsd:string ;
+             rdfs:comment "Name of the airport." ;
+             rdfs:label "airportName" .
 
 
-###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/countryName
-<http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/countryName> rdf:type owl:DatatypeProperty ;
-                                                                         rdfs:subPropertyOf owl:topDataProperty ;
-                                                                         rdfs:domain <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Country> ;
-                                                                         rdfs:range xsd:string ;
-                                                                         rdfs:comment "Name of the country." ;
-                                                                         rdfs:label "countryName" .
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#countryName
+:countryName rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf owl:topDataProperty ;
+             rdfs:domain :Country ;
+             rdfs:range xsd:string ;
+             rdfs:comment "Name of the country." ;
+             rdfs:label "countryName" .
 
 
-###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/flightCode
-<http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/flightCode> rdf:type owl:DatatypeProperty ;
-                                                                        rdfs:subPropertyOf owl:topDataProperty ;
-                                                                        rdfs:domain <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Flight> ;
-                                                                        rdfs:range xsd:string ;
-                                                                        rdfs:comment "Identifier given to a flight." ;
-                                                                        rdfs:label "flightCode" .
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#flightCode
+:flightCode rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf owl:topDataProperty ;
+            rdfs:domain :Flight ;
+            rdfs:range xsd:string ;
+            rdfs:comment "Identifier given to a flight." ;
+            rdfs:label "flightCode" .
 
 
-###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/flightDate
-<http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/flightDate> rdf:type owl:DatatypeProperty ;
-                                                                        rdfs:subPropertyOf owl:topDataProperty ;
-                                                                        rdf:type owl:FunctionalProperty ;
-                                                                        rdfs:domain <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Flight> ;
-                                                                        rdfs:range xsd:dateTime ;
-                                                                        rdfs:comment "Date the flight took place on." ;
-                                                                        rdfs:label "flightDate" .
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#flightDate
+:flightDate rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf owl:topDataProperty ;
+            rdf:type owl:FunctionalProperty ;
+            rdfs:domain :Flight ;
+            rdfs:range xsd:dateTime ;
+            rdfs:comment "Date the flight took place on." ;
+            rdfs:label "flightDate" .
 
 
-###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/manufacturerName
-<http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/manufacturerName> rdf:type owl:DatatypeProperty ;
-                                                                              rdfs:subPropertyOf owl:topDataProperty ;
-                                                                              rdfs:domain <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/AircraftManufacturer> ;
-                                                                              rdfs:range xsd:string ;
-                                                                              rdfs:comment "Name of the aircraft manufacturer." ;
-                                                                              rdfs:label "manufacturerName" .
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#manufacturerName
+:manufacturerName rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf owl:topDataProperty ;
+                  rdfs:domain :AircraftManufacturer ;
+                  rdfs:range xsd:string ;
+                  rdfs:comment "Name of the aircraft manufacturer." ;
+                  rdfs:label "manufacturerName" .
 
 
-###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/personName
-<http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/personName> rdf:type owl:DatatypeProperty ;
-                                                                        rdfs:subPropertyOf owl:topDataProperty ;
-                                                                        rdfs:domain <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Person> ;
-                                                                        rdfs:range xsd:string ;
-                                                                        rdfs:comment "Name of an individual." ;
-                                                                        rdfs:label "personName" .
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#personName
+:personName rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf owl:topDataProperty ;
+            rdfs:domain :Person ;
+            rdfs:range xsd:string ;
+            rdfs:comment "Name of an individual." ;
+            rdfs:label "personName" .
 
 
-###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/personPassportCode
-<http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/personPassportCode> rdf:type owl:DatatypeProperty ;
-                                                                                rdfs:subPropertyOf owl:topDataProperty ;
-                                                                                rdf:type owl:FunctionalProperty ;
-                                                                                rdfs:domain <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Person> ;
-                                                                                rdfs:range xsd:string ;
-                                                                                rdfs:comment "Passport code of an individual." ;
-                                                                                rdfs:label "personPassportCode" .
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#personPassportCode
+:personPassportCode rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf owl:topDataProperty ;
+                    rdf:type owl:FunctionalProperty ;
+                    rdfs:domain :Person ;
+                    rdfs:range xsd:string ;
+                    rdfs:comment "Passport code of an individual." ;
+                    rdfs:label "personPassportCode" .
 
 
-###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/ratingScore
-<http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/ratingScore> rdf:type owl:DatatypeProperty ;
-                                                                         rdfs:subPropertyOf owl:topDataProperty ;
-                                                                         rdf:type owl:FunctionalProperty ;
-                                                                         rdfs:domain <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Rating> ;
-                                                                         rdfs:range [ rdf:type rdfs:Datatype ;
-                                                                                      owl:onDatatype xsd:int ;
-                                                                                      owl:withRestrictions ( [ xsd:minInclusive "0"^^xsd:int
-                                                                                                             ]
-                                                                                                             [ xsd:maxInclusive "10"^^xsd:int
-                                                                                                             ]
-                                                                                                           )
-                                                                                    ] ;
-                                                                         rdfs:comment "Score given from 0 to 10." ;
-                                                                         rdfs:label "ratingScore" .
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#ratingScore
+:ratingScore rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf owl:topDataProperty ;
+             rdf:type owl:FunctionalProperty ;
+             rdfs:domain :Rating ;
+             rdfs:range [ rdf:type rdfs:Datatype ;
+                          owl:onDatatype xsd:int ;
+                          owl:withRestrictions ( [ xsd:minInclusive "0"^^xsd:int
+                                                 ]
+                                                 [ xsd:maxInclusive "10"^^xsd:int
+                                                 ]
+                                               )
+                        ] ;
+             rdfs:comment "Score given from 0 to 10." ;
+             rdfs:label "ratingScore" .
 
 
-###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/surveyCommentBody
-<http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/surveyCommentBody> rdf:type owl:DatatypeProperty ;
-                                                                               rdfs:subPropertyOf owl:topDataProperty ;
-                                                                               rdf:type owl:FunctionalProperty ;
-                                                                               rdfs:domain <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SatisfactionSurvey> ;
-                                                                               rdfs:range xsd:string ;
-                                                                               rdfs:comment "Comment written on a survey." ;
-                                                                               rdfs:label "surveyCommentBody" .
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#surveyCommentBody
+:surveyCommentBody rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf owl:topDataProperty ;
+                   rdf:type owl:FunctionalProperty ;
+                   rdfs:domain :SatisfactionSurvey ;
+                   rdfs:range xsd:string ;
+                   rdfs:comment "Comment written on a survey." ;
+                   rdfs:label "surveyCommentBody" .
 
 
-###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/surveyCommentTitle
-<http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/surveyCommentTitle> rdf:type owl:DatatypeProperty ;
-                                                                                rdfs:subPropertyOf owl:topDataProperty ;
-                                                                                rdf:type owl:FunctionalProperty ;
-                                                                                rdfs:domain <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SatisfactionSurvey> ;
-                                                                                rdfs:range xsd:string ;
-                                                                                rdfs:comment "Title of the comment written on a survey." ;
-                                                                                rdfs:label "surveyCommentTitle" .
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#surveyCommentTitle
+:surveyCommentTitle rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf owl:topDataProperty ;
+                    rdf:type owl:FunctionalProperty ;
+                    rdfs:domain :SatisfactionSurvey ;
+                    rdfs:range xsd:string ;
+                    rdfs:comment "Title of the comment written on a survey." ;
+                    rdfs:label "surveyCommentTitle" .
 
 
-###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/surveyIdentifier
-<http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/surveyIdentifier> rdf:type owl:DatatypeProperty ;
-                                                                              rdfs:subPropertyOf owl:topDataProperty ;
-                                                                              rdf:type owl:FunctionalProperty ;
-                                                                              rdfs:domain <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Survey> ;
-                                                                              rdfs:range xsd:int ;
-                                                                              rdfs:comment "Numerical identifier for the surveys." ;
-                                                                              rdfs:label "surveyIdentifier" .
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#surveyIdentifier
+:surveyIdentifier rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf owl:topDataProperty ;
+                  rdf:type owl:FunctionalProperty ;
+                  rdfs:domain :Survey ;
+                  rdfs:range xsd:int ;
+                  rdfs:comment "Numerical identifier for the surveys." ;
+                  rdfs:label "surveyIdentifier" .
 
 
-###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/surveyPublicationDate
-<http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/surveyPublicationDate> rdf:type owl:DatatypeProperty ;
-                                                                                   rdfs:subPropertyOf owl:topDataProperty ;
-                                                                                   rdf:type owl:FunctionalProperty ;
-                                                                                   rdfs:domain <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Survey> ;
-                                                                                   rdfs:range xsd:dateTime ;
-                                                                                   rdfs:comment "Date the survey was published on." ;
-                                                                                   rdfs:label "surveyPublicationDate" .
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#surveyPublicationDate
+:surveyPublicationDate rdf:type owl:DatatypeProperty ;
+                       rdfs:subPropertyOf owl:topDataProperty ;
+                       rdf:type owl:FunctionalProperty ;
+                       rdfs:domain :Survey ;
+                       rdfs:range xsd:dateTime ;
+                       rdfs:comment "Date the survey was published on." ;
+                       rdfs:label "surveyPublicationDate" .
 
 
 #################################################################
 #    Classes
 #################################################################
 
-###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/A350
-<http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/A350> rdf:type owl:Class ;
-                                                                  rdfs:subClassOf <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Aircraft> ;
-                                                                  rdfs:comment "This class represents the A350 plane model by Airbus." ;
-                                                                  rdfs:label "A350" .
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#A350
+:A350 rdf:type owl:Class ;
+      rdfs:subClassOf :Aircraft ;
+      rdfs:comment "This class represents the A350 plane model by Airbus." ;
+      rdfs:label "A350" .
 
 
-###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/A350_1000
-<http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/A350_1000> rdf:type owl:Class ;
-                                                                       rdfs:subClassOf <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Aircraft> ;
-                                                                       rdfs:comment "This class represents the A350-1000 plane model by Airbus." ;
-                                                                       rdfs:label "A350_1000" .
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#A350_1000
+:A350_1000 rdf:type owl:Class ;
+           rdfs:subClassOf :Aircraft ;
+           rdfs:comment "This class represents the A350-1000 plane model by Airbus." ;
+           rdfs:label "A350_1000" .
 
 
-###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/A380
-<http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/A380> rdf:type owl:Class ;
-                                                                  rdfs:subClassOf <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Aircraft> ;
-                                                                  rdfs:comment "This class represents the A380 plane model by Airbus." ;
-                                                                  rdfs:label "A380" .
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#A380
+:A380 rdf:type owl:Class ;
+      rdfs:subClassOf :Aircraft ;
+      rdfs:comment "This class represents the A380 plane model by Airbus." ;
+      rdfs:label "A380" .
 
 
-###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/A380_800
-<http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/A380_800> rdf:type owl:Class ;
-                                                                      rdfs:subClassOf <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Aircraft> ;
-                                                                      rdfs:comment "This class represents the A380-800 plane model by Airbus." ;
-                                                                      rdfs:label "A380_800" .
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#A380_800
+:A380_800 rdf:type owl:Class ;
+          rdfs:subClassOf :Aircraft ;
+          rdfs:comment "This class represents the A380-800 plane model by Airbus." ;
+          rdfs:label "A380_800" .
 
 
-###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Airbus
-<http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Airbus> rdf:type owl:Class ;
-                                                                    rdfs:subClassOf <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/AircraftManufacturer> ;
-                                                                    owl:disjointWith <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Boeing> ;
-                                                                    rdfs:comment "This class represents the aircraft manufacturing company Airbus." ;
-                                                                    rdfs:label "Airbus" .
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Airbus
+:Airbus rdf:type owl:Class ;
+        rdfs:subClassOf :AircraftManufacturer ;
+        owl:disjointWith :Boeing ;
+        rdfs:comment "This class represents the aircraft manufacturing company Airbus." ;
+        rdfs:label "Airbus" .
 
 
-###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Aircraft
-<http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Aircraft> rdf:type owl:Class ;
-                                                                      rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                                                                        owl:onProperty <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/manufacturedBy> ;
-                                                                                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                                                        owl:onClass <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/AircraftManufacturer>
-                                                                                      ] ;
-                                                                      rdfs:comment "Airliner used to travel between airports. This class groups existing plane models." ;
-                                                                      rdfs:label "Airplane" ;
-                                                                      rdfs:sameAs "https://dbpedia.org/ontology/Aircraft" .
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Aircraft
+:Aircraft rdf:type owl:Class ;
+          rdfs:subClassOf [ rdf:type owl:Restriction ;
+                            owl:onProperty :manufacturedBy ;
+                            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onClass :AircraftManufacturer
+                          ] ;
+          rdfs:comment "Airliner used to travel between airports. This class groups existing plane models." ;
+          rdfs:label "Airplane" ;
+          rdfs:sameAs "https://dbpedia.org/ontology/Aircraft" .
 
 
-###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/AircraftManufacturer
-<http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/AircraftManufacturer> rdf:type owl:Class ;
-                                                                                  rdfs:comment "Company that builds, tests and sells planes to the airlines. This class groups existing aircraft manufacturers." ;
-                                                                                  rdfs:label "AircraftManufacturer" .
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#AircraftManufacturer
+:AircraftManufacturer rdf:type owl:Class ;
+                      rdfs:comment "Company that builds, tests and sells planes to the airlines. This class groups existing aircraft manufacturers." ;
+                      rdfs:label "AircraftManufacturer" .
 
 
-###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Airline
-<http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Airline> rdf:type owl:Class ;
-                                                                     rdfs:comment "Company that operates airplanes covering flight routes. This class groups existing airlines." ;
-                                                                     rdfs:label "Airline" ;
-                                                                     rdfs:sameAs "https://dbpedia.org/ontology/Airline" .
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Airline
+:Airline rdf:type owl:Class ;
+         rdfs:comment "Company that operates airplanes covering flight routes. This class groups existing airlines." ;
+         rdfs:label "Airline" ;
+         rdfs:sameAs "https://dbpedia.org/ontology/Airline" .
 
 
-###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Airport
-<http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Airport> rdf:type owl:Class ;
-                                                                     rdfs:comment "This class represents the place from which aircraft operate that usually has paved runways and maintenance facilities and often serves as a terminal." ;
-                                                                     rdfs:label "Airport" ;
-                                                                     rdfs:sameAs "https://dbpedia.org/ontology/Airport" .
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Airport
+:Airport rdf:type owl:Class ;
+         rdfs:comment "This class represents the place from which aircraft operate that usually has paved runways and maintenance facilities and often serves as a terminal." ;
+         rdfs:label "Airport" ;
+         rdfs:sameAs "https://dbpedia.org/ontology/Airport" .
 
 
-###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/BeveragesRating
-<http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/BeveragesRating> rdf:type owl:Class ;
-                                                                             rdfs:subClassOf <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SpecificRating> ;
-                                                                             rdfs:comment "This class represents the rating given to the beverages." ;
-                                                                             rdfs:label "BeveragesRating" .
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#BeveragesRating
+:BeveragesRating rdf:type owl:Class ;
+                 rdfs:subClassOf :SpecificRating ;
+                 rdfs:comment "This class represents the rating given to the beverages." ;
+                 rdfs:label "BeveragesRating" .
 
 
-###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Boeing
-<http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Boeing> rdf:type owl:Class ;
-                                                                    rdfs:subClassOf <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/AircraftManufacturer> ;
-                                                                    rdfs:comment "This class represents the aircraft manufacturing company Boeing." ;
-                                                                    rdfs:label "Boeing" .
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Boeing
+:Boeing rdf:type owl:Class ;
+        rdfs:subClassOf :AircraftManufacturer ;
+        rdfs:comment "This class represents the aircraft manufacturing company Boeing." ;
+        rdfs:label "Boeing" .
 
 
-###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Boeing_777
-<http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Boeing_777> rdf:type owl:Class ;
-                                                                        rdfs:subClassOf <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Aircraft> ;
-                                                                        rdfs:comment "This class represents the Boeing-777 plane model by Boeing." ;
-                                                                        rdfs:label "Boeing_777" .
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Boeing_777
+:Boeing_777 rdf:type owl:Class ;
+            rdfs:subClassOf :Aircraft ;
+            rdfs:comment "This class represents the Boeing-777 plane model by Boeing." ;
+            rdfs:label "Boeing_777" .
 
 
-###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Boeing_787
-<http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Boeing_787> rdf:type owl:Class ;
-                                                                        rdfs:subClassOf <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Aircraft> ;
-                                                                        rdfs:comment "This class represents the Boeing-787 plane model by Boeing." ;
-                                                                        rdfs:label "Boeing_787" .
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Boeing_787
+:Boeing_787 rdf:type owl:Class ;
+            rdfs:subClassOf :Aircraft ;
+            rdfs:comment "This class represents the Boeing-787 plane model by Boeing." ;
+            rdfs:label "Boeing_787" .
 
 
-###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Business
-<http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Business> rdf:type owl:Class ;
-                                                                      rdfs:subClassOf <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/TravellerType> ;
-                                                                      owl:disjointWith <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Leisure> ;
-                                                                      rdfs:comment "This class represents those travel motivations related with business." ;
-                                                                      rdfs:label "Business" .
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Business
+:Business rdf:type owl:Class ;
+          rdfs:subClassOf :TravellerType ;
+          owl:disjointWith :Leisure ;
+          rdfs:comment "This class represents those travel motivations related with business." ;
+          rdfs:label "Business" .
 
 
-###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/BusinessClass
-<http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/BusinessClass> rdf:type owl:Class ;
-                                                                           rdfs:subClassOf <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SeatType> ;
-                                                                           rdfs:comment "This class represents the Business Class seat type." ;
-                                                                           rdfs:label "BusinessClass" .
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#BusinessClass
+:BusinessClass rdf:type owl:Class ;
+               rdfs:subClassOf :SeatType ;
+               rdfs:comment "This class represents the Business Class seat type." ;
+               rdfs:label "BusinessClass" .
 
 
-###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/CabinStaffServiceRating
-<http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/CabinStaffServiceRating> rdf:type owl:Class ;
-                                                                                     rdfs:subClassOf <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SpecificRating> ;
-                                                                                     rdfs:comment "This class represents the rating given to the cabin staff service." ;
-                                                                                     rdfs:label "CabinStaffServiceRating" .
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#CabinStaffServiceRating
+:CabinStaffServiceRating rdf:type owl:Class ;
+                         rdfs:subClassOf :SpecificRating ;
+                         rdfs:comment "This class represents the rating given to the cabin staff service." ;
+                         rdfs:label "CabinStaffServiceRating" .
 
 
-###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Country
-<http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Country> rdf:type owl:Class ;
-                                                                     rdfs:subClassOf owl:Thing ;
-                                                                     rdfs:comment "This class represents existing countries." ;
-                                                                     rdfs:label "Country" ;
-                                                                     rdfs:sameAs "https://dbpedia.org/ontology/Country" .
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Country
+:Country rdf:type owl:Class ;
+         rdfs:subClassOf owl:Thing ;
+         rdfs:comment "This class represents existing countries." ;
+         rdfs:label "Country" ;
+         rdfs:sameAs "https://dbpedia.org/ontology/Country" .
 
 
-###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/CoupleLeisure
-<http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/CoupleLeisure> rdf:type owl:Class ;
-                                                                           rdfs:subClassOf <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Leisure> ;
-                                                                           rdfs:comment "This class represents those travel motivations related with couple leisure." ;
-                                                                           rdfs:label "CoupleLeisure" .
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#CoupleLeisure
+:CoupleLeisure rdf:type owl:Class ;
+               rdfs:subClassOf :Leisure ;
+               rdfs:comment "This class represents those travel motivations related with couple leisure." ;
+               rdfs:label "CoupleLeisure" .
 
 
-###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/DissatisfiedSurvey
-<http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/DissatisfiedSurvey> rdf:type owl:Class ;
-                                                                                rdfs:subClassOf <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SatisfactionSurvey> ;
-                                                                                rdfs:comment "This class represents satisfaction surveys where the client is dissatisfied with the experience." ;
-                                                                                rdfs:label "DissatisfiedSurvey" .
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#DissatisfiedSurvey
+:DissatisfiedSurvey rdf:type owl:Class ;
+                    rdfs:subClassOf :SatisfactionSurvey ;
+                    rdfs:comment "This class represents satisfaction surveys where the client is dissatisfied with the experience." ;
+                    rdfs:label "DissatisfiedSurvey" .
 
 
-###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/EconomyClass
-<http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/EconomyClass> rdf:type owl:Class ;
-                                                                          rdfs:subClassOf <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SeatType> ;
-                                                                          rdfs:comment "This class represents the Economy Class seat type." ;
-                                                                          rdfs:label "EconomyClass" .
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#EconomyClass
+:EconomyClass rdf:type owl:Class ;
+              rdfs:subClassOf :SeatType ;
+              rdfs:comment "This class represents the Economy Class seat type." ;
+              rdfs:label "EconomyClass" .
 
 
-###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/FamilyLeisure
-<http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/FamilyLeisure> rdf:type owl:Class ;
-                                                                           rdfs:subClassOf <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Leisure> ;
-                                                                           rdfs:comment "This class represents those travel motivations related with family leisure." ;
-                                                                           rdfs:label "FamilyLeisure" .
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#FamilyLeisure
+:FamilyLeisure rdf:type owl:Class ;
+               rdfs:subClassOf :Leisure ;
+               rdfs:comment "This class represents those travel motivations related with family leisure." ;
+               rdfs:label "FamilyLeisure" .
 
 
-###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/FirstClass
-<http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/FirstClass> rdf:type owl:Class ;
-                                                                        rdfs:subClassOf <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SeatType> ;
-                                                                        rdfs:comment "This class represents the First Class seat type." ;
-                                                                        rdfs:label "FirstClass" .
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#FirstClass
+:FirstClass rdf:type owl:Class ;
+            rdfs:subClassOf :SeatType ;
+            rdfs:comment "This class represents the First Class seat type." ;
+            rdfs:label "FirstClass" .
 
 
-###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Flight
-<http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Flight> rdf:type owl:Class ;
-                                                                    rdfs:comment "This class represents a designated route followed by a specific airplane in flying from one airport to another, on a specific date." ;
-                                                                    rdfs:label "Flight" .
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Flight
+:Flight rdf:type owl:Class ;
+        rdfs:comment "This class represents a designated route followed by a specific airplane in flying from one airport to another, on a specific date." ;
+        rdfs:label "Flight" .
 
 
-###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/FoodRating
-<http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/FoodRating> rdf:type owl:Class ;
-                                                                        rdfs:subClassOf <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SpecificRating> ;
-                                                                        rdfs:comment "This class represents the rating given to the food." ;
-                                                                        rdfs:label "FoodRating" .
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#FoodRating
+:FoodRating rdf:type owl:Class ;
+            rdfs:subClassOf :SpecificRating ;
+            rdfs:comment "This class represents the rating given to the food." ;
+            rdfs:label "FoodRating" .
 
 
-###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/GroundServiceRating
-<http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/GroundServiceRating> rdf:type owl:Class ;
-                                                                                 rdfs:subClassOf <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SpecificRating> ;
-                                                                                 rdfs:comment "This class represents the rating given to the ground staff service." ;
-                                                                                 rdfs:label "GroundServiceRating" .
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#GroundServiceRating
+:GroundServiceRating rdf:type owl:Class ;
+                     rdfs:subClassOf :SpecificRating ;
+                     rdfs:comment "This class represents the rating given to the ground staff service." ;
+                     rdfs:label "GroundServiceRating" .
 
 
-###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/InflightEntertainmentRating
-<http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/InflightEntertainmentRating> rdf:type owl:Class ;
-                                                                                         rdfs:subClassOf <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SpecificRating> ;
-                                                                                         rdfs:comment "This class represents the rating given to the inflight entertainment service." ;
-                                                                                         rdfs:label "InflightEntertainmentRating" .
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#InflightEntertainmentRating
+:InflightEntertainmentRating rdf:type owl:Class ;
+                             rdfs:subClassOf :SpecificRating ;
+                             rdfs:comment "This class represents the rating given to the inflight entertainment service." ;
+                             rdfs:label "InflightEntertainmentRating" .
 
 
-###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Leisure
-<http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Leisure> rdf:type owl:Class ;
-                                                                     rdfs:subClassOf <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/TravellerType> ;
-                                                                     rdfs:comment "This class groups those travel motivations related with leisure." ;
-                                                                     rdfs:label "Leisure" .
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Leisure
+:Leisure rdf:type owl:Class ;
+         rdfs:subClassOf :TravellerType ;
+         rdfs:comment "This class groups those travel motivations related with leisure." ;
+         rdfs:label "Leisure" .
 
 
-###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/NeutralSurvey
-<http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/NeutralSurvey> rdf:type owl:Class ;
-                                                                           rdfs:subClassOf <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SatisfactionSurvey> ;
-                                                                           rdfs:comment "This class represents satisfaction surveys where the client is neutral regarding the experience." ;
-                                                                           rdfs:label "NeutralSurvey" .
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#NeutralSurvey
+:NeutralSurvey rdf:type owl:Class ;
+               rdfs:subClassOf :SatisfactionSurvey ;
+               rdfs:comment "This class represents satisfaction surveys where the client is neutral regarding the experience." ;
+               rdfs:label "NeutralSurvey" .
 
 
-###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/OverallRating
-<http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/OverallRating> rdf:type owl:Class ;
-                                                                           rdfs:subClassOf <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Rating> ;
-                                                                           owl:disjointWith <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SpecificRating> ;
-                                                                           rdfs:comment "This class represents a global rating given for the complete experience." ;
-                                                                           rdfs:label "OverallRating" .
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#OverallRating
+:OverallRating rdf:type owl:Class ;
+               rdfs:subClassOf :Rating ;
+               owl:disjointWith :SpecificRating ;
+               rdfs:comment "This class represents a global rating given for the complete experience." ;
+               rdfs:label "OverallRating" .
 
 
-###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Passenger
-<http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Passenger> rdf:type owl:Class ;
-                                                                       owl:equivalentClass [ owl:intersectionOf ( <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Person>
-                                                                                                                  [ rdf:type owl:Restriction ;
-                                                                                                                    owl:onProperty <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/takes> ;
-                                                                                                                    owl:someValuesFrom <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Flight>
-                                                                                                                  ]
-                                                                                                                ) ;
-                                                                                             rdf:type owl:Class
-                                                                                           ] ;
-                                                                       rdfs:subClassOf <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Person> ;
-                                                                       rdfs:comment "This class represents a Person who has flown at least once." ;
-                                                                       rdfs:label "Passenger" .
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Passenger
+:Passenger rdf:type owl:Class ;
+           owl:equivalentClass [ owl:intersectionOf ( :Person
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty :takes ;
+                                                        owl:someValuesFrom :Flight
+                                                      ]
+                                                    ) ;
+                                 rdf:type owl:Class
+                               ] ;
+           rdfs:subClassOf :Person ;
+           rdfs:comment "This class represents a Person who has flown at least once." ;
+           rdfs:label "Passenger" .
 
 
-###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Person
-<http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Person> rdf:type owl:Class ;
-                                                                    rdfs:comment "This class represents a specific individual that might be a passenger." ;
-                                                                    rdfs:label "Person" ;
-                                                                    rdfs:sameAs "https://dbpedia.org/ontology/Person" .
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Person
+:Person rdf:type owl:Class ;
+        rdfs:comment "This class represents a specific individual that might be a passenger." ;
+        rdfs:label "Person" ;
+        rdfs:sameAs "https://dbpedia.org/ontology/Person" .
 
 
-###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/PremiumEconomy
-<http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/PremiumEconomy> rdf:type owl:Class ;
-                                                                            rdfs:subClassOf <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SeatType> ;
-                                                                            rdfs:comment "This class represents the Premium Economy seat type." ;
-                                                                            rdfs:label "PremiumEconomy" .
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#PremiumEconomy
+:PremiumEconomy rdf:type owl:Class ;
+                rdfs:subClassOf :SeatType ;
+                rdfs:comment "This class represents the Premium Economy seat type." ;
+                rdfs:label "PremiumEconomy" .
 
 
-###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Qatar_Airways
-<http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Qatar_Airways> rdf:type owl:Class ;
-                                                                           rdfs:subClassOf <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Airline> ;
-                                                                           owl:disjointWith <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Ryanair> ;
-                                                                           rdfs:comment "This class represents the Qatar Airways airline." ;
-                                                                           rdfs:label "Qatar_Airways" .
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Qatar_Airways
+:Qatar_Airways rdf:type owl:Class ;
+               rdfs:subClassOf :Airline ;
+               owl:disjointWith :Ryanair ;
+               rdfs:comment "This class represents the Qatar Airways airline." ;
+               rdfs:label "Qatar_Airways" .
 
 
-###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Rating
-<http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Rating> rdf:type owl:Class ;
-                                                                    owl:equivalentClass [ rdf:type owl:Restriction ;
-                                                                                          owl:onProperty <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/ratingScore> ;
-                                                                                          owl:someValuesFrom xsd:int
-                                                                                        ] ;
-                                                                    rdfs:comment "This class represents a given rating from 0 to 10 to evaluate aspects of an experience." ;
-                                                                    rdfs:label "Rating" .
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Rating
+:Rating rdf:type owl:Class ;
+        owl:equivalentClass [ rdf:type owl:Restriction ;
+                              owl:onProperty :ratingScore ;
+                              owl:someValuesFrom xsd:int
+                            ] ;
+        rdfs:comment "This class represents a given rating from 0 to 10 to evaluate aspects of an experience." ;
+        rdfs:label "Rating" .
 
 
-###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Ryanair
-<http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Ryanair> rdf:type owl:Class ;
-                                                                     rdfs:subClassOf <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Airline> ;
-                                                                     rdfs:comment "This class represents the Ryanair airline." ;
-                                                                     rdfs:label "Ryanair" .
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Ryanair
+:Ryanair rdf:type owl:Class ;
+         rdfs:subClassOf :Airline ;
+         rdfs:comment "This class represents the Ryanair airline." ;
+         rdfs:label "Ryanair" .
 
 
-###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SatisfactionSurvey
-<http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SatisfactionSurvey> rdf:type owl:Class ;
-                                                                                rdfs:subClassOf <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Survey> ;
-                                                                                rdfs:comment "Marketing instrument used by businesses to determine clients' level of satisfaction with a brand. This class represents the satisfaction surveys completed by clients." ;
-                                                                                rdfs:label "SatisfactionSurvey" .
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#SatisfactionSurvey
+:SatisfactionSurvey rdf:type owl:Class ;
+                    rdfs:subClassOf :Survey ;
+                    rdfs:comment "Marketing instrument used by businesses to determine clients' level of satisfaction with a brand. This class represents the satisfaction surveys completed by clients." ;
+                    rdfs:label "SatisfactionSurvey" .
 
 
-###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SatisfiedSurvey
-<http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SatisfiedSurvey> rdf:type owl:Class ;
-                                                                             rdfs:subClassOf <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SatisfactionSurvey> ;
-                                                                             rdfs:comment "This class represents satisfaction surveys where the client is satisfied with the experience." ;
-                                                                             rdfs:label "SatisfiedSurvey" .
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#SatisfiedSurvey
+:SatisfiedSurvey rdf:type owl:Class ;
+                 rdfs:subClassOf :SatisfactionSurvey ;
+                 rdfs:comment "This class represents satisfaction surveys where the client is satisfied with the experience." ;
+                 rdfs:label "SatisfiedSurvey" .
 
 
-###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SeatComfortRating
-<http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SeatComfortRating> rdf:type owl:Class ;
-                                                                               rdfs:subClassOf <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SpecificRating> ;
-                                                                               rdfs:comment "This class represents the rating given to the seat comfort." ;
-                                                                               rdfs:label "SeatComfortRating" .
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#SeatComfortRating
+:SeatComfortRating rdf:type owl:Class ;
+                   rdfs:subClassOf :SpecificRating ;
+                   rdfs:comment "This class represents the rating given to the seat comfort." ;
+                   rdfs:label "SeatComfortRating" .
 
 
-###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SeatType
-<http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SeatType> rdf:type owl:Class ;
-                                                                      rdfs:comment "This class groups the existing seat types on any airplane." ;
-                                                                      rdfs:label "SeatType" .
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#SeatType
+:SeatType rdf:type owl:Class ;
+          rdfs:comment "This class groups the existing seat types on any airplane." ;
+          rdfs:label "SeatType" .
 
 
-###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SoloLeisure
-<http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SoloLeisure> rdf:type owl:Class ;
-                                                                         rdfs:subClassOf <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Leisure> ;
-                                                                         rdfs:comment "This class represents those travel motivations related with solo leisure." ;
-                                                                         rdfs:label "SoloLeisure" .
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#SoloLeisure
+:SoloLeisure rdf:type owl:Class ;
+             rdfs:subClassOf :Leisure ;
+             rdfs:comment "This class represents those travel motivations related with solo leisure." ;
+             rdfs:label "SoloLeisure" .
 
 
-###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SpecificRating
-<http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SpecificRating> rdf:type owl:Class ;
-                                                                            rdfs:subClassOf <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Rating> ;
-                                                                            rdfs:comment "This class represents a specific rating given for some specific parts of the experience." ;
-                                                                            rdfs:label "SpecificRating" .
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#SpecificRating
+:SpecificRating rdf:type owl:Class ;
+                rdfs:subClassOf :Rating ;
+                rdfs:comment "This class represents a specific rating given for some specific parts of the experience." ;
+                rdfs:label "SpecificRating" .
 
 
-###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Survey
-<http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Survey> rdf:type owl:Class ;
-                                                                    rdfs:comment "Marketing instrument used by businesses to engourage clients' to express their opinions on a specific brand. This class groups existing survey types. At the moment only the satisfaction surveys are contemplated." ;
-                                                                    rdfs:label "Survey" .
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Survey
+:Survey rdf:type owl:Class ;
+        rdfs:comment "Marketing instrument used by businesses to engourage clients' to express their opinions on a specific brand. This class groups existing survey types. At the moment only the satisfaction surveys are contemplated." ;
+        rdfs:label "Survey" .
 
 
-###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/TravellerType
-<http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/TravellerType> rdf:type owl:Class ;
-                                                                           rdfs:comment "This class groups different travel motivations." ;
-                                                                           rdfs:label "TravellerType" .
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#TravellerType
+:TravellerType rdf:type owl:Class ;
+               rdfs:comment "This class groups different travel motivations." ;
+               rdfs:label "TravellerType" .
 
 
-###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/ValueForMoneyRating
-<http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/ValueForMoneyRating> rdf:type owl:Class ;
-                                                                                 rdfs:subClassOf <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SpecificRating> ;
-                                                                                 rdfs:comment "This class represents the rating given to the Value-for-Money ratio of the experience." ;
-                                                                                 rdfs:label "ValueForMoneyRating" .
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#ValueForMoneyRating
+:ValueForMoneyRating rdf:type owl:Class ;
+                     rdfs:subClassOf :SpecificRating ;
+                     rdfs:comment "This class represents the rating given to the Value-for-Money ratio of the experience." ;
+                     rdfs:label "ValueForMoneyRating" .
 
 
-###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/VeryDissatisfiedSurvey
-<http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/VeryDissatisfiedSurvey> rdf:type owl:Class ;
-                                                                                    rdfs:subClassOf <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SatisfactionSurvey> ;
-                                                                                    rdfs:comment "This class represents satisfaction surveys where the client is deeply dissatisfied with the experience." ;
-                                                                                    rdfs:label "VeryDissatisfiedSurvey" .
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#VeryDissatisfiedSurvey
+:VeryDissatisfiedSurvey rdf:type owl:Class ;
+                        rdfs:subClassOf :SatisfactionSurvey ;
+                        rdfs:comment "This class represents satisfaction surveys where the client is deeply dissatisfied with the experience." ;
+                        rdfs:label "VeryDissatisfiedSurvey" .
 
 
-###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/VerySatisfiedSurvey
-<http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/VerySatisfiedSurvey> rdf:type owl:Class ;
-                                                                                 rdfs:subClassOf <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SatisfactionSurvey> ;
-                                                                                 rdfs:comment "This class represents satisfaction surveys where the client is very satisfied with the experience." ;
-                                                                                 rdfs:label "VerySatisfiedSurvey" .
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#VerySatisfiedSurvey
+:VerySatisfiedSurvey rdf:type owl:Class ;
+                     rdfs:subClassOf :SatisfactionSurvey ;
+                     rdfs:comment "This class represents satisfaction surveys where the client is very satisfied with the experience." ;
+                     rdfs:label "VerySatisfiedSurvey" .
 
 
-###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/WifiConnectivityRating
-<http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/WifiConnectivityRating> rdf:type owl:Class ;
-                                                                                    rdfs:subClassOf <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SpecificRating> ;
-                                                                                    rdfs:comment "This class represents the rating given to the Wifi service." ;
-                                                                                    rdfs:label "WifiConnectivityRating" .
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#WifiConnectivityRating
+:WifiConnectivityRating rdf:type owl:Class ;
+                        rdfs:subClassOf :SpecificRating ;
+                        rdfs:comment "This class represents the rating given to the Wifi service." ;
+                        rdfs:label "WifiConnectivityRating" .
 
 
 #################################################################
 #    Individuals
 #################################################################
 
-###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/AircraftManufacturer_Airbus
-<http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/AircraftManufacturer_Airbus> rdf:type owl:NamedIndividual ,
-                                                                                                  <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Airbus> ;
-                                                                                         <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/manufacturerName> "Airbus" .
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#AircraftManufacturer_Airbus
+:AircraftManufacturer_Airbus rdf:type owl:NamedIndividual ,
+                                      :Airbus ;
+                             :manufacturerName "Airbus" ;
+                             rdfs:comment "Airbus instance of AircraftManufacturer" ;
+                             rdfs:label "Aircraft_Manufacturer_Airbus" .
 
 
-###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/AircraftManufacturer_Boeing
-<http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/AircraftManufacturer_Boeing> rdf:type owl:NamedIndividual ,
-                                                                                                  <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Boeing> ;
-                                                                                         <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/manufacturerName> "Boeing" .
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#AircraftManufacturer_Boeing
+:AircraftManufacturer_Boeing rdf:type owl:NamedIndividual ,
+                                      :Boeing ;
+                             :manufacturerName "Boeing" ;
+                             rdfs:comment "Boeing instance of AircraftManufacturer" ;
+                             rdfs:label "AircraftManufacturer_Boeing" .
 
 
-###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Airline_1
-<http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Airline_1> rdf:type owl:NamedIndividual ,
-                                                                                <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Airline> ;
-                                                                       <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/airlineName> "Airline 1" .
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Airline_1
+:Airline_1 rdf:type owl:NamedIndividual ,
+                    :Airline ;
+           :airlineName "Airline 1" ;
+           rdfs:comment "Instance of an Airline with an unknown sub-type" ;
+           rdfs:label "Airline_1" .
 
 
-###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Airplane_A7-AJN
-<http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Airplane_A7-AJN> rdf:type owl:NamedIndividual ,
-                                                                                      <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/A380_800> ;
-                                                                             <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/aircraftCode> "A7-AJN" .
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Airplane_A7-AJN
+:Airplane_A7-AJN rdf:type owl:NamedIndividual ,
+                          :A380_800 ;
+                 :aircraftCode "A7-AJN" ;
+                 rdfs:comment "Instance of A7-AJN airplane" ;
+                 rdfs:label "Airplane_A7-AJN" .
 
 
-###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Airplane_A8-GTR
-<http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Airplane_A8-GTR> rdf:type owl:NamedIndividual ,
-                                                                                      <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Aircraft> ;
-                                                                             <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/manufacturedBy> <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/AircraftManufacturer_Airbus> ;
-                                                                             <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/aircraftCode> "A8-GTR" .
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Airplane_A8-GTR
+:Airplane_A8-GTR rdf:type owl:NamedIndividual ,
+                          :Aircraft ;
+                 :manufacturedBy :AircraftManufacturer_Airbus ;
+                 :aircraftCode "A8-GTR" ;
+                 rdfs:comment "Instance of A8-GTR airplane" ;
+                 rdfs:label "Airplane_A8-GTR" .
 
 
-###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Airplane_B7-MLG
-<http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Airplane_B7-MLG> rdf:type owl:NamedIndividual ,
-                                                                                      <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Boeing_777> ;
-                                                                             <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/covers> <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Flight_QA4563> ;
-                                                                             <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/operatedBy> <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Airline_1> ;
-                                                                             <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/aircraftCode> "B7-MLG" .
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Airplane_B7-MLG
+:Airplane_B7-MLG rdf:type owl:NamedIndividual ,
+                          :Boeing_777 ;
+                 :covers :Flight_QA4563 ;
+                 :operatedBy :Airline_1 ;
+                 :aircraftCode "B7-MLG" ;
+                 rdfs:comment "Instance of B7-MLG airplane" ;
+                 rdfs:label "Airplane_B7-MLG" .
 
 
-###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Airport_Barcelona
-<http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Airport_Barcelona> rdf:type owl:NamedIndividual ,
-                                                                                        <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Airport> ;
-                                                                               <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/locatedIn> <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Country_Spain> ;
-                                                                               <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/airportCode> "BCN" ;
-                                                                               <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/airportName> "Barcelona Airport" .
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Airport_Barcelona
+:Airport_Barcelona rdf:type owl:NamedIndividual ,
+                            :Airport ;
+                   :locatedIn :Country_Spain ;
+                   :airportCode "BCN" ;
+                   :airportName "Barcelona Airport" ;
+                   rdfs:comment "Instance of Barcelona's airport" ;
+                   rdfs:label "Airport_Barcelona" .
 
 
-###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Airport_London_Stansted
-<http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Airport_London_Stansted> rdf:type owl:NamedIndividual ,
-                                                                                              <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Airport> ;
-                                                                                     <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/locatedIn> <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Country_United_Kingdom> ;
-                                                                                     <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/airportCode> "LST" ;
-                                                                                     <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/airportName> "London Stansted Airport" .
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Airport_London_Stansted
+:Airport_London_Stansted rdf:type owl:NamedIndividual ,
+                                  :Airport ;
+                         :locatedIn :Country_United_Kingdom ;
+                         :airportCode "LST" ;
+                         :airportName "London Stansted Airport" ;
+                         rdfs:comment "Instance of London Stansted's airport" ;
+                         rdfs:label "Airport_London_Stansted" .
 
 
-###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Airport_Malaga
-<http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Airport_Malaga> rdf:type owl:NamedIndividual ,
-                                                                                     <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Airport> ;
-                                                                            <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/airportCode> "MLG" ;
-                                                                            <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/airportName> "Malaga Airport" .
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Airport_Malaga
+:Airport_Malaga rdf:type owl:NamedIndividual ,
+                         :Airport ;
+                :airportCode "MLG" ;
+                :airportName "Malaga Airport" ;
+                rdfs:comment "Instance of Malaga's airport" ;
+                rdfs:label "Airport_Malaga" .
 
 
-###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Country_Spain
-<http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Country_Spain> rdf:type owl:NamedIndividual ,
-                                                                                    <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Country> ;
-                                                                           <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/countryName> "Spain" .
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Country_Spain
+:Country_Spain rdf:type owl:NamedIndividual ,
+                        :Country ;
+               :countryName "Spain" ;
+               rdfs:comment "Instance of Spain - Country" ;
+               rdfs:label "Country_Spain" .
 
 
-###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Country_United_Kingdom
-<http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Country_United_Kingdom> rdf:type owl:NamedIndividual ,
-                                                                                             <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Country> ;
-                                                                                    <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/countryName> "United Kingdom" .
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Country_United_Kingdom
+:Country_United_Kingdom rdf:type owl:NamedIndividual ,
+                                 :Country ;
+                        :countryName "United Kingdom" ;
+                        rdfs:comment "Instance of United Kingdom - Country" ;
+                        rdfs:label "Country_United_Kingdom" .
 
 
-###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Flight_QA4563
-<http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Flight_QA4563> rdf:type owl:NamedIndividual ,
-                                                                                    <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Flight> ;
-                                                                           <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/arrivesTo> <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Airport_London_Stansted> ;
-                                                                           <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/departsFrom> <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Airport_Barcelona> ;
-                                                                           <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/flightCode> "QA4563" ;
-                                                                           <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/flightDate> "2024-01-09T14:00:00"^^xsd:dateTime .
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Flight_QA4563
+:Flight_QA4563 rdf:type owl:NamedIndividual ,
+                        :Flight ;
+               :arrivesTo :Airport_London_Stansted ;
+               :departsFrom :Airport_Barcelona ;
+               :flightCode "QA4563" ;
+               :flightDate "2024-01-09T14:00:00"^^xsd:dateTime ;
+               rdfs:comment "Instance of Flight QA4563" ;
+               rdfs:label "Flight_QA4563" .
 
 
-###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Person_Mary_Le
-<http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Person_Mary_Le> rdf:type owl:NamedIndividual ,
-                                                                                     <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Person> ;
-                                                                            <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/livesIn> <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Country_United_Kingdom> ;
-                                                                            <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/takes> <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Flight_QA4563> ;
-                                                                            <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/personName> "Mary Le" .
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Person_Mary_Le
+:Person_Mary_Le rdf:type owl:NamedIndividual ,
+                         :Person ;
+                :livesIn :Country_United_Kingdom ;
+                :takes :Flight_QA4563 ;
+                :personName "Mary Le" ;
+                rdfs:comment "Instance of a Person, Mary Le" ;
+                rdfs:label "Person_Mary_Le" .
 
 
-###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Person_Nestor_Carreno_Gimeno
-<http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Person_Nestor_Carreno_Gimeno> rdf:type owl:NamedIndividual ,
-                                                                                                   <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Person> ;
-                                                                                          <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/livesIn> <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Country_Spain> ;
-                                                                                          <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/takes> <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Flight_QA4563> ;
-                                                                                          <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/personName> "Nestor Carreno Gimeno" ;
-                                                                                          <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/personPassportCode> "56879054C" .
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Person_Nestor_Carreno_Gimeno
+:Person_Nestor_Carreno_Gimeno rdf:type owl:NamedIndividual ,
+                                       :Person ;
+                              :livesIn :Country_Spain ;
+                              :takes :Flight_QA4563 ;
+                              :personName "Nestor Carreno Gimeno" ;
+                              :personPassportCode "56879054C" ;
+                              rdfs:comment "Instance of a Person, Nestor Carreno Gimeno" ;
+                              rdfs:label "Person_Nestor_Carreno_Gimeno" .
 
 
-###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Rating_1
-<http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Rating_1> rdf:type owl:NamedIndividual ,
-                                                                               <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/OverallRating> ;
-                                                                      <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/ratingScore> "10"^^xsd:int .
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Rating_1
+:Rating_1 rdf:type owl:NamedIndividual ,
+                   :OverallRating ;
+          :ratingScore "10"^^xsd:int ;
+          rdfs:comment "A numeric rating: 10" ;
+          rdfs:label "Rating_1" .
 
 
-###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Rating_2
-<http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Rating_2> rdf:type owl:NamedIndividual ,
-                                                                               <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/OverallRating> ;
-                                                                      <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/ratingScore> "3"^^xsd:int .
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Rating_2
+:Rating_2 rdf:type owl:NamedIndividual ,
+                   :OverallRating ;
+          :ratingScore "3"^^xsd:int ;
+          rdfs:comment "A numeric rating: 3" ;
+          rdfs:label "Rating_2" .
 
 
-###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SatisfactionSurvey_1
-<http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SatisfactionSurvey_1> rdf:type owl:NamedIndividual ,
-                                                                                           <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SatisfactionSurvey> ;
-                                                                                  <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/explainsExperienceOf> <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/TravellerType_FamilyLeisure> ;
-                                                                                  <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/exposes> <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Rating_1> ;
-                                                                                  <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/isCompletedBy> <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Person_Nestor_Carreno_Gimeno> ;
-                                                                                  <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/isEvaluating> <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SeatType_EconomyClass> ;
-                                                                                  <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/rates> <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Flight_QA4563> ;
-                                                                                  <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/surveyCommentBody> "The flight was on time. Everything perfect." ;
-                                                                                  <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/surveyCommentTitle> "Very happy with the service." ;
-                                                                                  <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/surveyIdentifier> "1"^^xsd:int ;
-                                                                                  <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/surveyPublicationDate> "2024-02-23T16:30:47"^^xsd:dateTime .
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#SatisfactionSurvey_1
+:SatisfactionSurvey_1 rdf:type owl:NamedIndividual ,
+                               :SatisfactionSurvey ;
+                      :explainsExperienceOf :TravellerType_FamilyLeisure ;
+                      :exposes :Rating_1 ;
+                      :isCompletedBy :Person_Nestor_Carreno_Gimeno ;
+                      :isEvaluating :SeatType_EconomyClass ;
+                      :rates :Flight_QA4563 ;
+                      :surveyCommentBody "The flight was on time. Everything perfect." ;
+                      :surveyCommentTitle "Very happy with the service." ;
+                      :surveyIdentifier "1"^^xsd:int ;
+                      :surveyPublicationDate "2024-02-23T16:30:47"^^xsd:dateTime ;
+                      rdfs:comment "An instance of the SatisfactionSurvey with ID 1" ;
+                      rdfs:label "SatisfactionSurvey_1" .
 
 
-###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SatisfactionSurvey_2
-<http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SatisfactionSurvey_2> rdf:type owl:NamedIndividual ,
-                                                                                           <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SatisfactionSurvey> ;
-                                                                                  <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/explainsExperienceOf> <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/TravellerType_Business> ;
-                                                                                  <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/exposes> <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Rating_2> ;
-                                                                                  <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/isCompletedBy> <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Person_Mary_Le> ;
-                                                                                  <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/isEvaluating> <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SeatType_EconomyClass> ;
-                                                                                  <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/rates> <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Flight_QA4563> ;
-                                                                                  <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/surveyCommentBody> "The delay of my flight from Haneda to Doha caused a bit of chaos upon arrival. Despite my efforts to reach the gate promptly, I was denied boarding due to luggage issues, and the lack of assistance added to the frustration. I paid for an Economy Comfort package, which was supposed to include an aisle seat. However, upon boarding, I was informed that no aisle seats were available, despite assurances beforehand. Additionally, my luggage tag was lost during the boarding pass exchange, leading to further uncertainty upon arrival in London. What was meant to be a 19-hour journey turned into a 27-hour ordeal. When I requested assistance from staff regarding a re-arrangement they promised to get back to me within 5-10 minutes, but no one followed up until I reached out again. The security queue at Heathrow on departure from the UK was incredibly long, with a wait time of about 1.5 hours just to get through. Overall, while the crew onboard was courteous and provided great service, the experience was marred by these inconveniences." ;
-                                                                                  <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/surveyCommentTitle> "Marred by inconveniences" ;
-                                                                                  <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/surveyIdentifier> "2"^^xsd:int ;
-                                                                                  <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/surveyPublicationDate> "2024-02-02T13:45:32"^^xsd:dateTime .
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#SatisfactionSurvey_2
+:SatisfactionSurvey_2 rdf:type owl:NamedIndividual ,
+                               :SatisfactionSurvey ;
+                      :explainsExperienceOf :TravellerType_Business ;
+                      :exposes :Rating_2 ;
+                      :isCompletedBy :Person_Mary_Le ;
+                      :isEvaluating :SeatType_EconomyClass ;
+                      :rates :Flight_QA4563 ;
+                      :surveyCommentBody "The delay of my flight from Haneda to Doha caused a bit of chaos upon arrival. Despite my efforts to reach the gate promptly, I was denied boarding due to luggage issues, and the lack of assistance added to the frustration. I paid for an Economy Comfort package, which was supposed to include an aisle seat. However, upon boarding, I was informed that no aisle seats were available, despite assurances beforehand. Additionally, my luggage tag was lost during the boarding pass exchange, leading to further uncertainty upon arrival in London. What was meant to be a 19-hour journey turned into a 27-hour ordeal. When I requested assistance from staff regarding a re-arrangement they promised to get back to me within 5-10 minutes, but no one followed up until I reached out again. The security queue at Heathrow on departure from the UK was incredibly long, with a wait time of about 1.5 hours just to get through. Overall, while the crew onboard was courteous and provided great service, the experience was marred by these inconveniences." ;
+                      :surveyCommentTitle "Marred by inconveniences" ;
+                      :surveyIdentifier "2"^^xsd:int ;
+                      :surveyPublicationDate "2024-02-02T13:45:32"^^xsd:dateTime ;
+                      rdfs:comment "An instance of the SatisfactionSurvey with ID 2" ;
+                      rdfs:label "SatisfactionSurvey_2" .
 
 
-###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SeatType_EconomyClass
-<http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SeatType_EconomyClass> rdf:type owl:NamedIndividual ,
-                                                                                            <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/EconomyClass> .
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#SeatType_EconomyClass
+:SeatType_EconomyClass rdf:type owl:NamedIndividual ,
+                                :EconomyClass ;
+                       rdfs:comment "Instance of the SeatType Economy Class" ;
+                       rdfs:label "SeatType_EconomyClass" .
 
 
-###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/TravellerType_Business
-<http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/TravellerType_Business> rdf:type owl:NamedIndividual ,
-                                                                                             <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Business> .
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#TravellerType_Business
+:TravellerType_Business rdf:type owl:NamedIndividual ,
+                                 :Business ;
+                        rdfs:comment "Instance of the TravellerType Business" ;
+                        rdfs:label "TravellerType_Business" .
 
 
-###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/TravellerType_FamilyLeisure
-<http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/TravellerType_FamilyLeisure> rdf:type owl:NamedIndividual ,
-                                                                                                  <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/FamilyLeisure> .
+###  http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#TravellerType_FamilyLeisure
+:TravellerType_FamilyLeisure rdf:type owl:NamedIndividual ,
+                                      :FamilyLeisure ;
+                             rdfs:comment "Instance of the TravellerType Family Leisure" ;
+                             rdfs:label "TravellerType_FamilyLeisure" .
 
 
 #################################################################
@@ -950,52 +997,52 @@ owl:topObjectProperty rdfs:subPropertyOf owl:topObjectProperty .
 #################################################################
 
 [ rdf:type owl:AllDisjointClasses ;
-  owl:members ( <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/A350>
-                <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/A350_1000>
-                <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/A380>
-                <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/A380_800>
-                <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Boeing_777>
-                <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Boeing_787>
+  owl:members ( :A350
+                :A350_1000
+                :A380
+                :A380_800
+                :Boeing_777
+                :Boeing_787
               )
 ] .
 
 
 [ rdf:type owl:AllDisjointClasses ;
-  owl:members ( <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/BeveragesRating>
-                <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/CabinStaffServiceRating>
-                <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/FoodRating>
-                <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/GroundServiceRating>
-                <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/InflightEntertainmentRating>
-                <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SeatComfortRating>
-                <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/ValueForMoneyRating>
-                <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/WifiConnectivityRating>
+  owl:members ( :BeveragesRating
+                :CabinStaffServiceRating
+                :FoodRating
+                :GroundServiceRating
+                :InflightEntertainmentRating
+                :SeatComfortRating
+                :ValueForMoneyRating
+                :WifiConnectivityRating
               )
 ] .
 
 
 [ rdf:type owl:AllDisjointClasses ;
-  owl:members ( <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/BusinessClass>
-                <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/EconomyClass>
-                <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/FirstClass>
-                <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/PremiumEconomy>
+  owl:members ( :BusinessClass
+                :EconomyClass
+                :FirstClass
+                :PremiumEconomy
               )
 ] .
 
 
 [ rdf:type owl:AllDisjointClasses ;
-  owl:members ( <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/CoupleLeisure>
-                <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/FamilyLeisure>
-                <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SoloLeisure>
+  owl:members ( :CoupleLeisure
+                :FamilyLeisure
+                :SoloLeisure
               )
 ] .
 
 
 [ rdf:type owl:AllDisjointClasses ;
-  owl:members ( <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/DissatisfiedSurvey>
-                <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/NeutralSurvey>
-                <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SatisfiedSurvey>
-                <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/VeryDissatisfiedSurvey>
-                <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/VerySatisfiedSurvey>
+  owl:members ( :DissatisfiedSurvey
+                :NeutralSurvey
+                :SatisfiedSurvey
+                :VeryDissatisfiedSurvey
+                :VerySatisfiedSurvey
               )
 ] .
 
@@ -1021,7 +1068,7 @@ owl:topObjectProperty rdfs:subPropertyOf owl:topObjectProperty .
 [ rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
    <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
-                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SatisfactionSurvey> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :SatisfactionSurvey ;
                                                        <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#s>
                                                      ] ;
                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
@@ -1037,13 +1084,13 @@ owl:topObjectProperty rdfs:subPropertyOf owl:topObjectProperty .
                                                                 ] ;
                                                       rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                                                  rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
-                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/exposes> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> :exposes ;
                                                                              <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#s> ;
                                                                              <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#r>
                                                                            ] ;
                                                                  rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                                                             rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
-                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/ratingScore> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> :ratingScore ;
                                                                                         <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#r> ;
                                                                                         <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#x>
                                                                                       ] ;
@@ -1066,7 +1113,7 @@ owl:topObjectProperty rdfs:subPropertyOf owl:topObjectProperty .
                                          ] ;
    <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
-                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/DissatisfiedSurvey> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :DissatisfiedSurvey ;
                                                        <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#s>
                                                      ] ;
                                            rdf:rest rdf:nil
@@ -1076,7 +1123,7 @@ owl:topObjectProperty rdfs:subPropertyOf owl:topObjectProperty .
 [ rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
    <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
-                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SatisfactionSurvey> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :SatisfactionSurvey ;
                                                        <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#s>
                                                      ] ;
                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
@@ -1103,13 +1150,13 @@ owl:topObjectProperty rdfs:subPropertyOf owl:topObjectProperty .
                                                                            ] ;
                                                                  rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                                                             rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
-                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/exposes> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> :exposes ;
                                                                                         <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#s> ;
                                                                                         <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#r>
                                                                                       ] ;
                                                                             rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                                                                        rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
-                                                                                                   <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/ratingScore> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#propertyPredicate> :ratingScore ;
                                                                                                    <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#r> ;
                                                                                                    <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#x>
                                                                                                  ] ;
@@ -1121,7 +1168,7 @@ owl:topObjectProperty rdfs:subPropertyOf owl:topObjectProperty .
                                          ] ;
    <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
-                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/NeutralSurvey> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :NeutralSurvey ;
                                                        <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#s>
                                                      ] ;
                                            rdf:rest rdf:nil
@@ -1131,7 +1178,7 @@ owl:topObjectProperty rdfs:subPropertyOf owl:topObjectProperty .
 [ rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
    <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
-                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SatisfactionSurvey> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :SatisfactionSurvey ;
                                                        <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#s>
                                                      ] ;
                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
@@ -1147,13 +1194,13 @@ owl:topObjectProperty rdfs:subPropertyOf owl:topObjectProperty .
                                                                 ] ;
                                                       rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                                                  rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
-                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/exposes> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> :exposes ;
                                                                              <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#s> ;
                                                                              <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#r>
                                                                            ] ;
                                                                  rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                                                             rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
-                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/ratingScore> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> :ratingScore ;
                                                                                         <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#r> ;
                                                                                         <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#x>
                                                                                       ] ;
@@ -1176,7 +1223,7 @@ owl:topObjectProperty rdfs:subPropertyOf owl:topObjectProperty .
                                          ] ;
    <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
-                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/VerySatisfiedSurvey> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :VerySatisfiedSurvey ;
                                                        <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#s>
                                                      ] ;
                                            rdf:rest rdf:nil
@@ -1186,7 +1233,7 @@ owl:topObjectProperty rdfs:subPropertyOf owl:topObjectProperty .
 [ rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
    <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
-                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SatisfactionSurvey> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :SatisfactionSurvey ;
                                                        <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#s>
                                                      ] ;
                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
@@ -1213,13 +1260,13 @@ owl:topObjectProperty rdfs:subPropertyOf owl:topObjectProperty .
                                                                            ] ;
                                                                  rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                                                             rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
-                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/exposes> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> :exposes ;
                                                                                         <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#s> ;
                                                                                         <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#r>
                                                                                       ] ;
                                                                             rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                                                                        rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
-                                                                                                   <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/ratingScore> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#propertyPredicate> :ratingScore ;
                                                                                                    <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#r> ;
                                                                                                    <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#x>
                                                                                                  ] ;
@@ -1231,7 +1278,7 @@ owl:topObjectProperty rdfs:subPropertyOf owl:topObjectProperty .
                                          ] ;
    <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
-                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SatisfiedSurvey> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :SatisfiedSurvey ;
                                                        <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#s>
                                                      ] ;
                                            rdf:rest rdf:nil
@@ -1241,16 +1288,16 @@ owl:topObjectProperty rdfs:subPropertyOf owl:topObjectProperty .
 [ rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
    <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
-                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/A350> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :A350 ;
                                                        <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#b>
                                                      ] ;
                                            rdf:rest rdf:nil
                                          ] ;
    <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
-                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/manufacturedBy> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :manufacturedBy ;
                                                        <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#b> ;
-                                                       <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/AircraftManufacturer_Airbus>
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :AircraftManufacturer_Airbus
                                                      ] ;
                                            rdf:rest rdf:nil
                                          ]
@@ -1259,16 +1306,16 @@ owl:topObjectProperty rdfs:subPropertyOf owl:topObjectProperty .
 [ rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
    <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
-                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/A350_1000> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :A350_1000 ;
                                                        <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#b>
                                                      ] ;
                                            rdf:rest rdf:nil
                                          ] ;
    <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
-                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/manufacturedBy> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :manufacturedBy ;
                                                        <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#b> ;
-                                                       <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/AircraftManufacturer_Airbus>
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :AircraftManufacturer_Airbus
                                                      ] ;
                                            rdf:rest rdf:nil
                                          ]
@@ -1277,16 +1324,16 @@ owl:topObjectProperty rdfs:subPropertyOf owl:topObjectProperty .
 [ rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
    <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
-                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/A380> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :A380 ;
                                                        <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#b>
                                                      ] ;
                                            rdf:rest rdf:nil
                                          ] ;
    <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
-                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/manufacturedBy> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :manufacturedBy ;
                                                        <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#b> ;
-                                                       <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/AircraftManufacturer_Airbus>
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :AircraftManufacturer_Airbus
                                                      ] ;
                                            rdf:rest rdf:nil
                                          ]
@@ -1295,16 +1342,16 @@ owl:topObjectProperty rdfs:subPropertyOf owl:topObjectProperty .
 [ rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
    <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
-                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/A380_800> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :A380_800 ;
                                                        <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#b>
                                                      ] ;
                                            rdf:rest rdf:nil
                                          ] ;
    <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
-                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/manufacturedBy> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :manufacturedBy ;
                                                        <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#b> ;
-                                                       <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/AircraftManufacturer_Airbus>
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :AircraftManufacturer_Airbus
                                                      ] ;
                                            rdf:rest rdf:nil
                                          ]
@@ -1313,16 +1360,16 @@ owl:topObjectProperty rdfs:subPropertyOf owl:topObjectProperty .
 [ rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
    <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
-                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Boeing_777> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Boeing_777 ;
                                                        <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#b>
                                                      ] ;
                                            rdf:rest rdf:nil
                                          ] ;
    <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
-                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/manufacturedBy> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :manufacturedBy ;
                                                        <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#b> ;
-                                                       <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/AircraftManufacturer_Boeing>
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :AircraftManufacturer_Boeing
                                                      ] ;
                                            rdf:rest rdf:nil
                                          ]
@@ -1331,16 +1378,16 @@ owl:topObjectProperty rdfs:subPropertyOf owl:topObjectProperty .
 [ rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
    <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
-                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Boeing_787> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Boeing_787 ;
                                                        <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#b>
                                                      ] ;
                                            rdf:rest rdf:nil
                                          ] ;
    <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
-                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/manufacturedBy> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :manufacturedBy ;
                                                        <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#b> ;
-                                                       <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/AircraftManufacturer_Boeing>
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :AircraftManufacturer_Boeing
                                                      ] ;
                                            rdf:rest rdf:nil
                                          ]
@@ -1349,30 +1396,30 @@ owl:topObjectProperty rdfs:subPropertyOf owl:topObjectProperty .
 [ rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
    <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
-                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Flight> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Flight ;
                                                        <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#f>
                                                      ] ;
                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
-                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/coveredBy> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :coveredBy ;
                                                                   <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#f> ;
                                                                   <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#a>
                                                                 ] ;
                                                       rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                                                  rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
-                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/departsFrom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> :departsFrom ;
                                                                              <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#f> ;
-                                                                             <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Airport_Barcelona>
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> :Airport_Barcelona
                                                                            ] ;
                                                                  rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                                                             rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
-                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/arrivesTo> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> :arrivesTo ;
                                                                                         <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#f> ;
-                                                                                        <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Airport_London_Stansted>
+                                                                                        <http://www.w3.org/2003/11/swrl#argument2> :Airport_London_Stansted
                                                                                       ] ;
                                                                             rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                                                                        rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
-                                                                                                   <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/operatedBy> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#propertyPredicate> :operatedBy ;
                                                                                                    <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#a> ;
                                                                                                    <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#o>
                                                                                                  ] ;
@@ -1384,7 +1431,7 @@ owl:topObjectProperty rdfs:subPropertyOf owl:topObjectProperty .
                                          ] ;
    <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
-                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Ryanair> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Ryanair ;
                                                        <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#o>
                                                      ] ;
                                            rdf:rest rdf:nil
@@ -1394,7 +1441,7 @@ owl:topObjectProperty rdfs:subPropertyOf owl:topObjectProperty .
 [ rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
    <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
-                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SatisfactionSurvey> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :SatisfactionSurvey ;
                                                        <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#s>
                                                      ] ;
                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
@@ -1421,13 +1468,13 @@ owl:topObjectProperty rdfs:subPropertyOf owl:topObjectProperty .
                                                                            ] ;
                                                                  rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                                                             rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
-                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/exposes> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> :exposes ;
                                                                                         <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#s> ;
                                                                                         <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#r>
                                                                                       ] ;
                                                                             rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                                                                        rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
-                                                                                                   <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/ratingScore> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#propertyPredicate> :ratingScore ;
                                                                                                    <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#r> ;
                                                                                                    <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#x>
                                                                                                  ] ;
@@ -1439,7 +1486,7 @@ owl:topObjectProperty rdfs:subPropertyOf owl:topObjectProperty .
                                          ] ;
    <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
-                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/VeryDissatisfiedSurvey> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :VeryDissatisfiedSurvey ;
                                                        <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#s>
                                                      ] ;
                                            rdf:rest rdf:nil

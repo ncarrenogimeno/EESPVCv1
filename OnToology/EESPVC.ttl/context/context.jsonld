@@ -1,34 +1,37 @@
 {
   "@context" : {
     "ratingScore" : {
-      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/ratingScore"
+      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#ratingScore"
     },
     "A350" : {
-      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/A350"
+      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#A350"
     },
     "isEvaluatedIn" : {
-      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/isEvaluatedIn",
+      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#isEvaluatedIn",
       "@type" : "@id"
     },
+    "created" : {
+      "@id" : "http://purl.org/dc/elements/1.1/created"
+    },
     "airlineName" : {
-      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/airlineName",
+      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#airlineName",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
     "ValueForMoneyRating" : {
-      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/ValueForMoneyRating"
+      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#ValueForMoneyRating"
     },
     "Boeing_777" : {
-      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Boeing_777"
+      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Boeing_777"
     },
     "Country" : {
-      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Country"
+      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Country"
     },
     "operates" : {
-      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/operates",
+      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#operates",
       "@type" : "@id"
     },
     "FoodRating" : {
-      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/FoodRating"
+      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#FoodRating"
     },
     "Thing" : {
       "@id" : "http://www.w3.org/2002/07/owl#Thing"
@@ -37,108 +40,108 @@
       "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
     },
     "Leisure" : {
-      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Leisure"
+      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Leisure"
     },
     "hasDeparture" : {
-      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/hasDeparture",
+      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#hasDeparture",
       "@type" : "@id"
     },
     "isEvaluating" : {
-      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/isEvaluating",
+      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#isEvaluating",
       "@type" : "@id"
     },
     "NeutralSurvey" : {
-      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/NeutralSurvey"
+      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#NeutralSurvey"
     },
     "hasArrival" : {
-      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/hasArrival",
+      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#hasArrival",
       "@type" : "@id"
     },
     "CoupleLeisure" : {
-      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/CoupleLeisure"
+      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#CoupleLeisure"
     },
     "livesIn" : {
-      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/livesIn",
+      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#livesIn",
       "@type" : "@id"
     },
     "A380_800" : {
-      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/A380_800"
+      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#A380_800"
     },
     "surveyCommentBody" : {
-      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/surveyCommentBody",
+      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#surveyCommentBody",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
     "manufacturedBy" : {
-      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/manufacturedBy",
+      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#manufacturedBy",
       "@type" : "@id"
     },
     "SatisfactionSurvey" : {
-      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SatisfactionSurvey"
+      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#SatisfactionSurvey"
     },
     "label" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
     },
     "takes" : {
-      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/takes",
+      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#takes",
       "@type" : "@id"
     },
     "OverallRating" : {
-      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/OverallRating"
+      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#OverallRating"
     },
     "VerySatisfiedSurvey" : {
-      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/VerySatisfiedSurvey"
+      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#VerySatisfiedSurvey"
     },
     "departsFrom" : {
-      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/departsFrom",
+      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#departsFrom",
       "@type" : "@id"
     },
     "aircraftCode" : {
-      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/aircraftCode",
+      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#aircraftCode",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
     "countryName" : {
-      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/countryName",
+      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#countryName",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
     "FirstClass" : {
-      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/FirstClass"
+      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#FirstClass"
     },
     "locates" : {
-      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/locates",
+      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#locates",
       "@type" : "@id"
     },
     "operatedBy" : {
-      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/operatedBy",
+      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#operatedBy",
       "@type" : "@id"
     },
     "Business" : {
-      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Business"
+      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Business"
     },
     "Airport" : {
-      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Airport"
+      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Airport"
     },
     "completes" : {
-      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/completes",
+      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#completes",
       "@type" : "@id"
     },
     "Person" : {
-      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Person"
+      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Person"
     },
     "Boeing_787" : {
-      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Boeing_787"
+      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Boeing_787"
     },
     "surveyPublicationDate" : {
-      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/surveyPublicationDate",
+      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#surveyPublicationDate",
       "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
     },
     "SpecificRating" : {
-      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SpecificRating"
+      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#SpecificRating"
     },
     "CabinStaffServiceRating" : {
-      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/CabinStaffServiceRating"
+      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#CabinStaffServiceRating"
     },
     "isRatedOn" : {
-      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/isRatedOn",
+      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#isRatedOn",
       "@type" : "@id"
     },
     "creator" : {
@@ -149,117 +152,117 @@
       "@type" : "@id"
     },
     "arrivesTo" : {
-      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/arrivesTo",
+      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#arrivesTo",
       "@type" : "@id"
     },
     "residenceOf" : {
-      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/residenceOf",
+      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#residenceOf",
       "@type" : "@id"
     },
     "personName" : {
-      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/personName",
+      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#personName",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
     "flightDate" : {
-      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/flightDate",
+      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#flightDate",
       "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
     },
     "Passenger" : {
-      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Passenger"
+      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Passenger"
     },
     "covers" : {
-      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/covers",
+      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#covers",
       "@type" : "@id"
     },
     "exposes" : {
-      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/exposes",
+      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#exposes",
       "@type" : "@id"
     },
     "Survey" : {
-      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Survey"
+      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Survey"
     },
     "Qatar_Airways" : {
-      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Qatar_Airways"
+      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Qatar_Airways"
     },
     "rates" : {
-      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/rates",
+      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#rates",
       "@type" : "@id"
     },
     "A380" : {
-      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/A380"
+      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#A380"
     },
     "FamilyLeisure" : {
-      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/FamilyLeisure"
+      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#FamilyLeisure"
     },
     "Rating" : {
-      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Rating"
+      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Rating"
     },
     "BeveragesRating" : {
-      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/BeveragesRating"
+      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#BeveragesRating"
     },
     "WifiConnectivityRating" : {
-      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/WifiConnectivityRating"
+      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#WifiConnectivityRating"
     },
     "SatisfiedSurvey" : {
-      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SatisfiedSurvey"
+      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#SatisfiedSurvey"
     },
     "airportCode" : {
-      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/airportCode",
+      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#airportCode",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
     "Aircraft" : {
-      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Aircraft"
+      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Aircraft"
     },
     "Ryanair" : {
-      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Ryanair"
+      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Ryanair"
     },
     "Airbus" : {
-      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Airbus"
+      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Airbus"
     },
     "coveredBy" : {
-      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/coveredBy",
+      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#coveredBy",
       "@type" : "@id"
     },
     "GroundServiceRating" : {
-      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/GroundServiceRating"
+      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#GroundServiceRating"
     },
     "SeatComfortRating" : {
-      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SeatComfortRating"
+      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#SeatComfortRating"
     },
     "VeryDissatisfiedSurvey" : {
-      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/VeryDissatisfiedSurvey"
+      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#VeryDissatisfiedSurvey"
     },
     "title" : {
       "@id" : "http://purl.org/dc/elements/1.1/title"
     },
     "DissatisfiedSurvey" : {
-      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/DissatisfiedSurvey"
+      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#DissatisfiedSurvey"
     },
     "Airline" : {
-      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Airline"
+      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Airline"
     },
     "Flight" : {
-      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Flight"
+      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Flight"
     },
     "A350_1000" : {
-      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/A350_1000"
+      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#A350_1000"
     },
     "locatedIn" : {
-      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/locatedIn",
+      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#locatedIn",
       "@type" : "@id"
     },
     "Boeing" : {
-      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/Boeing"
+      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#Boeing"
     },
     "surveyCommentTitle" : {
-      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/surveyCommentTitle",
+      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#surveyCommentTitle",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
     "EconomyClass" : {
-      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/EconomyClass"
+      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#EconomyClass"
     },
     "personPassportCode" : {
-      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/personPassportCode",
+      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#personPassportCode",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
     "sameAs" : {
@@ -269,59 +272,59 @@
       "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
     },
     "manufacturerName" : {
-      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/manufacturerName",
+      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#manufacturerName",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
     "InflightEntertainmentRating" : {
-      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/InflightEntertainmentRating"
+      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#InflightEntertainmentRating"
     },
     "SoloLeisure" : {
-      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SoloLeisure"
+      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#SoloLeisure"
     },
     "AircraftManufacturer" : {
-      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/AircraftManufacturer"
+      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#AircraftManufacturer"
     },
     "BusinessClass" : {
-      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/BusinessClass"
+      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#BusinessClass"
     },
     "takenBy" : {
-      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/takenBy",
+      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#takenBy",
       "@type" : "@id"
     },
     "PremiumEconomy" : {
-      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/PremiumEconomy"
+      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#PremiumEconomy"
     },
     "hasManufactured" : {
-      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/hasManufactured",
+      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#hasManufactured",
       "@type" : "@id"
     },
     "surveyIdentifier" : {
-      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/surveyIdentifier",
+      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#surveyIdentifier",
       "@type" : "http://www.w3.org/2001/XMLSchema#int"
     },
     "SeatType" : {
-      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/SeatType"
+      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#SeatType"
     },
     "airportName" : {
-      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/airportName",
+      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#airportName",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
     "isCompletedBy" : {
-      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/isCompletedBy",
+      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#isCompletedBy",
       "@type" : "@id"
     },
     "description" : {
       "@id" : "http://purl.org/dc/elements/1.1/description"
     },
     "TravellerType" : {
-      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/TravellerType"
+      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#TravellerType"
     },
     "explainsExperienceOf" : {
-      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/explainsExperienceOf",
+      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#explainsExperienceOf",
       "@type" : "@id"
     },
     "flightCode" : {
-      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC/flightCode",
+      "@id" : "http://www.semanticweb.org/nestor/ontologies/2024/3/EESPVC#flightCode",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
     }
   }
